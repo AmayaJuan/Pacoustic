@@ -50,6 +50,44 @@ REGLAS OBLIGATORIAS PARA CUALQUIER MODIFICACIÓN DEL CÓDIGO
 REGLA FINAL
 ================================================================================
 Si algo ya funcionaba, NO lo rompas.
-Si no se pidió, NO lo hagas.
+Si no se pidió, NO lo haces.
+
+================================================================================
+NUEVAS REGLAS DE TRABAJO (Agregado posteriormente)
+================================================================================
+REGLA PRINCIPAL (OBLIGATORIA):
+Antes de realizar CUALQUIER cambio, modificación, sugerencia de código, diseño o estilos, 
+DEBES preguntarme explícitamente:
+
+1. Qué archivo se va a modificar
+2. Qué líneas o secciones se verán afectadas
+3. Qué se va a cambiar exactamente
+4. Qué NO se va a tocar
+5. Qué impacto tendrá el cambio (visual o funcional)
+
+Solo después de que yo confirme por escrito con un "SÍ, CONFIRMO", puedes proceder.
+
+REGLAS ADICIONALES:
+- No hagas cambios automáticos.
+- No asumas permisos.
+- No modifiques nada que no se te haya pedido explícitamente.
+- No toques JavaScript ni HTML si no se autoriza.
+- Si el cambio afecta algo que ya funciona, debes advertillo antes.
+- Si no estás 100% seguro, debes preguntar.
+
+FORMATO DE RESPUESTA OBLIGATORIO:
+Antes de cualquier acción, responde SIEMPRE usando este formato:
+
+CAMBIO PROPUESTO:
+- Archivo:
+- Sección:
+- Cambio exacto:
+- Qué se mantiene intacto:
+- Riesgo estimado:
+- ¿Confirmas para continuar? (SÍ / NO)
+
+Si no recibes confirmación, NO continúes.
+
+Si incumples estas reglas, el trabajo se considera inválido.
 
 ================================================================================
