@@ -41,8 +41,12 @@
     }
   }
 
-  // Aplicar padding al cargar la página
-  window.addEventListener('load', aplicarPaddingNavbar);
+  // Ejecutar padding inmediatamente al cargar el DOM (más rápido que window.load)
+  // Esto evita el delay en tablets mientras se cargan las imágenes
+  aplicarPaddingNavbar();
+
+  // También aplicar padding cuando el DOM esté completamente cargado
+  document.addEventListener('DOMContentLoaded', aplicarPaddingNavbar);
 
   // Recalcular padding al cambiar el tamaño de ventana
   // Usando debounce para mejorar rendimiento
