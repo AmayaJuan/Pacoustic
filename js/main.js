@@ -778,3 +778,158 @@ renderBanner();              // Renderizar banner
 renderProductos();           // Renderizar catálogo
 setupCatalogFilters();       // Configurar filtros
 initActiveMenuLink();       // Activar enlace de menú
+initMobileFilters();       // Inicializar filtros móviles
+
+// ========================================
+// FILTROS MÓVILES
+// ========================================
+
+/**
+ * Inicializa los controles de filtro para móvil
+ * Llena el selector de categorías móvil y configura eventos
+ */
+function initMobileFilters() {
+  // Llenar selector de categorías móvil
+  const mobileCategorySelect = document.getElementById('mobileCategorySelect');
+  const desktopCategorySelect = document.getElementById('catalogCategory');
+  
+  if (mobileCategorySelect && desktopCategorySelect) {
+    // Copiar opciones del selector de escritorio
+    mobileCategorySelect.innerHTML = desktopCategorySelect.innerHTML;
+  }
+}
+
+/**
+ * Alterna la visibilidad del panel de búsqueda móvil
+ */
+function toggleMobileSearch() {
+  const searchPanel = document.getElementById('mobileSearchPanel');
+  const filterPanel = document.getElementById('mobileFilterPanel');
+  
+  // Cerrar panel de filtros si está abierto
+  if (filterPanel && filterPanel.classList.contains('open')) {
+    filterPanel.classList.remove('open');
+  }
+  
+  // Alternar panel de búsqueda
+  if (searchPanel) {
+    searchPanel.classList.toggle('open');
+    // Enfocar input cuando se abre
+    if (searchPanel.classList.contains('open')) {
+      setTimeout(() => {
+        const searchInput = document.getElementById('mobileSearchInput');
+        if (searchInput) searchInput.focus();
+      }, 300);
+    }
+  }
+}
+
+/**
+ * Alterna la visibilidad del panel de filtros móvil
+ */
+function toggleMobileFilters() {
+  const filterPanel = document.getElementById('mobileFilterPanel');
+  const searchPanel = document.getElementById('mobileSearchPanel');
+  
+  // Cerrar panel de búsqueda si está abierto
+  if (searchPanel && searchPanel.classList.contains('open')) {
+    searchPanel.classList.remove('open');
+  }
+  
+  // Alternar panel de filtros
+  if (filterPanel) {
+    filterPanel.classList.toggle('open');
+  }
+}
+
+/**
+ * Aplica la búsqueda desde el panel móvil
+ */
+function applyMobileSearch() {
+  const mobileInput = document.getElementById('mobileSearchInput');
+  const desktopInput = document.getElementById('catalogSearch');
+  
+  if (mobileInput && desktopInput) {
+    // Sincronizar con el input del escritorio
+    desktopInput.value = mobileInput.value;
+    // Renderizar productos con el nuevo filtro
+    renderProductos();
+  }
+  
+  // Cerrar panel
+  toggleMobileSearch();
+  
+  // Scroll a productos
+  document.getElementById('productos').scrollIntoView({ behavior: 'smooth' });
+}
+
+/**
+ * Limpia la búsqueda desde el panel móvil
+ */
+function clearMobileSearch() {
+  const mobileInput = document.getElementById('mobileSearchInput');
+  const desktopInput = document.getElementById('catalogSearch');
+  
+  if (mobileInput) mobileInput.value = '';
+  if (desktopInput) desktopInput.value = '';
+  
+  // Renderizar productos sin filtro de búsqueda
+  renderProductos();
+  
+  // Cerrar panel
+  toggleMobileSearch();
+}
+
+/**
+ * Aplica el filtro de categoría desde el panel móvil
+ */
+function applyMobileFilters() {
+  const mobileSelect = document.getElementById('mobileCategorySelect');
+  const desktopSelect = document.getElementById('catalogCategory');
+  const filterBtn = document.getElementById('mobileFilterBtn');
+  
+  if (mobileSelect && desktopSelect) {
+    // Sincronizar con el selector del escritorio
+    desktopSelect.value = mobileSelect.value;
+    // Renderizar productos con el nuevo filtro
+    renderProductos();
+    
+    // Actualizar botón activo
+    if (filterBtn) {
+      if (mobileSelect.value) {
+        filterBtn.classList.add('active');
+      } else {
+        filterBtn.classList.remove('active');
+      }
+    }
+  }
+  
+  // Cerrar panel
+  toggleMobileFilters();
+  
+  // Scroll a productos
+  document.getElementById('productos').scrollIntoView({ behavior: 'smooth' });
+}
+
+/**
+ * Limpia los filtros de categoría desde el panel móvil
+ */
+function clearMobileFilters() {
+  const mobileSelect = document.getElementById('mobileCategorySelect');
+  const desktopSelect = document.getElementById('catalogCategory');
+  const filterBtn = document.getElementById('mobileFilterBtn');
+  
+  if (mobileSelect) mobileSelect.value = '';
+  if (desktopSelect) desktopSelect.value = '';
+  
+  // Quitar clase activa del botón
+  if (filterBtn) {
+    filterBtn.classList.remove('active');
+  }
+  
+  // Renderizar productos sin filtro
+  renderProductos();
+  
+  // Cerrar panel
+  toggleMobileFilters();
+}

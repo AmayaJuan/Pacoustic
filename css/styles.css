@@ -674,6 +674,8 @@ body[data-theme="light"] .prod-watermark {
 footer { background: var(--bg2); border-top: 1px solid var(--borde); padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
 .footer-logo img { height: 40px; object-fit: contain; }
 footer p { font-size: 0.72rem; color: var(--muted); }
+.footer-info { display: flex; flex-direction: column; align-items: flex-end; gap: 0.25rem; }
+.footer-credit { font-size: 0.75rem; color: var(--muted); opacity: 0.8; }
 
 /* ── MODAL ── */
 .modal-overlay { position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; padding: 1rem; }
@@ -918,4 +920,258 @@ body[data-theme="light"] .modal-watermark {
   .btn-rojo, .btn-outline { padding: 0.7rem 1.5rem; font-size: 0.85rem; }
   .banner-item { width: 150px; height: 110px; }
   .modal { max-width: 100%; border-radius: 12px; }
+  /* Modal improvements for small screens */
+  .modal-overlay { padding: 0.5rem; align-items: flex-start; }
+  .modal { max-height: 95vh; margin-top: 0.5rem; }
+  .modal-body { padding: 1rem; gap: 1rem; }
+  .modal-header { padding: 0.75rem 1rem; }
+  .modal-titulo { font-size: 1.2rem; }
+  .modal-nombre { font-size: 1.4rem; }
+  .modal-desc { font-size: 0.75rem; }
+  .modal-tabla { font-size: 0.65rem; }
+  .modal-tabla td { padding: 0.35rem 0.4rem; }
+  .modal-img-main { aspect-ratio: 16/10; }
+  .modal-img-thumbs { gap: 0.5rem; }
+  .modal-thumb { width: 56px; height: 56px; }
+  .modal-apps h4 { font-size: 0.75rem; }
+  .modal-apps li { font-size: 0.65rem; }
+  .modal-wp { padding: 0.7rem; font-size: 0.85rem; }
+  .modal-wp svg { width: 16px; height: 16px; }
+}
+
+/* Extra extra small devices */
+@media (max-width: 360px) {
+  .modal-body { padding: 0.75rem; }
+  .modal-badge { font-size: 0.55rem; padding: 0.2rem 0.5rem; }
+  .modal-cat { font-size: 0.6rem; }
+  .modal-nombre { font-size: 1.2rem; }
+  .productos-grid { gap: 1rem; }
+  .sec { padding: 2rem 0.75rem; }
+  .sec-alt { padding: 2rem 0.75rem; }
+}
+
+/* Mobile catalog controls - Botones de filtro en movil */
+.mobile-catalog-controls {
+  display: none;
+  position: fixed;
+  bottom: 5rem;
+  left: 0;
+  right: 0;
+  padding: 0.75rem 1rem;
+  background: var(--bg2);
+  border-top: 1px solid var(--borde);
+  z-index: 150;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.mobile-filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.25rem;
+  background: var(--bg3);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  color: var(--texto);
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+  max-width: 160px;
+}
+
+.mobile-filter-btn:hover {
+  border-color: var(--rojo);
+  color: var(--rojo);
+}
+
+.mobile-filter-btn.active {
+  background: var(--rojo);
+  border-color: var(--rojo);
+  color: white;
+}
+
+/* Mobile filter dropdown panel */
+.mobile-filter-panel {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg);
+  z-index: 300;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.mobile-filter-panel.open {
+  display: block;
+  animation: fadeUp 0.3s ease;
+}
+
+.mobile-filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--borde);
+}
+
+.mobile-filter-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--titulo);
+}
+
+.mobile-filter-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--borde);
+  background: transparent;
+  color: var(--texto);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-filter-close:hover {
+  border-color: var(--rojo);
+  color: var(--rojo);
+}
+
+.mobile-search-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: var(--bg3);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  color: var(--texto);
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.mobile-search-input:focus {
+  outline: none;
+  border-color: var(--rojo);
+}
+
+.mobile-search-input::placeholder {
+  color: var(--muted);
+}
+
+.mobile-category-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.mobile-category-select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: var(--bg3);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  color: var(--texto);
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238b9bb4' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+}
+
+.mobile-category-select:focus {
+  outline: none;
+  border-color: var(--rojo);
+}
+
+.mobile-filter-apply {
+  width: 100%;
+  padding: 0.85rem;
+  background: var(--rojo);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobile-filter-apply:hover {
+  background: var(--rojo2);
+}
+
+.mobile-filter-clear {
+  width: 100%;
+  padding: 0.85rem;
+  background: transparent;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  color: var(--muted);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.mobile-filter-clear:hover {
+  border-color: var(--rojo);
+  color: var(--rojo);
+}
+
+/* Show mobile controls on small screens */
+@media (max-width: 768px) {
+  .mobile-catalog-controls {
+    display: flex;
+  }
+  footer {
+    padding-bottom: 5rem;
+  }
+  .wp-float {
+    bottom: 5.5rem;
+  }
+}
+
+/* Better touch targets in mobile */
+@media (max-width: 768px) {
+  .prod-card {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .prod-btn {
+    padding: 0.55rem 1rem;
+    min-height: 36px;
+  }
+  .banner-wrap {
+    padding: 1.25rem 0;
+  }
+  .banner-item {
+    cursor: pointer;
+  }
+  .hero-btns a {
+    min-height: 44px;
+    -webkit-tap-highlight-color: transparent;
+  }
 }

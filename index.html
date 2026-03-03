@@ -107,6 +107,47 @@
 </nav>
 
 <!-- ========================================
+     CONTROLES DE CATÁLOGO PARA MÓVIL
+     Botones flotantes de búsqueda y filtro
+     que aparecen solo en dispositivos móviles
+     ======================================== -->
+<div class="mobile-catalog-controls" id="mobileCatalogControls">
+  <button type="button" class="mobile-filter-btn" id="mobileSearchBtn" onclick="toggleMobileSearch()">
+    <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+    Buscar
+  </button>
+  <button type="button" class="mobile-filter-btn" id="mobileFilterBtn" onclick="toggleMobileFilters()">
+    <svg viewBox="0 0 24 24"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/></svg>
+    Filtrar
+  </button>
+</div>
+
+<!-- Panel de búsqueda móvil -->
+<div class="mobile-filter-panel" id="mobileSearchPanel">
+  <div class="mobile-filter-header">
+    <div class="mobile-filter-title">Buscar Productos</div>
+    <button class="mobile-filter-close" onclick="toggleMobileSearch()">✕</button>
+  </div>
+  <input type="search" id="mobileSearchInput" class="mobile-search-input" placeholder="Escribe para buscar..." autocomplete="off" aria-label="Buscar productos"/>
+  <button type="button" class="mobile-filter-apply" onclick="applyMobileSearch()">Buscar</button>
+  <button type="button" class="mobile-filter-clear" onclick="clearMobileSearch()">Limpiar</button>
+</div>
+
+<!-- Panel de filtros móvil -->
+<div class="mobile-filter-panel" id="mobileFilterPanel">
+  <div class="mobile-filter-header">
+    <div class="mobile-filter-title">Filtrar por Categoría</div>
+    <button class="mobile-filter-close" onclick="toggleMobileFilters()">✕</button>
+  </div>
+  <div class="mobile-category-label">Selecciona una categoría</div>
+  <select id="mobileCategorySelect" class="mobile-category-select">
+    <option value="">Todas las categorías</option>
+  </select>
+  <button type="button" class="mobile-filter-apply" onclick="applyMobileFilters()">Aplicar Filtro</button>
+  <button type="button" class="mobile-filter-clear" onclick="clearMobileFilters()">Mostrar Todos</button>
+</div>
+
+<!-- ========================================
      SECCIÓN HERO
      Sección principal de bienvenida con:
      - Imagen de fondo
@@ -284,7 +325,10 @@
      ======================================== -->
 <footer>
   <div class="footer-logo"><img src="img/logo.jpg" alt="PA Acoustic"/></div>
-  <p>© 2026 PA Acoustic — Audio Profesional Medellin - Colombia 🇨🇴</p>
+  <div class="footer-info">
+    <p>© 2026 PA Acoustic — Audio Profesional Medellin - Colombia 🇨🇴</p>
+    <p class="footer-credit">Desarrollado por Juan Pablo Vélez · Web Developer</p>
+  </div>
 </footer>
 
 <!-- ========================================
