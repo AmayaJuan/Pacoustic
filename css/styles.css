@@ -820,14 +820,15 @@ body[data-theme="light"] .modal-watermark {
 
 /* Tablet: 769px - 1024px */
 @media (max-width: 1024px) {
-  nav { padding: 1rem 2rem; }
-  .nav-logo img { height: 44px; }
+  nav { padding: 1.2rem 2rem; }
+  .nav-logo img { height: 48px; }
   .nav-logo { cursor: pointer; }
-  .nav-links { gap: 1.5rem; }
-  .nav-links a { font-size: 0.8rem; }
+  .nav-links { gap: 2rem; }
+  .nav-links a { font-size: 0.85rem; }
+  .hero { padding: 8rem 2.5rem 5rem; }
   .sec, .sec-alt { padding: 4rem 2rem; }
   .nos-grid, .con-grid { gap: 3rem; }
-  .productos-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+  .productos-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 2rem; }
 }
 
 /* Mobile: 768px and below */
