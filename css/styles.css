@@ -829,6 +829,8 @@ body[data-theme="light"] .modal-watermark {
   .sec, .sec-alt { padding: 4rem 2rem; }
   .nos-grid, .con-grid { gap: 3rem; }
   .productos-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 2rem; }
+  /* WhatsApp flotante visible en tablet */
+  .wp-float { display: flex; bottom: 2rem; right: 2rem; }
 }
 
 /* Mobile: 768px and below */
