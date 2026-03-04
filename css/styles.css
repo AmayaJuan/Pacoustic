@@ -878,7 +878,11 @@ body[data-theme="light"] .modal-watermark {
 
 /* Mobile: 768px and below */
 @media (max-width: 768px) {
-  nav { padding: 0.8rem 1.5rem; }
+  nav { 
+    padding: 0.8rem 1.5rem; 
+    position: sticky;
+    top: 0;
+  }
   
   /* Show hamburger */
   .nav-hamburger { display: flex; }
