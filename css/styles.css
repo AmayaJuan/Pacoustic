@@ -828,15 +828,11 @@ body[data-theme="light"] .modal-watermark {
 
 /* Tablet: 769px - 1024px */
 @media (max-width: 1024px) {
-  /* Navbar - ajustar para que no se desborde */
+  /* Navbar - ajustar para que no se desborde sin romper sticky */
   nav { 
     padding: 0.8rem 1rem; 
-    overflow-x: auto;
+    overflow-x: visible;
     white-space: nowrap;
-    scrollbar-width: none;
-  }
-  nav::-webkit-scrollbar {
-    display: none;
   }
   .nav-logo img { height: 40px; }
   .nav-logo { flex-shrink: 0; }
@@ -1220,6 +1216,9 @@ body[data-theme="light"] .modal-watermark {
 
 /* Show mobile controls on small screens */
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   .mobile-catalog-controls {
     display: flex;
   }
