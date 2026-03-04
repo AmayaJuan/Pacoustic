@@ -10,6 +10,8 @@ Sitio web oficial de **PA Acoustic**, empresa especializada en equipos de audio 
 
 | Fecha | Cambios | Archivos Afectados |
 |-------|---------|-------------------|
+| 04/03/2026 | Corregir filtrado catálogo - mensaje "sin resultados" solo cuando hay filtros activos Y no hay productos | js/main.js |
+| 04/03/2026 | Corregir navbar sticky en móvil - agregar z-index 250 para superposición correcta | css/styles.css |
 | 05/03/2026 | Corregir navbar sticky en móvil/tablet - agregar position:sticky explícito en media query móvil | css/styles.css |
 | 03/03/2026 | Separar selectores de categoría desktop/móvil - nunca se ven ambos al mismo tiempo | css/styles.css |
 | 03/03/2026 | Corregir navbar sticky que no seguía al hacer scroll - cambiar overflow body de hidden a clip | css/styles.css |

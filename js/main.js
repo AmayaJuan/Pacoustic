@@ -466,7 +466,16 @@ function renderProductos() {
   const grid = document.getElementById('productosGrid');
   if (!grid) return;
 
-  if (filtered.length === 0) {
+  // Obtener valores de los filtros activos
+  const searchEl = document.getElementById('catalogSearch');
+  const categoryEl = document.getElementById('catalogCategory');
+  const query = (searchEl && searchEl.value) ? searchEl.value.trim() : '';
+  const category = (categoryEl && categoryEl.value) ? categoryEl.value.trim() : '';
+  
+  // Solo mostrar mensaje de "sin resultados" si hay filtros activos Y no hay productos
+  const hayFiltrosActivos = query !== '' || category !== '';
+  
+  if (filtered.length === 0 && hayFiltrosActivos) {
     grid.innerHTML = `
       <div class="catalog-empty" style="grid-column:1/-1;text-align:center;padding:3rem 2rem;background:var(--bg3);border:1px solid var(--borde);border-radius:12px;">
         <p style="font-size:1rem;color:var(--texto);margin-bottom:.5rem;">No hay productos con los filtros seleccionados.</p>
