@@ -157,3 +157,24 @@ Además, debe:
 No se debe dar una tarea por concluida sin esta confirmación explícita.
 
 ================================================================================
+POLÍTICA DE ACTUALIZACIÓN DEL README (OBLIGATORIO)
+================================================================================
+Cada vez que se realice un cambio, modificación o actualización en el código del proyecto,
+DEBE actualizarse el archivo README.md para reflejar los cambios realizados.
+
+Reglas obligatorias:
+1. Incluir una sección de "Historial de cambios" o "Última actualización" en el README.
+2. Documentar qué archivos fueron modificados.
+3. Describir brevemente el cambio realizado.
+4. Actualizar la fecha de la última modificación.
+5. Si se agregan nuevas características, añadirlas a la sección correspondiente.
+6. Si se corrigen errores, documentar qué error se corrigió.
+
+Esta política asegura que el README.md siempre esté sincronizado con el estado actual del proyecto.
+
+Ejemplo de formato de entrada:
+- Fecha: [DD/MM/AAAA]
+- Cambios: [Descripción breve]
+- Archivos afectados: [Lista de archivos]
+
+================================================================================

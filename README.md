@@ -6,6 +6,15 @@ Sitio web oficial de **PA Acoustic**, empresa especializada en equipos de audio 
 
 ---
 
+## 📋 Historial de Cambios
+
+| Fecha | Cambios | Archivos Afectados |
+|-------|---------|-------------------|
+| 17/01/2025 | Corrección bug variable WP undefined en modal + creación inicial README | js/main.js, README.md |
+| 17/01/2025 | Agregada política de actualización del README en PROJECT_RULES.txt | PROJECT_RULES.txt |
+
+---
+
 ## 📋 Descripción
 
 Sitio web de comercio electrónico/catálogo para una empresa de audio profesional que incluye:
