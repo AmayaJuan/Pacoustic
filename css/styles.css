@@ -77,6 +77,7 @@ body[data-theme="light"] .hero-grid {
 /* Navegación en modo claro */
 body[data-theme="light"] nav {
   box-shadow: 0 2px 12px rgba(13, 27, 42, 0.08);
+  background: rgba(240, 245, 249, 0.95);
 }
 
 /* Tarjetas de productos en modo claro */
@@ -254,6 +255,11 @@ body[data-theme="light"] .prod-img-wrap {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Mobile category selector - hidden by default on desktop */
+.nav-category-mobile {
+  display: none;
+}
+
 .nav-category-select:hover {
   border-color: var(--rojo);
   transform: translateY(-1px);
@@ -346,14 +352,11 @@ body[data-theme="light"] .nav-category-select option:hover {
 
 /* ── NAV ── */
 nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  position: sticky; top: 0; left: 0; right: 0; z-index: 200;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0.8rem 3rem;
   background: rgba(5,7,9,0.96); backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--borde);
-}
-body[data-theme="light"] nav {
-  background: rgba(240, 245, 249, 0.95);
 }
 .nav-logo img { height: 48px; object-fit: contain; }
 .nav-links { display: flex; gap: 2rem; list-style: none; }
@@ -499,13 +502,12 @@ body[data-theme="light"] nav {
 body[data-theme="light"] .theme-toggle {
   background: rgba(255,255,255,0.9);
   border-color: rgba(148,163,184,0.8);
+  color: #1a1a2e;
 }
 body[data-theme="light"] .theme-toggle:hover {
   background: #fce4e7;
-  color: var(--rojo);
-}
-body[data-theme="light"] .theme-toggle {
-  color: var(--texto);
+  border-color: #c41e3a;
+  color: #c41e3a;
 }
 .nav-wp { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem; background: var(--wp); color: white; border-radius: 6px; text-decoration: none; font-size: 0.8rem; font-weight: 700; transition: all .2s; }
 .nav-wp:hover { background: #1db954; box-shadow: 0 0 20px rgba(37,211,102,0.4); }
@@ -515,7 +517,7 @@ body[data-theme="light"] .theme-toggle {
 .nav-wp-mobile { display: none; }
 
 /* ── HERO ── */
-.hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 7rem 3rem 4rem; }
+.hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 6rem 3rem 4rem; }
 .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 65% 50%, rgba(196, 30, 58, 0.06) 0%, transparent 65%); }
 .hero-grid {
   position: absolute; inset: 0;
@@ -804,7 +806,7 @@ body[data-theme="light"] .modal-watermark {
   background: var(--rojo);
 }
 
-/* Mobile menu overlay */
+/* Mobile menu overlay - hidden by default on desktop/tablet */
 .nav-mobile-overlay {
   display: none;
   position: fixed;
@@ -812,11 +814,14 @@ body[data-theme="light"] .modal-watermark {
   background: rgba(0, 0, 0, 0.8);
   z-index: 199;
   opacity: 0;
-  transition: opacity .3s ease;
+  visibility: hidden;
+  transition: opacity .3s ease, visibility .3s ease;
 }
 
 .nav-mobile-overlay.open {
+  display: block;
   opacity: 1;
+  visibility: visible;
 }
 
 /* ── RESPONSIVE ── */
@@ -867,7 +872,7 @@ body[data-theme="light"] .modal-watermark {
     font-size: 0.7rem;
   }
   
-  .hero { padding: 8rem 2rem 5rem; }
+  .hero { padding: 5rem 2rem 3rem; }
   .sec, .sec-alt { padding: 4rem 2rem; }
   .nos-grid, .con-grid { gap: 3rem; }
   .productos-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 2rem; }
@@ -921,23 +926,28 @@ body[data-theme="light"] .modal-watermark {
   
   .nav-links a::after { display: none; }
   
-/* Hide desktop controls */
+  /* Hide desktop controls */
   .nav-catalog-controls { display: none; }
+  .nav-category-select { display: none; }
+  .nav-category-mobile { display: block; }
   .theme-toggle { margin-right: 0.5rem; display: inline-flex; }
   .nav-wp { display: none; }
   .nav-logo { cursor: pointer; }
   
   /* WhatsApp dentro del menú hamburguesa */
-  .nav-wp-mobile { display: block; }
+  .nav-wp-mobile { 
+    display: block; 
+  }
   .nav-wp-mobile a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 0;
-    color: var(--wp);
+    color: var(--wp) !important;
     font-weight: 600;
     border-top: 1px solid var(--borde);
     margin-top: 0.5rem;
+    text-decoration: none;
   }
   .nav-wp-mobile svg {
     width: 20px;
@@ -945,51 +955,34 @@ body[data-theme="light"] .modal-watermark {
     fill: var(--wp);
   }
   
+  /* Mostrar todos los elementos del menú en móvil */
+  .nav-links li {
+    display: block !important;
+  }
+  
   /* Sections */
   .sec, .sec-alt { padding: 3rem 1.5rem; }
-  .hero { padding: 5rem 1.5rem 2.5rem; }
+  .hero { padding: 4rem 1.5rem 2.5rem; }
   .hero-content { max-width: 100%; }
   .hero-titulo { font-size: clamp(2rem, 8vw, 3rem); }
   .hero-sub { font-size: 0.9rem; }
   .hero-btns { flex-direction: column; }
   .hero-btns a { width: 100%; justify-content: center; }
   
-  /* Grids */
-  .nos-grid, .con-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .productos-grid { grid-template-columns: 1fr; gap: 1.25rem; }
-  
-  /* Modal */
-  .modal-body { grid-template-columns: 1fr; padding: 1.5rem; }
-  .modal-header { padding: 1rem 1.5rem; }
-  
-  /* Banner */
-  .banner-item { width: 180px; height: 130px; }
-  
-  /* Footer */
-  footer { padding: 2rem 1.5rem; flex-direction: column; text-align: center; gap: 1.5rem; }
-  
-  /* WP Float - adjust position */
-  .wp-float { bottom: 1.5rem; right: 1.5rem; width: 50px; height: 50px; }
-  .wp-float svg { width: 24px; height: 24px; }
-}
-
-/* Extra small devices */
-@media (max-width: 480px) {
+  /* Extra small adjustments */
   .nav-logo img { height: 40px; }
-  .nav-logo { cursor: pointer; }
-  .hero { padding: 4.5rem 1rem 2rem; }
   .hero-logo-img { height: 60px; }
   .hero-tag { font-size: 0.6rem; padding: 0.25rem 0.75rem; }
-  .sec, .sec-alt { padding: 2.5rem 1rem; }
   .sec-titulo { font-size: 1.6rem; margin-bottom: 1.5rem; }
   .nos-titulo, .con-titulo { font-size: 1.6rem; }
   .btn-rojo, .btn-outline { padding: 0.7rem 1.5rem; font-size: 0.85rem; }
   .banner-item { width: 150px; height: 110px; }
+  
+  /* Modal */
   .modal { max-width: 100%; border-radius: 12px; }
-  /* Modal improvements for small screens */
   .modal-overlay { padding: 0.5rem; align-items: flex-start; }
   .modal { max-height: 95vh; margin-top: 0.5rem; }
-  .modal-body { padding: 1rem; gap: 1rem; }
+  .modal-body { grid-template-columns: 1fr; padding: 1rem; gap: 1rem; }
   .modal-header { padding: 0.75rem 1rem; }
   .modal-titulo { font-size: 1.2rem; }
   .modal-nombre { font-size: 1.4rem; }
@@ -1003,9 +996,27 @@ body[data-theme="light"] .modal-watermark {
   .modal-apps li { font-size: 0.65rem; }
   .modal-wp { padding: 0.7rem; font-size: 0.85rem; }
   .modal-wp svg { width: 16px; height: 16px; }
+  
+  /* Grids */
+  .nos-grid, .con-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .productos-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  
+  /* Footer */
+  footer { padding: 2rem 1.5rem 5rem; flex-direction: column; text-align: center; gap: 1.5rem; }
+  
+  /* WP Float - adjust position */
+  .wp-float { bottom: 5.5rem; right: 1.5rem; width: 50px; height: 50px; }
+  .wp-float svg { width: 24px; height: 24px; }
+  
+  /* Touch targets */
+  .prod-card { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .prod-btn { padding: 0.55rem 1rem; min-height: 36px; }
+  .banner-wrap { padding: 1.25rem 0; }
+  .banner-item { cursor: pointer; }
+  .hero-btns a { min-height: 44px; -webkit-tap-highlight-color: transparent; }
 }
 
-/* Extra extra small devices */
+/* Extra small devices */
 @media (max-width: 360px) {
   .modal-body { padding: 0.75rem; }
   .modal-badge { font-size: 0.55rem; padding: 0.2rem 0.5rem; }
@@ -1016,24 +1027,7 @@ body[data-theme="light"] .modal-watermark {
   .sec-alt { padding: 2rem 0.75rem; }
 }
 
-/* --------------------------------------------------
-   Orientation-specific tweaks
-   - fixes for tablet held in portrait mode
-   -------------------------------------------------- */
-@media (max-width: 768px) and (orientation: portrait) {
-  /* slightly tighter padding to avoid nav overlap */
-  nav { padding: 0.6rem 1.2rem; }
-  .hero { padding-top: 4rem; }
-  .nav-links a { font-size: 0.95rem; }
-  /* Keep WP button hidden in portrait mobile */
-  /* .nav-wp { display: flex; padding: 0.4rem 0.8rem; font-size: 0.7rem; } */
-  /* .nav-wp svg { width: 14px; height: 14px; } */
-  /* Keep WP button in bounds on portrait - reduce spacing */
-  .wp-float { bottom: 1rem; right: 1rem; width: 48px; height: 48px; }
-  .wp-float svg { width: 22px; height: 22px; }
-}
-
-/* Mobile catalog controls - Botones de filtro en movil */
+/* Mobile catalog controls */
 .mobile-catalog-controls {
   display: none;
   position: fixed;

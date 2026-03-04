@@ -79,6 +79,12 @@
     <li><a href="#productos" class="nav-link" onclick="handleNavClick(event, 'productos')">Productos</a></li>
     <li><a href="#nosotros" class="nav-link" onclick="handleNavClick(event, 'nosotros')">Nosotros</a></li>
     <li><a href="#contacto" class="nav-link" onclick="handleNavClick(event, 'contacto')">Contacto</a></li>
+    <!-- Selector de categorías en menú móvil -->
+    <li class="nav-category-mobile">
+      <select id="mobileCategoryInMenu" class="nav-category-select-mobile" onchange="handleMobileCategoryChange(this)">
+        <option value="">Todas las categorías</option>
+      </select>
+    </li>
     <li class="nav-wp-mobile"><a href="https://wa.me/573053402732?text=Hola,%20quiero%20más%20información" target="_blank">
       <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       WhatsApp
@@ -121,47 +127,6 @@
 </nav>
 
 <!-- ========================================
-     CONTROLES DE CATÁLOGO PARA MÓVIL
-     Botones flotantes de búsqueda y filtro
-     que aparecen solo en dispositivos móviles
-     ======================================== -->
-<div class="mobile-catalog-controls" id="mobileCatalogControls">
-  <button type="button" class="mobile-filter-btn" id="mobileSearchBtn" onclick="toggleMobileSearch()">
-    <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-    Buscar
-  </button>
-  <button type="button" class="mobile-filter-btn" id="mobileFilterBtn" onclick="toggleMobileFilters()">
-    <svg viewBox="0 0 24 24"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/></svg>
-    Filtrar
-  </button>
-</div>
-
-<!-- Panel de búsqueda móvil -->
-<div class="mobile-filter-panel" id="mobileSearchPanel">
-  <div class="mobile-filter-header">
-    <div class="mobile-filter-title">Buscar Productos</div>
-    <button class="mobile-filter-close" onclick="toggleMobileSearch()">✕</button>
-  </div>
-  <input type="search" id="mobileSearchInput" class="mobile-search-input" placeholder="Escribe para buscar..." autocomplete="off" aria-label="Buscar productos"/>
-  <button type="button" class="mobile-filter-apply" onclick="applyMobileSearch()">Buscar</button>
-  <button type="button" class="mobile-filter-clear" onclick="clearMobileSearch()">Limpiar</button>
-</div>
-
-<!-- Panel de filtros móvil -->
-<div class="mobile-filter-panel" id="mobileFilterPanel">
-  <div class="mobile-filter-header">
-    <div class="mobile-filter-title">Filtrar por Categoría</div>
-    <button class="mobile-filter-close" onclick="toggleMobileFilters()">✕</button>
-  </div>
-  <div class="mobile-category-label">Selecciona una categoría</div>
-  <select id="mobileCategorySelect" class="mobile-category-select">
-    <option value="">Todas las categorías</option>
-  </select>
-  <button type="button" class="mobile-filter-apply" onclick="applyMobileFilters()">Aplicar Filtro</button>
-  <button type="button" class="mobile-filter-clear" onclick="clearMobileFilters()">Mostrar Todos</button>
-</div>
-
-<!-- ========================================
      SECCIÓN HERO
      Sección principal de bienvenida con:
      - Imagen de fondo
@@ -198,33 +163,6 @@
      ======================================== -->
 <div class="banner-wrap">
   <div class="banner-track" id="bannerTrack"></div>
-</div>
-
-<!-- ========================================
-     SECCIÓN DE MARCAS
-     Barra horizontal con nombres de productos
-     y categorías que se desplaza automáticamente
-     ======================================== -->
-<div class="marcas-wrap">
-  <div class="marcas-track">
-    <span class="marca-item">PA HL-30A</span>
-    <span class="marca-item">PA HL-10A</span>
-    <span class="marca-item">PA10N-900</span>
-    <span class="marca-item">LF18X401+</span>
-    <span class="marca-item">18LW2420+</span>
-    <span class="marca-item">Line Array</span>
-    <span class="marca-item">Woofer 18"</span>
-    <span class="marca-item">Neodymium</span>
-    <!-- Duplicado para efecto de scroll infinito -->
-    <span class="marca-item">PA HL-30A</span>
-    <span class="marca-item">PA HL-10A</span>
-    <span class="marca-item">PA10N-900</span>
-    <span class="marca-item">LF18X401+</span>
-    <span class="marca-item">18LW2420+</span>
-    <span class="marca-item">Line Array</span>
-    <span class="marca-item">Woofer 18"</span>
-    <span class="marca-item">Neodymium</span>
-  </div>
 </div>
 
 <!-- ========================================
@@ -387,11 +325,9 @@
 <script src="js/main.js"></script>
 
 <!-- ========================================
-     SCRIPT FIX NAVBAR
-     Solución dinámica que calcula automáticamente
-     la altura del navbar y aplica padding al body
-     para evitar contenido oculto en tablets/móviles
+     SCRIPT FIX NAVBAR (ya no necesario con position: sticky)
+     El espacio superior se maneja con padding del .hero en CSS
      ======================================== -->
-<script src="js/navbar-fix.js"></script>
+<!-- <script src="js/navbar-fix.js"></script> -->
 </body>
 </html>

@@ -421,12 +421,21 @@ function getUniqueCategories() {
  */
 function fillCategorySelect() {
   const sel = document.getElementById('catalogCategory');
-  if (!sel) return;
-  const current = sel.value;
+  const mobileSel = document.getElementById('mobileCategoryInMenu');
+  const current = sel ? sel.value : '';
   const categories = getUniqueCategories();
-  sel.innerHTML = '<option value="">Todas las categorías</option>' +
+  
+  const optionsHTML = '<option value="">Todas las categorías</option>' +
     categories.map(c => `<option value="${escapeAttr(c)}">${escapeHtml(c)}</option>`).join('');
-  if (categories.includes(current)) sel.value = current;
+  
+  if (sel) {
+    sel.innerHTML = optionsHTML;
+    if (categories.includes(current)) sel.value = current;
+  }
+  
+  if (mobileSel) {
+    mobileSel.innerHTML = optionsHTML;
+  }
 }
 
 /**
@@ -517,6 +526,7 @@ function setupCatalogFilters() {
   
   const searchEl = document.getElementById('catalogSearch');
   const categoryEl = document.getElementById('catalogCategory');
+  const mobileCategoryEl = document.getElementById('mobileCategoryInMenu');
   const searchBox = document.getElementById('navSearchBox');
   const searchTrigger = document.getElementById('navSearchTrigger');
 
@@ -527,6 +537,13 @@ function setupCatalogFilters() {
   }
   
   if (categoryEl) categoryEl.addEventListener('change', function() {
+    renderProductos();
+    document.getElementById('productos').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  // Evento para el selector de categorías en menú móvil
+  if (mobileCategoryEl) mobileCategoryEl.addEventListener('change', function() {
+    if (categoryEl) categoryEl.value = mobileCategoryEl.value;
     renderProductos();
     document.getElementById('productos').scrollIntoView({ behavior: 'smooth' });
   });
