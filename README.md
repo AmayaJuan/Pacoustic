@@ -10,6 +10,7 @@ Sitio web oficial de **PA Acoustic**, empresa especializada en equipos de audio 
 
 | Fecha | Cambios | Archivos Afectados |
 |-------|---------|-------------------|
+| 14/03/2026 | Refactorizar SVG de WhatsApp - definir símbolo reutilizable una sola vez y usar <use> en los 5 enlaces | index.html |
 | 08/03/2026 | Agregar atributos aria-label y aria-labelledby en nav y sections - mejorar accesibilidad para lectores de pantalla | index.html |
 | 11/03/2026 | Agregar variables de sombra para tema oscuro en :root - evitan que sombras fallen en modo oscuro | css/styles.css |
 | 06/03/2026 | Agregar escapeHtml() en renderProductos() - prevenir XSS en badge, cat, nombre y desc del catálogo | js/main.js |

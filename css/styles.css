@@ -570,7 +570,17 @@ body[data-theme="light"] .theme-toggle:hover {
 
 /* ── PRODUCTOS ── */
 .productos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 1.5rem; }
-.prod-card { background: var(--bg3); border: 1px solid var(--borde); border-radius: 12px; overflow: hidden; cursor: pointer; transition: all .3s; }
+/* Tarjeta de producto con animación controlada por variable CSS */
+.prod-card {
+  background: var(--bg3); /* Color de fondo de la tarjeta */
+  border: 1px solid var(--borde); /* Borde con color del tema */
+  border-radius: 12px; /* Bordes redondeados */
+  overflow: hidden; /* Ocultar contenido que se desborde */
+  cursor: pointer; /* Cursor de mano al pasar por encima */
+  transition: all .3s; /* Transición suave para hover */
+  opacity: 0; /* Inicialmente invisible para la animación */
+  animation: fadeUp .6s ease forwards var(--card-delay, 0s); /* Animación con delay por variable */
+}
 .prod-card:hover { border-color: rgba(196, 30, 58, 0.5); transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
 .prod-img-wrap { aspect-ratio: 4/3; background: linear-gradient(135deg,#0d1218,#141c28); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
 .prod-img-wrap img { width: 100%; height: 100%; object-fit: contain; padding: 1rem; transition: transform .4s; }

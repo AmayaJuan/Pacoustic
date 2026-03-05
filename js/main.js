@@ -506,7 +506,7 @@ function renderProductos() {
     
     grouped[cat].forEach((p) => {
       html += `
-        <div class="prod-card" style="opacity:0;animation:fadeUp .6s ease forwards ${delay * 0.07}s" onclick="abrirModal('${p.id}')">
+<div class="prod-card" style="--card-delay: ${delay * 0.07}s" onclick="abrirModal('${p.id}')">
           <div class="prod-img-wrap">
             <img src="${p.imgs[0]}" alt="${p.nombre}"/>
             ${p.watermark ? `<img src="${p.watermark}" alt="" class="prod-watermark"/>` : ''}
