@@ -510,12 +510,16 @@ function renderProductos() {
           <div class="prod-img-wrap">
             <img src="${p.imgs[0]}" alt="${p.nombre}"/>
             ${p.watermark ? `<img src="${p.watermark}" alt="" class="prod-watermark"/>` : ''}
-            <span class="prod-badge">${p.badge}</span>
+            <!-- Escapar el badge para evitar inyección de código malicioso -->
+            <span class="prod-badge">${escapeHtml(p.badge)}</span>
           </div>
           <div class="prod-body">
-            <div class="prod-cat">${p.cat}</div>
-            <div class="prod-nombre">${p.nombre}</div>
-            <div class="prod-desc">${p.desc}</div>
+            <!-- Escapar la categoría para mostrarla de forma segura -->
+            <div class="prod-cat">${escapeHtml(p.cat)}</div>
+            <!-- Escapar el nombre del producto para evitar XSS -->
+            <div class="prod-nombre">${escapeHtml(p.nombre)}</div>
+            <!-- Escapar la descripción para mostrarla de forma segura -->
+            <div class="prod-desc">${escapeHtml(p.desc)}</div>
             <div class="prod-specs">${p.tags.map(t => `<span class="spec-tag">${t}</span>`).join('')}</div>
             <div class="prod-footer">
               <span style="font-size:0.65rem;color:var(--muted)">Click para ver ficha</span>

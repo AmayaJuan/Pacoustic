@@ -23,6 +23,12 @@
   --blanco: #ffffff;      /* Blanco puro */
   --wp:     #25d366;      /* Color WhatsApp */
   --accent-glow: rgba(255, 45, 85, 0.4); /* Efecto glow rojo */
+
+  /* Variables de sombra para el tema oscuro (valores por defecto) */
+  /* Sin estos valores, las sombras fallan silenciosamente en modo oscuro */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3); /* Sombra pequeña para elementos sutiles */
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4); /* Sombra mediana para tarjetas */
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5); /* Sombra grande para modales */
 }
 
 /* Light theme overrides - Nueva paleta de colores profesional para modo claro */
