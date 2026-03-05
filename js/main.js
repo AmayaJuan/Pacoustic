@@ -627,6 +627,8 @@ function abrirModal(id) {
 
   document.getElementById('modalTitulo').textContent = p.nombre;
   document.getElementById('modalImgMain').src = p.imgs[0];
+  /* Asignar texto descriptivo al alt de la imagen para lectores de pantalla */
+  document.getElementById('modalImgMain').alt = 'Imagen de ' + p.nombre;
 
   document.getElementById('modalThumbs').innerHTML = p.imgs.map((img, i) => `
     <div class="modal-thumb ${i === 0 ? 'active' : ''}" onclick="cambiarImg('${img}', this)">
