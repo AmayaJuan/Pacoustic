@@ -10,32 +10,20 @@ Sitio web oficial de **PA Acoustic**, empresa especializada en equipos de audio 
 
 | Fecha | Cambios | Archivos Afectados |
 |-------|---------|-------------------|
-| 06/03/2026 | Auditoría técnica completa del proyecto - Análisis de código, políticas y cumplimiento. Puntaje: 92.5/100. Cumplimiento total de políticas estrictas | ANALISIS.md, README.md |
-| 06/03/2026 | Corregir sistemas de búsqueda duplicados en navbar desktop - Ocultar sistema antiguo (dentro .nav-links) con CSS, mantener solo sistema moderno en .nav-catalog-controls | css/styles.css, ANALISIS.md, README.md |
-| 05/03/2026 | Agregar 2 nuevos productos al catálogo: PA8N-600 (Woofer 8" Neodimio) y PA12N-1000 (Woofer 12" Neodimio). Actualización automática del banner carrusel con las nuevas imágenes | js/main.js, README.md |
-| 05/03/2026 | Análisis completo del código - Verificación de HTML, CSS y JavaScript. Código funcionando correctamente | index.html, css/styles.css, js/main.js |
-| 03/03/2026 | Corregir navegación - función handleNavClick solo cierra menú móvil si está abierto, evitando bloqueo de pantalla | js/main.js |
-| 02/03/2026 | Agregar focus trap al modal - mantener foco dentro del modal al presionar Tab y restaurar foco al cerrar | js/main.js |
-| 01/03/2026 | Agregar texto descriptivo al atributo alt de imagen principal del modal al abrirlo - mejorar accesibilidad | js/main.js |
-| 28/02/2026 | Triplicar items del carrusel en renderBanner() - evitar salto visible del loop en pantallas anchas | js/main.js |
-| 25/02/2026 | Refactorizar SVG de WhatsApp - definir símbolo reutilizable una sola vez y usar <use> en los 5 enlaces | index.html |
-| 24/02/2026 | Agregar atributos aria-label y aria-labelledby en nav y sections - mejorar accesibilidad para lectores de pantalla | index.html |
-| 23/02/2026 | Agregar variables de sombra para tema oscuro en :root - evitan que sombras fallen en modo oscuro | css/styles.css |
-| 22/02/2026 | Agregar escapeHtml() en renderProductos() - prevenir XSS en badge, cat, nombre y desc del catálogo | js/main.js |
-| 22/02/2026 | Mover IntersectionObserver dentro de DOMContentLoaded - evitar errores al cargar antes del DOM | js/main.js |
-| 22/02/2026 | Agregar DOCTYPE html al inicio del archivo | index.html |
-| 21/02/2026 | Agregar estilo :active para enlaces del menú - corrige color oscuro al presionar en móvil | css/styles.css |
-| 20/02/2026 | Corregir filtrado catálogo - mensaje "sin resultados" solo cuando hay filtros activos Y no hay productos | js/main.js |
-| 20/02/2026 | Corregir navbar sticky en móvil - agregar z-index 250 para superposición correcta | css/styles.css |
-| 20/02/2026 | Corregir navbar sticky en móvil/tablet - agregar position:sticky explícito en media query móvil | css/styles.css |
-| 19/02/2026 | Separar selectores de categoría desktop/móvil - nunca se ven ambos al mismo tiempo | css/styles.css |
-| 19/02/2026 | Corregir navbar sticky que no seguía al hacer scroll - cambiar overflow body de hidden a clip | css/styles.css |
-| 19/02/2026 | Corregir menú hamburguesa no mostraba contenido - agregar estilos display:block | css/styles.css |
-| 19/02/2026 | Agregar botón WhatsApp dentro del menú hamburguesa en móviles | index.html, css/styles.css |
-| 19/02/2026 | Ocultar botón WhatsApp navbar en móvil portrait - permite ver menú hamburguesa | css/styles.css |
-| 19/02/2026 | Corrección overflow navbar en tablet - elementos no se desbordan | css/styles.css |
-| 19/02/2026 | Agregada política de actualización del README en PROJECT_RULES.txt | PROJECT_RULES.txt |
-| 19/02/2026 | Corrección bug variable WP undefined en modal + creación inicial README | js/main.js, README.md |
+| 06/03/2026 | Sistema de zoom en modal de productos (minZoom=1, maxZoom=3, wheel + pinch-to-zoom) | js/main.js |
+| 06/03/2026 | Auditoría técnica completa del proyecto - Análisis de código, políticas y cumplimiento. Puntaje: 92.5/100 | ANALISIS.md, README.md |
+| 06/03/2026 | Corregir sistemas de búsqueda duplicados en navbar desktop | css/styles.css, ANALISIS.md |
+| 06/03/2026 | Actualización checklist de requisitos | CHECKLIST_REQUISITOS.md |
+| 05/03/2026 | Agregar 2 nuevos productos: PA8N-600 y PA12N-1000 | js/main.js |
+| 05/03/2026 | Análisis completo del código | index.html, css/styles.css, js/main.js |
+| 03/03/2026 | Corregir navegación - función handleNavClick | js/main.js |
+| 01/03/2026 | Agregar focus trap al modal | js/main.js |
+| 28/02/2026 | Triplicar items del carrusel | js/main.js |
+| 25/02/2026 | Refactorizar SVG de WhatsApp | index.html |
+| 24/02/2026 | Agregar atributos aria-label | index.html |
+| 22/02/2026 | Agregar escapeHtml() para prevenir XSS | js/main.js |
+| 20/02/2026 | Corregir filtrado catálogo | js/main.js |
+| 19/02/2026 | Separar selectores de categoría desktop/móvil | css/styles.css |
 
 ---
 
@@ -46,6 +34,7 @@ Sitio web de comercio electrónico/catálogo para una empresa de audio profesion
 - Catálogo de productos (Line Arrays, Woofers, Parlantes Neodimio)
 - Sistema de búsqueda y filtrado por categorías
 - Modal de detalles de producto con especificaciones técnicas
+- Sistema de zoom en imágenes de productos
 - Temas claro y oscuro
 - Diseño responsivo (móvil, tablet, escritorio)
 - Integración con WhatsApp para cotizaciones
@@ -71,11 +60,12 @@ PGW/
 ├── index.html              # Página principal
 ├── PROJECT_RULES.txt       # Políticas y reglas del proyecto
 ├── README.md               # Este archivo
+├── CHECKLIST_REQUISITOS.md # Checklist de progreso
+├── ANALISIS.md            # Informe de auditoría técnica
 ├── css/
 │   └── styles.css          # Todos los estilos del sitio
 ├── js/
-│   ├── main.js             # Funcionalidad principal
-│   └── navbar-fix.js       # Fix dinámico del navbar
+│   └── main.js             # Funcionalidad principal
 ├── audio/
 │   └── intro.mp3           # Audio introductorio
 ├── img/
@@ -83,22 +73,31 @@ PGW/
 │   ├── mafondo.png         # Imagen de fondo (watermark)
 │   ├── hl30a-1.png         # Imagen producto HL-30A
 │   ├── hl30a-2.png         # Marca de agua HL-30A
-│   ├── hl10a-1.png        # Imagen producto HL-10A
-│   ├── hl10a-2.png        # Marca de agua HL-10A
-│   ├── pa10n-1.png        # Imagen producto PA10N-900
-│   ├── pa10n-2.png        # Marca de agua PA10N-900
-│   ├── lf18x-1.png        # Imagen producto LF18X401+
-│   ├── lf18x-2.png        # Marca de agua LF18X401+
-│   ├── woof18lw-1.png     # Imagen producto 18LW2420+
-│   └── woof18lw-2.png     # Marca de agua 18LW2420+
+│   ├── hl10a-1.png         # Imagen producto HL-10A
+│   ├── hl10a-2.png         # Marca de agua HL-10A
+│   ├── pa10n-1.png         # Imagen producto PA10N-900
+│   ├── pa10n-2.png         # Marca de agua PA10N-900
+│   ├── lf18x-1.png         # Imagen producto LF18X401+
+│   ├── lf18x-2.png         # Marca de agua LF18X401+
+│   ├── woof18lw-1.png      # Imagen producto 18LW2420+
+│   ├── woof18lw-2.png      # Marca de agua 18LW2420+
+│   ├── pa8n600.png         # Imagen producto PA8N-600
+│   ├── pa8n600-1.png       # Marca de agua PA8N-600
+│   ├── pa12n1000.png       # Imagen producto PA12N-1000
+│   ├── pa12n1000-1.png     # Marca de agua PA12N-1000
+│   ├── p12sheffield.png    # Imagen producto Sheffield 12
+│   └── pa12shieffield-1.png # Marca de agua Sheffield 12
 └── doc/
+    ├── DOCUMENTO DE REQUISITOS DEL PROYECTO WEB.docx
     ├── FICHA TECNICA PA HL 10A.docx
     ├── FICHA TECNICA PA HL30A.docx
     ├── FICHA TECNICA PARLANTE 10 NEODIMIO.docx
     ├── FICHA TECNICA PARLANTE 10 SHEFIEELD.docx
     ├── FICHA TECNICA PARLANTE 12 SHEFFIELD.docx
     ├── FICHA TECNICA PARLANTE LF18X401+.docx
-    └── FICHA TECNICA WOOFER 18LW2420+.docx
+    ├── FICHA TECNICA WOOFER 18LW2420+.docx
+    ├── FICHA TECNICA WOOFER PA8N600.pdf
+    └── FICHA TECNICA WOOFER PA12N1000.pdf
 ```
 
 ---
@@ -130,13 +129,14 @@ npx http-server .
 
 | Producto | Categoría | Potencia | Características |
 |----------|-----------|----------|------------------|
-| PA HL-30A | Line Array Activo | 2200W | SPL 137dB, 2×10" Neodimio |
+| PA HL-30A | Line Array Activo | 2200W | SPL 137dB, 2×10" Neodimio, DSP |
 | PA HL-10A | Line Array Activo | 1400W | SPL 133dB, 2×8" Neodimio |
 | PA10N-900 | Parlante 10" Neodimio | 1000W | Sensibilidad 99dB |
 | LF18X401+ | Woofer 18" Alto Rendimiento | 3800W | Bobina 4.5", 180oz magnético |
 | 18LW2420+ | Woofer 18" Ferrita | 2600W | Bobina 4", ferrita |
 | PA8N-600 | Woofer 8" Neodimio | 600W | Sensibilidad 97dB, bobina 2" |
 | PA12N-1000 | Woofer 12" Neodimio | 1000W | Sensibilidad 100dB, cono semi-impermeable |
+| PA Sheffield 12 | Parlante 12" Ferrita | 1000W | Bobina 3" kapton |
 
 ---
 
@@ -152,6 +152,12 @@ npx http-server .
 - Filtrado por categoría
 - Mensaje cuando no hay resultados
 - Sin filtros activos al inicio (política del proyecto)
+
+### Sistema de Zoom en Modal
+- Zoom con rueda del mouse (scroll up = zoom in, scroll down = zoom out)
+- Pinch-to-zoom en dispositivos táctiles
+- Límites: minZoom=1, maxZoom=3
+- Zoom out bloqueado cuando está en nivel mínimo
 
 ### Responsive Design
 - Desktop: > 1024px
@@ -172,6 +178,23 @@ El desarrollo de este proyecto sigue reglas estrictas definidas en `PROJECT_RULE
 
 ---
 
+## 📊 Estado del Proyecto
+
+**Progreso: ~90%**
+
+| Categoría | Completados | Pendientes |
+|-----------|-------------|------------|
+| Secciones | 6 | 2 |
+| Funcionalidades | 7 | 1 |
+| Ajustes solicitados | 8 | 0 |
+
+### Pendientes del cliente:
+- Proporcionar 10-15 fotos para la Galería
+- Proporcionar textos finales del catálogo
+- Proporcionar 10 imágenes nuevas en alta resolución
+
+---
+
 ## 📄 Licencia
 
 © 2026 PA Acoustic - Audio Profesional Medellín - Colombia
@@ -185,4 +208,3 @@ Desarrollado por: **Juan Pablo Vélez** - Web Developer
 - **WhatsApp**: +57 305 340 2732
 - **Ubicación**: Medellín, Colombia
 - **Horario**: Lun – Vie: 8:45 – 18:00 · Sáb: 8:45 – 15:00
-

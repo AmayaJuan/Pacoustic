@@ -57,6 +57,153 @@ const THEME_KEY = 'paTheme';
 // ========================================
 
 // ========================================
+// CONTROL DE ZOOM
+// ========================================
+
+/**
+ * Variables de estado para el control de zoom
+ * minZoom: nivel mínimo (1 = sin zoom)
+ * maxZoom: nivel máximo (3 = zoom 3x)
+ * currentZoom: nivel actual de zoom
+ */
+const ZOOM_CONFIG = {
+  minZoom: 1,
+  maxZoom: 3,
+  currentZoom: 1
+};
+
+/**
+ * Realiza zoom in si no se ha alcanzado el máximo
+ * @returns {boolean} true si el zoom se ejecutó, false si ya está en máximo
+ */
+function zoomIn() {
+  if (ZOOM_CONFIG.currentZoom < ZOOM_CONFIG.maxZoom) {
+    ZOOM_CONFIG.currentZoom = Math.min(ZOOM_CONFIG.currentZoom + 0.5, ZOOM_CONFIG.maxZoom);
+    applyZoomToImages();
+    return true;
+  }
+  return false;
+}
+
+/**
+ * Realiza zoom out solo si el nivel actual es mayor que el mínimo
+ * y si previamente se ha hecho zoom in
+ * @returns {boolean} true si el zoom se ejecutó, false si está en nivel mínimo
+ */
+function zoomOut() {
+  // Solo permitir zoom out si el nivel actual es mayor que el mínimo Y
+  // el usuario ha hecho zoom in previamente (currentZoom > minZoom)
+  if (ZOOM_CONFIG.currentZoom > ZOOM_CONFIG.minZoom) {
+    ZOOM_CONFIG.currentZoom = Math.max(ZOOM_CONFIG.currentZoom - 0.5, ZOOM_CONFIG.minZoom);
+    applyZoomToImages();
+    return true;
+  }
+  // Si está en nivel mínimo, bloquear zoom out
+  return false;
+}
+
+/**
+ * Aplica el nivel de zoom actual a todas las imágenes del modal
+ */
+function applyZoomToImages() {
+  const modalImgMain = document.getElementById('modalImgMain');
+  if (modalImgMain) {
+    modalImgMain.style.transform = 'scale(' + ZOOM_CONFIG.currentZoom + ')';
+    modalImgMain.style.transition = 'transform 0.3s ease';
+  }
+  
+  // Aplicar también a miniaturas si existen
+  const thumbs = document.querySelectorAll('.modal-thumb img');
+  thumbs.forEach(thumb => {
+    thumb.style.transform = 'scale(' + ZOOM_CONFIG.currentZoom + ')';
+    thumb.style.transition = 'transform 0.3s ease';
+  });
+}
+
+/**
+ * Reinicia el zoom al nivel mínimo (1)
+ */
+function resetZoom() {
+  ZOOM_CONFIG.currentZoom = ZOOM_CONFIG.minZoom;
+  applyZoomToImages();
+}
+
+/**
+ * Maneja el evento de rueda del mouse para zoom
+ * @param {WheelEvent} e - Evento de rueda
+ */
+function handleWheelZoom(e) {
+  // Solo activar si el modal está abierto
+  const modalOverlay = document.getElementById('modalOverlay');
+  if (!modalOverlay || !modalOverlay.classList.contains('open')) return;
+  
+  e.preventDefault();
+  
+  if (e.deltaY < 0) {
+    // Scroll hacia arriba = zoom in
+    zoomIn();
+  } else {
+    // Scroll hacia abajo = zoom out
+    zoomOut();
+  }
+}
+
+/**
+ * Inicializa los eventos de zoom para el modal
+ */
+function initZoomControls() {
+  // Agregar listener para zoom con rueda del mouse
+  document.addEventListener('wheel', handleWheelZoom, { passive: false });
+  
+  // Agregar eventos táctiles para pinch-to-zoom en móviles
+  let initialDistance = 0;
+  let initialZoom = ZOOM_CONFIG.currentZoom;
+  
+  document.addEventListener('touchstart', function(e) {
+    const modalOverlay = document.getElementById('modalOverlay');
+    if (!modalOverlay || !modalOverlay.classList.contains('open')) return;
+    
+    if (e.touches.length === 2) {
+      initialDistance = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      initialZoom = ZOOM_CONFIG.currentZoom;
+    }
+  }, { passive: true });
+  
+  document.addEventListener('touchmove', function(e) {
+    const modalOverlay = document.getElementById('modalOverlay');
+    if (!modalOverlay || !modalOverlay.classList.contains('open')) return;
+    
+    if (e.touches.length === 2) {
+      e.preventDefault();
+      
+      const currentDistance = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      
+      // Calcular el factor de cambio
+      const scale = currentDistance / initialDistance;
+      let newZoom = initialZoom * scale;
+      
+      // Limitar el zoom entre minZoom y maxZoom
+      newZoom = Math.max(ZOOM_CONFIG.minZoom, Math.min(newZoom, ZOOM_CONFIG.maxZoom));
+      
+      // Solo permitir zoom out si el nivel actual es mayor que el mínimo
+      if (newZoom < ZOOM_CONFIG.currentZoom && ZOOM_CONFIG.currentZoom <= ZOOM_CONFIG.minZoom) {
+        // Bloquear zoom out si ya está en nivel mínimo
+        return;
+      }
+      
+      ZOOM_CONFIG.currentZoom = newZoom;
+      applyZoomToImages();
+    }
+  }, { passive: false });
+}
+
+// ========================================
 // GESTIÓN DEL TEMA (CLARO/OSCURO)
 // ========================================
 
@@ -890,6 +1037,7 @@ document.addEventListener('DOMContentLoaded', function() {
   setupCatalogFilters();
   initActiveMenuLink();
   initMobileFilters();
+  initZoomControls();
   // Crear el observador de intersección para las animaciones de reveal
   const obs = new IntersectionObserver(entries => {
     // Por cada entrada del observador, agregar clase 'visible' si el elemento es visible
