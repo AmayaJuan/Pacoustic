@@ -958,6 +958,7 @@ body[data-theme="light"] .modal-watermark {
   
   /* Ocultar controles de catálogo del navbar en móvil (se movieron al menú) */
   .nav-catalog-controls { display: none !important; }
+  .nav-search-box { display: none !important; }
   .nav-category-select { display: none !important; }
   .nav-category-mobile { display: block !important; }
   .theme-toggle { margin-right: 0.5rem; display: inline-flex; }
