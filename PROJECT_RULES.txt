@@ -74,6 +74,7 @@ REGLAS ADICIONALES:
 - No toques JavaScript ni HTML si no se autoriza.
 - Si el cambio afecta algo que ya funciona, debes advertillo antes.
 - Si no estás 100% seguro, debes preguntar.
+- PROHIBIDO modificar código si eso implica romper la página.
 
 FORMATO DE RESPUESTA OBLIGATORIO:
 Antes de cualquier acción, responde SIEMPRE usando este formato:

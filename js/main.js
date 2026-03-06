@@ -31,9 +31,10 @@ NOTAS DE MARCAS DE AGUA (WATERMARKS):
   HL-10A:     img/hl10a-2.png
   PA10N-900:  img/pa10n-2.png
   LF18X401+:  img/lf18x-2.png
-  18LW2420+:  img/woof18lw-2.png
+ 18LW2420+:  img/woof18lw-2.png
   PA8N-600:   img/pa8n600-1.png
   PA12N-1000: img/pa12n1000-1.png
+  Sheffield12: img/pa12shieffield-1.png
 - Estilos en css/styles.css:
   .prod-watermark (catálogo) y .modal-watermark (modal)
 ======================================================================
@@ -394,6 +395,30 @@ const productos = [
     ],
     apps: ['Sistemas line array','Sistemas PA de alto rendimiento','Monitores de escenarios','Cajas turbo','Sistema pickup','Car audio','Proyectos ligereza + potencia'],
     tags: ['1000 W', '100 dB', '12"', 'Neodimio']
+  },
+  {
+    id: 'sheffield12',
+    nombre: 'PA Sheffield 12',
+    cat: 'Parlante 12" Ferrita',
+    badge: 'Pro',
+    desc: 'El parlante SHEFFIELD 12 es un componente pensado para sistemas profesionales que requieren graves más profundos y mayor cobertura de rango medio. Su bobina de 3" en kapton, imán de ferrita y chasis en lámina aseguran un rendimiento confiable, alta durabilidad y excelente disipación de calor.',
+    imgs: ['img/p12sheffield.png'],
+    watermark: 'img/pa12shieffield-1.png',
+    specs: [
+      ['Modelo',             'PA Sheffield 12'],
+      ['Diámetro Nominal',  '12 pulgadas'],
+      ['Impedancia',        '8 ohmios'],
+      ['Potencia RMS',      '500 W'],
+      ['Potencia Programada','1000 W'],
+      ['Sensibilidad',      '97 dB'],
+      ['Rango de Frecuencia','45 Hz – 2.5KHz'],
+      ['Diámetro de Bobina','3 pulgadas'],
+      ['Material de Bobina','Kapton / Alambre Cobre'],
+      ['Tipo de Imán',      'Ferrita'],
+      ['Tipo de Chasis',    'Lámina'],
+    ],
+    apps: ['Cajas convencionales','Sistemas full-range de alto desempeño','Equipos profesionales para música en vivo','Monitores de escenario de alta presión sonora','Reemplazos para proyectos de reparación'],
+    tags: ['1000 W', '97 dB', '12"', 'Ferrita']
   }
 ];
 
