@@ -32,6 +32,8 @@ NOTAS DE MARCAS DE AGUA (WATERMARKS):
   PA10N-900:  img/pa10n-2.png
   LF18X401+:  img/lf18x-2.png
   18LW2420+:  img/woof18lw-2.png
+  PA8N-600:   img/pa8n600-1.png
+  PA12N-1000: img/pa12n1000-1.png
 - Estilos en css/styles.css:
   .prod-watermark (catálogo) y .modal-watermark (modal)
 ======================================================================
@@ -323,7 +325,7 @@ const productos = [
     apps: ['Subwoofers de alta potencia','Sistemas de sonido profesional','Cajas bass réflex','Conciertos en vivo','Teatros y auditorios','Clubes nocturnos'],
     tags: ['3800 W', '98 dB', '18"', '180oz']
   },
-  {
+{
     id: 'woof18lw',
     nombre: '18LW2420+',
     cat: 'Woofer 18" Ferrita',
@@ -348,6 +350,50 @@ const productos = [
     ],
     apps: ['Subwoofers de alta potencia','Sistemas de sonido profesional','Cajas bass réflex','Conciertos en vivo','Teatros y auditorios','Clubes nocturnos'],
     tags: ['2600 W', '98 dB', '18"', 'Ferrita']
+  },
+  {
+    id: 'pa8n600',
+    nombre: 'PA8N-600',
+    cat: 'Woofer 8" Neodimio',
+    badge: 'Nuevo',
+    desc: 'Woofer profesional de 8 pulgadas con imán de neodimio. Diseño para rango medio y alta eficiencia. 600W programados, 300W RMS, bobina 2" IN-OUT.',
+    imgs: ['img/pa8n600.png'],
+    watermark: 'img/pa8n600-1.png',
+    specs: [
+      ['Modelo',             'PA8N-600'],
+      ['Diámetro Nominal',  '8 pulgadas'],
+      ['Impedancia',        '8 ohmios'],
+      ['Potencia Programada','600 W'],
+      ['Potencia RMS',      '300 W'],
+      ['Sensibilidad',      '97 dB'],
+      ['Rango de Frecuencia','70 Hz – 3000 Hz'],
+      ['Diámetro de Bobina','2 pulgadas'],
+      ['Capas de Bobina',   '2 capas (IN - OUT)'],
+    ],
+    apps: ['Cajas de dos vías','Sistemas line array','Monitores de escenarios','Cajas turbo','Sistema pickup','Car audio','Proyectos ligereza + potencia'],
+    tags: ['600 W', '97 dB', '8"', 'Neodimio']
+  },
+  {
+    id: 'pa12n1000',
+    nombre: 'PA12N-1000',
+    cat: 'Woofer 12" Neodimio',
+    badge: 'Top',
+    desc: 'Woofer profesional de 12" con imán de neodimio. Máxima potencia con sensibilidad de 100dB. 1000W RMS, cono semi-impermeable, bobina 3" IN-OUT.',
+    imgs: ['img/pa12n1000.png'],
+    watermark: 'img/pa12n1000-1.png',
+    specs: [
+      ['Modelo',             'PA12N-1000'],
+      ['Diámetro Nominal',  '306mm (12 pulgadas)'],
+      ['Impedancia',        '8 ohmios'],
+      ['Potencia RMS',      '1000 W'],
+      ['Sensibilidad',      '100 dB'],
+      ['Rango de Frecuencia','50 Hz – 3500 Hz'],
+      ['Diámetro de Bobina','3 pulgadas'],
+      ['Capas de Bobina',   '2 capas (IN - OUT)'],
+      ['Cono',              'Semi-impermeable'],
+    ],
+    apps: ['Sistemas line array','Sistemas PA de alto rendimiento','Monitores de escenarios','Cajas turbo','Sistema pickup','Car audio','Proyectos ligereza + potencia'],
+    tags: ['1000 W', '100 dB', '12"', 'Neodimio']
   }
 ];
 

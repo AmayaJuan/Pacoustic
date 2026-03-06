@@ -10,29 +10,30 @@ Sitio web oficial de **PA Acoustic**, empresa especializada en equipos de audio 
 
 | Fecha | Cambios | Archivos Afectados |
 |-------|---------|-------------------|
-| 15/04/2026 | Análisis completo del código - Verificación de HTML, CSS y JavaScript. Código funcionando correctamente | index.html, css/styles.css, js/main.js |
-| 10/04/2026 | Corregir navegación - función handleNavClick solo cierra menú móvil si está abierto, evitando bloqueo de pantalla | js/main.js |
-| 09/04/2026 | Agregar focus trap al modal - mantener foco dentro del modal al presionar Tab y restaurar foco al cerrar | js/main.js |
-| 06/04/2026 | Agregar texto descriptivo al atributo alt de imagen principal del modal al abrirlo - mejorar accesibilidad | js/main.js |
-| 04/04/2026 | Triplicar items del carrusel en renderBanner() - evitar salto visible del loop en pantallas anchas | js/main.js |
-| 14/03/2026 | Refactorizar SVG de WhatsApp - definir símbolo reutilizable una sola vez y usar <use> en los 5 enlaces | index.html |
-| 08/03/2026 | Agregar atributos aria-label y aria-labelledby en nav y sections - mejorar accesibilidad para lectores de pantalla | index.html |
-| 11/03/2026 | Agregar variables de sombra para tema oscuro en :root - evitan que sombras fallen en modo oscuro | css/styles.css |
-| 06/03/2026 | Agregar escapeHtml() en renderProductos() - prevenir XSS en badge, cat, nombre y desc del catálogo | js/main.js |
-| 06/03/2026 | Mover IntersectionObserver dentro de DOMContentLoaded - evitar errores al cargar antes del DOM | js/main.js |
-| 06/03/2026 | Agregar DOCTYPE html al inicio del archivo | index.html |
-| 05/03/2026 | Agregar estilo :active para enlaces del menú - corrige color oscuro al presionar en móvil | css/styles.css |
-| 04/03/2026 | Corregir filtrado catálogo - mensaje "sin resultados" solo cuando hay filtros activos Y no hay productos | js/main.js |
-| 04/03/2026 | Corregir navbar sticky en móvil - agregar z-index 250 para superposición correcta | css/styles.css |
-| 05/03/2026 | Corregir navbar sticky en móvil/tablet - agregar position:sticky explícito en media query móvil | css/styles.css |
-| 03/03/2026 | Separar selectores de categoría desktop/móvil - nunca se ven ambos al mismo tiempo | css/styles.css |
-| 03/03/2026 | Corregir navbar sticky que no seguía al hacer scroll - cambiar overflow body de hidden a clip | css/styles.css |
-| 03/03/2026 | Corregir menú hamburguesa no mostraba contenido - agregar estilos display:block | css/styles.css |
-| 03/03/2026 | Agregar botón WhatsApp dentro del menú hamburguesa en móviles | index.html, css/styles.css |
-| 03/03/2026 | Ocultar botón WhatsApp navbar en móvil portrait - permite ver menú hamburguesa | css/styles.css |
-| 03/03/2026 | Corrección overflow navbar en tablet - elementos no se desbordan | css/styles.css |
-| 03/03/2026 | Agregada política de actualización del README en PROJECT_RULES.txt | PROJECT_RULES.txt |
-| 03/03/2026 | Corrección bug variable WP undefined en modal + creación inicial README | js/main.js, README.md |
+| 05/03/2026 | Agregar 2 nuevos productos al catálogo: PA8N-600 (Woofer 8" Neodimio) y PA12N-1000 (Woofer 12" Neodimio). Actualización automática del banner carrusel con las nuevas imágenes | js/main.js, README.md |
+| 05/03/2026 | Análisis completo del código - Verificación de HTML, CSS y JavaScript. Código funcionando correctamente | index.html, css/styles.css, js/main.js |
+| 03/03/2026 | Corregir navegación - función handleNavClick solo cierra menú móvil si está abierto, evitando bloqueo de pantalla | js/main.js |
+| 02/03/2026 | Agregar focus trap al modal - mantener foco dentro del modal al presionar Tab y restaurar foco al cerrar | js/main.js |
+| 01/03/2026 | Agregar texto descriptivo al atributo alt de imagen principal del modal al abrirlo - mejorar accesibilidad | js/main.js |
+| 28/02/2026 | Triplicar items del carrusel en renderBanner() - evitar salto visible del loop en pantallas anchas | js/main.js |
+| 25/02/2026 | Refactorizar SVG de WhatsApp - definir símbolo reutilizable una sola vez y usar <use> en los 5 enlaces | index.html |
+| 24/02/2026 | Agregar atributos aria-label y aria-labelledby en nav y sections - mejorar accesibilidad para lectores de pantalla | index.html |
+| 23/02/2026 | Agregar variables de sombra para tema oscuro en :root - evitan que sombras fallen en modo oscuro | css/styles.css |
+| 22/02/2026 | Agregar escapeHtml() en renderProductos() - prevenir XSS en badge, cat, nombre y desc del catálogo | js/main.js |
+| 22/02/2026 | Mover IntersectionObserver dentro de DOMContentLoaded - evitar errores al cargar antes del DOM | js/main.js |
+| 22/02/2026 | Agregar DOCTYPE html al inicio del archivo | index.html |
+| 21/02/2026 | Agregar estilo :active para enlaces del menú - corrige color oscuro al presionar en móvil | css/styles.css |
+| 20/02/2026 | Corregir filtrado catálogo - mensaje "sin resultados" solo cuando hay filtros activos Y no hay productos | js/main.js |
+| 20/02/2026 | Corregir navbar sticky en móvil - agregar z-index 250 para superposición correcta | css/styles.css |
+| 20/02/2026 | Corregir navbar sticky en móvil/tablet - agregar position:sticky explícito en media query móvil | css/styles.css |
+| 19/02/2026 | Separar selectores de categoría desktop/móvil - nunca se ven ambos al mismo tiempo | css/styles.css |
+| 19/02/2026 | Corregir navbar sticky que no seguía al hacer scroll - cambiar overflow body de hidden a clip | css/styles.css |
+| 19/02/2026 | Corregir menú hamburguesa no mostraba contenido - agregar estilos display:block | css/styles.css |
+| 19/02/2026 | Agregar botón WhatsApp dentro del menú hamburguesa en móviles | index.html, css/styles.css |
+| 19/02/2026 | Ocultar botón WhatsApp navbar en móvil portrait - permite ver menú hamburguesa | css/styles.css |
+| 19/02/2026 | Corrección overflow navbar en tablet - elementos no se desbordan | css/styles.css |
+| 19/02/2026 | Agregada política de actualización del README en PROJECT_RULES.txt | PROJECT_RULES.txt |
+| 19/02/2026 | Corrección bug variable WP undefined en modal + creación inicial README | js/main.js, README.md |
 
 ---
 
@@ -132,6 +133,8 @@ npx http-server .
 | PA10N-900 | Parlante 10" Neodimio | 1000W | Sensibilidad 99dB |
 | LF18X401+ | Woofer 18" Alto Rendimiento | 3800W | Bobina 4.5", 180oz magnético |
 | 18LW2420+ | Woofer 18" Ferrita | 2600W | Bobina 4", ferrita |
+| PA8N-600 | Woofer 8" Neodimio | 600W | Sensibilidad 97dB, bobina 2" |
+| PA12N-1000 | Woofer 12" Neodimio | 1000W | Sensibilidad 100dB, cono semi-impermeable |
 
 ---
 
