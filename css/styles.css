@@ -874,6 +874,7 @@ body[data-theme="light"] .modal-watermark {
   }
   .nav-search-box {
     width: 36px;
+    display: none !important;
   }
   .nav-search-box.expanded {
     width: 150px;
@@ -956,9 +957,9 @@ body[data-theme="light"] .modal-watermark {
   .nav-links a::after { display: none; }
   
   /* Ocultar controles de catálogo del navbar en móvil (se movieron al menú) */
-  .nav-catalog-controls { display: none; }
-  .nav-category-select { display: none; }
-  .nav-category-mobile { display: block; }
+  .nav-catalog-controls { display: none !important; }
+  .nav-category-select { display: none !important; }
+  .nav-category-mobile { display: block !important; }
   .theme-toggle { margin-right: 0.5rem; display: inline-flex; }
   .nav-wp { display: none; }
   .nav-logo { cursor: pointer; }
