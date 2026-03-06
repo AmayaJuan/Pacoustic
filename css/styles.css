@@ -530,6 +530,10 @@ body[data-theme="light"] .theme-toggle:hover {
 /* WhatsApp en menú móvil - oculto por defecto */
 .nav-wp-mobile { display: none; }
 
+/* Ocultar sistema antiguo de búsqueda en desktop - solo mostrar en móvil */
+.nav-mobile-search { display: none; }
+.nav-mobile-category { display: none; }
+
 /* ── HERO ── */
 .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 6rem 3rem 4rem; }
 .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 65% 50%, rgba(196, 30, 58, 0.06) 0%, transparent 65%); }
@@ -951,7 +955,7 @@ body[data-theme="light"] .modal-watermark {
   
   .nav-links a::after { display: none; }
   
-  /* Hide desktop controls */
+  /* Ocultar controles de catálogo del navbar en móvil (se movieron al menú) */
   .nav-catalog-controls { display: none; }
   .nav-category-select { display: none; }
   .nav-category-mobile { display: block; }
@@ -978,6 +982,74 @@ body[data-theme="light"] .modal-watermark {
     width: 20px;
     height: 20px;
     fill: var(--wp);
+  }
+  
+  /* Buscador dentro del menú móvil */
+  .nav-mobile-search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--borde);
+    margin-bottom: 0.5rem;
+  }
+  
+  .nav-mobile-search-input {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    background: var(--bg3);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    color: var(--texto);
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+  }
+  
+  .nav-mobile-search-input:focus {
+    outline: none;
+    border-color: var(--rojo);
+  }
+  
+  .nav-mobile-search-input::placeholder {
+    color: var(--muted);
+  }
+  
+  /* Selector de categoría dentro del menú móvil */
+  .nav-mobile-category {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--borde);
+    margin-bottom: 0.5rem;
+  }
+  
+  .nav-mobile-category-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+  
+  .nav-mobile-category-select {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    background: var(--bg3);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    color: var(--texto);
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238b9bb4' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+  }
+  
+  .nav-mobile-category-select:focus {
+    outline: none;
+    border-color: var(--rojo);
   }
   
   /* Mostrar todos los elementos del menú en móvil */

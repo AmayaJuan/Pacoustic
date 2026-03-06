@@ -53,17 +53,6 @@
   <!-- Enlace al archivo de estilos CSS principal -->
   <link rel="stylesheet" href="css/styles.css"/>
   
-  <!-- Script inline para cargar el tema inmediatamente sin flash (optimizado) -->
-  <script>
-    (function() {
-      var theme = localStorage.getItem('paTheme');
-      if (theme === 'light' || theme === 'dark') {
-        document.body.setAttribute('data-theme', theme);
-      } else {
-        document.body.setAttribute('data-theme', 'dark');
-      }
-    })();
-  </script>
 </head>
 <body>
 
@@ -115,15 +104,20 @@
   
   <!-- Menú de navegación con enlaces a las secciones principales -->
   <ul class="nav-links" id="navLinks">
-    <li><a href="#productos" class="nav-link" onclick="handleNavClick(event, 'productos')">Productos</a></li>
-    <li><a href="#nosotros" class="nav-link" onclick="handleNavClick(event, 'nosotros')">Nosotros</a></li>
-    <li><a href="#contacto" class="nav-link" onclick="handleNavClick(event, 'contacto')">Contacto</a></li>
-    <!-- Selector de categorías en menú móvil -->
-    <li class="nav-category-mobile">
-      <select id="mobileCategoryInMenu" class="nav-category-select-mobile" onchange="handleMobileCategoryChange(this)">
+    <!-- Buscador integrado en menú móvil -->
+    <li class="nav-mobile-search">
+      <input type="search" id="mobileMenuSearch" class="nav-mobile-search-input" placeholder="Buscar productos..." autocomplete="off" aria-label="Buscar productos en el menú"/>
+    </li>
+    <!-- Filtro de categoría integrado en menú móvil -->
+    <li class="nav-mobile-category">
+      <label class="nav-mobile-category-label">Filtrar por categoría</label>
+      <select id="mobileMenuCategory" class="nav-mobile-category-select">
         <option value="">Todas las categorías</option>
       </select>
     </li>
+    <li><a href="#productos" class="nav-link" onclick="handleNavClick(event, 'productos')">Productos</a></li>
+    <li><a href="#nosotros" class="nav-link" onclick="handleNavClick(event, 'nosotros')">Nosotros</a></li>
+    <li><a href="#contacto" class="nav-link" onclick="handleNavClick(event, 'contacto')">Contacto</a></li>
 <li class="nav-wp-mobile"><a href="https://wa.me/573053402732?text=Hola,%20quiero%20más%20información" target="_blank" rel="noopener noreferrer">
       <!-- Referencia al símbolo SVG definido arriba, evita duplicar el código -->
       <svg viewBox="0 0 24 24"><use href="#ico-wp"/></svg>
@@ -365,40 +359,27 @@
 
 <!-- ========================================
      CONTROLES DE CATÁLOGO MÓVIL
-     Botones flotantes para buscar y filtrar en móvil
+     Botón único para buscar y filtrar en móvil
      ======================================== -->
 <div class="mobile-catalog-controls">
-  <button type="button" class="mobile-filter-btn" id="mobileSearchBtn" onclick="toggleMobileSearch()" aria-label="Buscar">
-    🔍 Buscar
-  </button>
-  <button type="button" class="mobile-filter-btn" id="mobileFilterBtn" onclick="toggleMobileFilters()" aria-label="Filtrar por categoría">
-    ☰ Categoría
+  <button type="button" class="mobile-filter-btn" id="mobileFilterBtn" onclick="toggleMobileFilters()" aria-label="Buscar y filtrar">
+    🔍☰ Buscar y Filtrar
   </button>
 </div>
 
-<!-- Panel de búsqueda móvil -->
-<div class="mobile-filter-panel" id="mobileSearchPanel">
-  <div class="mobile-filter-header">
-    <span class="mobile-filter-title">Buscar Productos</span>
-    <button type="button" class="mobile-filter-close" onclick="toggleMobileSearch()" aria-label="Cerrar">✕</button>
-  </div>
-  <input type="search" id="mobileSearchInput" class="mobile-search-input" placeholder="Escribe para buscar..." autocomplete="off" aria-label="Buscar productos"/>
-  <button type="button" class="mobile-filter-apply" onclick="applyMobileSearch()">Buscar</button>
-  <button type="button" class="mobile-filter-clear" onclick="clearMobileSearch()">Limpiar</button>
-</div>
-
-<!-- Panel de filtros móvil -->
+<!-- Panel unificado de búsqueda y filtros móvil -->
 <div class="mobile-filter-panel" id="mobileFilterPanel">
   <div class="mobile-filter-header">
-    <span class="mobile-filter-title">Filtrar por Categoría</span>
+    <span class="mobile-filter-title">Buscar y Filtrar</span>
     <button type="button" class="mobile-filter-close" onclick="toggleMobileFilters()" aria-label="Cerrar">✕</button>
   </div>
+  <input type="search" id="mobileSearchInput" class="mobile-search-input" placeholder="Escribe para buscar..." autocomplete="off" aria-label="Buscar productos"/>
   <label class="mobile-category-label">Categoría</label>
   <select id="mobileCategorySelect" class="mobile-category-select">
     <option value="">Todas las categorías</option>
   </select>
-  <button type="button" class="mobile-filter-apply" onclick="applyMobileFilters()">Aplicar Filtro</button>
-  <button type="button" class="mobile-filter-clear" onclick="clearMobileFilters()">Limpiar Filtro</button>
+  <button type="button" class="mobile-filter-apply" onclick="applyAllFilters()">Aplicar</button>
+  <button type="button" class="mobile-filter-clear" onclick="clearAllFilters()">Limpiar Todo</button>
 </div>
 
 <!-- ========================================

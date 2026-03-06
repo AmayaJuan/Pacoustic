@@ -157,6 +157,35 @@ Además, debe:
 No se debe dar una tarea por concluida sin esta confirmación explícita.
 
 ================================================================================
+POLÍTICA ESTRICTA DE CÓDIGO (OBLIGATORIO)
+================================================================================
+Las siguientes reglas son DE CUMPLIMIENTO OBLIGATORIO y se aplican a TODO el código
+del proyecto (HTML, CSS, JavaScript). Su incumplimiento genera deuda técnica.
+
+REGLAS OBLIGATORIAS:
+1. No permitir scripts duplicados.
+2. No permitir funciones duplicadas.
+3. No permitir procesos redundantes.
+4. No permitir lógica DOM repetida.
+5. No permitir reglas CSS duplicadas.
+6. No permitir variables o código sin usar.
+
+APLICACIÓN:
+- Si se detecta código duplicado: OPTIMIZAR o ELIMINAR sin romper funcionalidad.
+- Si se detecta código sin usar: ELIMINAR inmediatamente.
+- Si se detectan procesos redundantes: CONSOLIDAR en una sola función.
+- Si se detectan selectores CSS duplicados: UNIFICAR en un solo bloque.
+
+VERIFICACIÓN OBLIGATORIA:
+- Antes de cada commit, verificar que no existan duplicados.
+- Usar herramientas de linting para detectar código muerto.
+- Revisar que no haya funciones定義adas sin llamar.
+
+SANCIONES POR INCUMPLIMIENTO:
+- Cualquier violación debe corregirse antes de entregar código.
+- El código con duplicaciones será rechazado en revisión.
+
+================================================================================
 POLÍTICA DE ACTUALIZACIÓN DEL README (OBLIGATORIO)
 ================================================================================
 Cada vez que se realice un cambio, modificación o actualización en el código del proyecto,
