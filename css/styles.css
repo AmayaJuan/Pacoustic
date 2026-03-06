@@ -1260,6 +1260,24 @@ body[data-theme="light"] .modal-watermark {
 }
 
 /* Better touch targets in mobile */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .hero-content,
+  .reveal,
+  .prod-card {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .banner-track {
+    animation: none !important;
+  }
+}
+
 @media (max-width: 768px) {
   .prod-card {
     cursor: pointer;
