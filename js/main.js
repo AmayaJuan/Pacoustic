@@ -122,6 +122,12 @@ function $(id) {
 // BANDERAS DE ESTADO
 // ========================================
 
+// Configuración de paginación
+const PAGINATION_CONFIG = {
+  itemsPerPage: 8,  // Productos por página
+  currentPage: 1    // Página actual
+};
+
 // ========================================
 // CONTROL DE ZOOM
 // ========================================
@@ -793,12 +799,20 @@ function escapeAttr(text) {
 }
 
 /**
- * Renderiza las tarjetas de productos en el grid
+ * Renderiza las tarjetas de productos en el grid con paginación
  */
 function renderProductos() {
   const filtered = getFilteredProductos();
   const grid = document.getElementById('productosGrid');
   if (!grid) return;
+
+  // Actualizar contador de productos
+  const productosCount = document.getElementById('productosCount');
+  if (productosCount) {
+    const total = filtered.length;
+    const texto = total === 1 ? '1 producto' : `${total} productos`;
+    productosCount.innerHTML = `<strong>${total}</strong> ${total === 1 ? 'producto' : 'productos'} encontrado${total !== 1 ? 's' : ''}`;
+  }
 
   // Obtener valores de los filtros activos
   const searchEl = document.getElementById('catalogSearch');
@@ -828,11 +842,32 @@ function renderProductos() {
         <p style="font-size:.85rem;color:var(--muted);">Cambia la categoría o el texto de búsqueda.</p>
       </div>
     `;
+    // Ocultar controles de paginación
+    const paginationControls = document.getElementById('paginationControls');
+    if (paginationControls) paginationControls.style.display = 'none';
     return;
   }
 
+  // Calcular paginación
+  const totalItems = filtered.length;
+  const itemsPerPage = PAGINATION_CONFIG.itemsPerPage;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  
+  // Asegurar que la página actual sea válida
+  if (PAGINATION_CONFIG.currentPage > totalPages) {
+    PAGINATION_CONFIG.currentPage = totalPages || 1;
+  }
+  if (PAGINATION_CONFIG.currentPage < 1) {
+    PAGINATION_CONFIG.currentPage = 1;
+  }
+  
+  // Obtener productos de la página actual
+  const startIndex = (PAGINATION_CONFIG.currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const pageProducts = filtered.slice(startIndex, endIndex);
+
   const grouped = {};
-  filtered.forEach(p => {
+  pageProducts.forEach(p => {
     if (!grouped[p.cat]) grouped[p.cat] = [];
     grouped[p.cat].push(p);
   });
@@ -875,6 +910,79 @@ function renderProductos() {
   });
 
   grid.innerHTML = html;
+  
+  // Renderizar controles de paginación
+  renderPaginationControls(totalPages, PAGINATION_CONFIG.currentPage);
+}
+
+/**
+ * Renderiza los controles de paginación
+ * @param {number} totalPages - Total de páginas
+ * @param {number} currentPage - Página actual
+ */
+function renderPaginationControls(totalPages, currentPage) {
+  let paginationContainer = document.getElementById('paginationControls');
+  
+  // Si no existe el contenedor, crearlo
+  if (!paginationContainer) {
+    const productosSection = document.getElementById('productos');
+    if (!productosSection) return;
+    
+    paginationContainer = document.createElement('div');
+    paginationContainer.id = 'paginationControls';
+    paginationContainer.className = 'pagination-controls';
+    productosSection.appendChild(paginationContainer);
+  }
+  
+  // Si solo hay una página, mostrar solo el indicador sin botones
+  if (totalPages <= 1) {
+    paginationContainer.innerHTML = `
+      <div class="pagination-info">
+        <span class="pagination-current">1</span>
+        <span class="pagination-separator">/</span>
+        <span class="pagination-total">1</span>
+      </div>
+    `;
+    paginationContainer.style.display = 'flex';
+    return;
+  }
+  
+  // Generar HTML de controles
+  paginationContainer.innerHTML = `
+    <button class="pagination-btn pagination-prev" onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>
+      ‹
+    </button>
+    <div class="pagination-info">
+      <span class="pagination-current">${currentPage}</span>
+      <span class="pagination-separator">/</span>
+      <span class="pagination-total">${totalPages}</span>
+    </div>
+    <button class="pagination-btn pagination-next" onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>
+      ›
+    </button>
+  `;
+  
+  paginationContainer.style.display = 'flex';
+}
+
+/**
+ * Cambia de página en la paginación
+ * @param {number} page - Número de página al que cambiar
+ */
+function changePage(page) {
+  const filtered = getFilteredProductos();
+  const totalPages = Math.ceil(filtered.length / PAGINATION_CONFIG.itemsPerPage);
+  
+  if (page < 1 || page > totalPages) return;
+  
+  PAGINATION_CONFIG.currentPage = page;
+  renderProductos();
+  
+  // Scroll suave al inicio del grid de productos
+  const productosSection = document.getElementById('productos');
+  if (productosSection) {
+    productosSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
 
 /**
@@ -894,15 +1002,17 @@ function setupCatalogFilters() {
   const searchBox = document.getElementById('navSearchBox');
   const searchTrigger = document.getElementById('navSearchTrigger');
 
-  // Evento de búsqueda en escritorio
+// Evento de búsqueda en escritorio
   if (searchEl) {
     searchEl.addEventListener('input', function() {
+      PAGINATION_CONFIG.currentPage = 1; // Reiniciar a página 1 al buscar
       renderProductos();
     });
   }
   
   // Evento de categoría en escritorio
   if (categoryEl) categoryEl.addEventListener('change', function() {
+    PAGINATION_CONFIG.currentPage = 1; // Reiniciar a página 1 al cambiar categoría
     renderProductos();
     document.getElementById('productos').scrollIntoView({ behavior: 'smooth' });
   });
@@ -910,6 +1020,7 @@ function setupCatalogFilters() {
   // Evento para el selector de categorías en menú móvil
   if (mobileMenuCategory) mobileMenuCategory.addEventListener('change', function() {
     if (categoryEl) categoryEl.value = mobileMenuCategory.value;
+    PAGINATION_CONFIG.currentPage = 1; // Reiniciar a página 1 al cambiar categoría
     renderProductos();
     document.getElementById('productos').scrollIntoView({ behavior: 'smooth' });
   });
@@ -919,6 +1030,7 @@ if (mobileMenuSearch) {
     mobileMenuSearch.addEventListener('input', function() {
       if (searchEl) {
         searchEl.value = mobileMenuSearch.value;
+        PAGINATION_CONFIG.currentPage = 1; // Reiniciar a página 1 al buscar
         renderProductos();
         // Scroll instantáneo a productos en móvil cuando el usuario escribe
         document.getElementById('productos').scrollIntoView({ behavior: 'smooth' });
@@ -1263,6 +1375,9 @@ function applyAllFilters() {
     }
   }
   
+  // Reiniciar paginación a página 1 al aplicar filtros
+  PAGINATION_CONFIG.currentPage = 1;
+  
   // Re-renderizar catálogo con los filtros aplicados
   renderProductos();
   
@@ -1297,6 +1412,9 @@ function clearAllFilters() {
   if (filterBtn) {
     filterBtn.classList.remove('active');
   }
+  
+  // Reiniciar paginación a página 1 al limpiar filtros
+  PAGINATION_CONFIG.currentPage = 1;
   
   // Re-renderizar catálogo con todos los productos
   renderProductos();

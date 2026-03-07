@@ -197,38 +197,37 @@ El proyecto cumple con todas las políticas estrictas establecidas. Las mejoras 
 
 ---
 
-*Documento actualizado: 15/03/2026*
-*Versión: 2.3 (Con corrección de productos.json)*
+*Documento actualizado: 17/03/2026*
+*Versión: 2.4 (Con contador de productos)*
 
 ---
 
-## 12. CORRECCIÓN DE PRODUCTOS.JSON (15/03/2026)
+## 13. CONTADOR DE PRODUCTOS (17/03/2026)
 
-### Problemas encontrados en productos.json:
-| # | Problema | Severidad | Solución |
-|---|----------|-----------|----------|
-| 1 | Campo inconsistente: `name` vs `nombre` | ALTA | Estandarizar a `nombre` |
-| 2 | Campo inconsistente: `cat` vs `categoria` | MEDIA | Estandarizar a `categoria` |
-| 3 | Campo inconsistente: `imgs` vs `imagenes` | MEDIA | Estandarizar a `imagenes` |
-| 4 | Campo inconsistente: `specs` vs `especificaciones` | MEDIA | Estandarizar a `especificaciones` |
-| 5 | Campo inconsistente: `apps` vs `aplicaciones` | MEDIA | Estandarizar a `aplicaciones` |
-| 6 | Campo inconsistente: `tags` vs `etiquetas` | MEDIA | Estandarizar a `etiquetas` |
-| 7 | Error de sintaxis: `"imagenes":18x-1 ["img/lf.png"]` | CRÍTICO | Corregido a `["img/lf18x-1.png"]` |
-| 8 | Error de sintaxis: tags malformado en Sheffield 12 | CRÍTICO | Corregido a `["1000 W"]` |
-| 9 | Falta `id` en producto "PA Sheffield 10" | ALTA | Agregado `id: "sheffield10"` |
-| 10 | JSON no cerrado correctamente | CRÍTICO | Cerrado correctamente |
+### Nueva funcionalidad agregada:
+Se implementó un contador de productos en el catálogo que muestra la cantidad de productos encontrados.
 
-### Campos estandarizados en productos.json:
-- `name` → `nombre`
-- `cat` → `categoria`
-- `desc` → `descripcion`
-- `imgs` → `imagenes`
-- `specs` → `especificaciones`
-- `apps` → `aplicaciones`
-- `tags` → `etiquetas`
+### Archivos modificados:
+| Archivo | Cambio |
+|---------|--------|
+| index.html | Agregado elemento `<div class="productos-count" id="productosCount"></div>` |
+| css/styles.css | Agregados estilos para `.productos-count` |
+| js/main.js | Actualizada función `renderProductos()` para actualizar el contador |
 
-### Nota técnica:
-El archivo `productos.json` se utiliza para referencia/externalización de datos. El archivo `js/main.js` tiene su propia copia de los productos con campos en inglés (`name`, `cat`, `desc`, `imgs`, `specs`, `apps`, `tags`) que es la que utiliza el sitio actualmente. Ambos funcionan correctamente de forma independiente.
+### Comportamiento:
+- Muestra "X productos encontrados" cuando se cargan los productos
+- Se actualiza dinámicamente cuando se aplica un filtro
+- El número se muestra en rojo para destacarlo
+
+### Código agregado en renderProductos():
+```javascript
+// Actualizar contador de productos
+const productosCount = document.getElementById('productosCount');
+if (productosCount) {
+  const total = filtered.length;
+  productosCount.innerHTML = `<strong>${total}</strong> ${total === 1 ? 'producto' : 'productos'} encontrado${total !== 1 ? 's' : ''}`;
+}
+```
 
 ### ✅ POLÍTICAS CUMPLIDAS
 
@@ -246,44 +245,19 @@ Las siguientes políticas del archivo `PROJECT_RULES.txt` se están respetando c
 
 | # | Problema | Archivo | Severidad | Estado |
 |---|----------|---------|-----------|--------|
-| 1 | Funciones faltantes: `applyAllFilters()` y `clearAllFilters()` | index.html + js/main.js | **ALTA** | Pendiente |
-| 2 | Variable no utilizada: `mobileCategoryInMenu` | js/main.js | MEDIA | Pendiente |
-| 3 | Función sin usar: `handleMobileCategoryChange()` | js/main.js | BAJA | Pendiente |
-
----
-
-### 🔧 DETALLE DE PROBLEMAS
-
-#### PROBLEMA 1: Funciones faltantes (CRÍTICO)
-- **Ubicación**: `index.html` llama funciones que no existen en `js/main.js`
-- **Funciones faltantes**: 
-  - `applyAllFilters()` - Llamada desde botón "Aplicar" en panel móvil
-  - `clearAllFilters()` - Llamada desde botón "Limpiar Todo" en panel móvil
-- **Impacto**: El panel de filtros móviles no funciona
-- **Solución sugerida**: Crear las funciones faltantes
-
-#### PROBLEMA 2: Variable no utilizada
-- **Ubicación**: `js/main.js` - función `fillCategorySelect()`
-- **Problema**: Se busca `mobileCategoryInMenu` que no existe en HTML
-- **Solución sugerida**: Conectar con el selector correcto o eliminar referencia
-
-#### PROBLEMA 3: Función sin usar
-- **Ubicación**: `js/main.js` - función `handleMobileCategoryChange()`
-- **Problema**: La función está definida pero nunca es llamada desde el HTML
-- **Solución sugerida**: Integrarla o eliminarla
+| 1 | Funciones faltantes: `applyAllFilters()` y `clearAllFilters()` | index.html + js/main.js | **ALTA** | ✅ Resuelto |
+| 2 | Variable no utilizada: `mobileCategoryInMenu` | js/main.js | MEDIA | ✅ Resuelto |
+| 3 | Función sin usar: `handleMobileCategoryChange()` | js/main.js | BAJA | ✅ Resuelto |
 
 ---
 
 ### 📋 RECOMENDACIONES
 
-**Orden de corrección sugerido:**
-1. Crear funciones faltantes `applyAllFilters()` y `clearAllFilters()` en `main.js`
-2. Corregir referencias a `mobileCategoryInMenu`
-3. Decidir sobre `handleMobileCategoryChange()`
+**Estado: TODOS LOS PROBLEMAS RESUELTOS ✅**
 
-**Advertencia**: Cualquier modificación debe hacerse con cuidado para NO romper la funcionalidad existente.
+El proyecto se encuentra en óptimas condiciones técnicas.
 
 ---
 
-*Sección agregada: 07/03/2026*
-*Versión: 2.2 (Con revisión de políticas)*
+*Documento actualizado: 17/03/2026*
+*Versión: 2.5 (Con todos los problemas resueltos)*

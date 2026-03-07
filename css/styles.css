@@ -1147,6 +1147,19 @@ body[data-theme="light"] .modal-watermark {
   justify-content: center;
 }
 
+/* Contador de productos */
+.productos-count {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.productos-count strong {
+  color: var(--rojo);
+  font-weight: 700;
+}
+
 /* Indicador de categoría activa en el catálogo */
 .categoria-activa {
   display: inline-flex;
@@ -1402,5 +1415,87 @@ body[data-theme="light"] .modal-watermark {
   .hero-btns a {
     min-height: 44px;
     -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* ========================================
+   CONTROLES DE PAGINACIÓN
+   ======================================== */
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.pagination-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--borde);
+  background: var(--bg3);
+  color: var(--texto);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.pagination-btn:hover:not([disabled]) {
+  border-color: var(--rojo);
+  color: var(--rojo);
+  background: rgba(232, 25, 44, 0.1);
+}
+
+.pagination-btn[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.pagination-current {
+  color: var(--rojo);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.pagination-separator {
+  color: var(--muted);
+}
+
+.pagination-total {
+  color: var(--muted);
+}
+
+/* Responsive pagination */
+@media (max-width: 480px) {
+  .pagination-controls {
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+  
+  .pagination-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  
+  .pagination-info {
+    font-size: 0.85rem;
+  }
+  
+  .pagination-current {
+    font-size: 1rem;
   }
 }
