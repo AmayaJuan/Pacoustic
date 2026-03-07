@@ -10,6 +10,7 @@ Sitio web oficial de **PA Acoustic**, empresa especializada en equipos de audio 
 
 | Fecha | Cambios | Archivos Afectados |
 |-------|---------|-------------------|
+| 15/03/2026 | Corregir y organizar productos.json (errores de sintaxis, campos estandarizados) | productos.json |
 | 07/03/2026 | Implementar sistema de cache DOM (domCache, initCache, función $()) | js/main.js |
 | 07/03/2026 | Eliminar funciones sin usar: applyMobileSearch, clearMobileSearch, applyMobileFilters, clearMobileFilters | js/main.js |
 | 07/03/2026 | Corregir búsqueda en menú móvil - agregar evento input para mobileMenuSearch | js/main.js |

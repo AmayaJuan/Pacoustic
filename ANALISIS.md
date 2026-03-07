@@ -197,12 +197,38 @@ El proyecto cumple con todas las políticas estrictas establecidas. Las mejoras 
 
 ---
 
-*Documento actualizado: 06/03/2026*
-*Versión: 2.1 (Con sistema de zoom)*
+*Documento actualizado: 15/03/2026*
+*Versión: 2.3 (Con corrección de productos.json)*
 
 ---
 
-## 11. REVISIÓN DE POLÍTICAS Y SCRIPTS (07/03/2026)
+## 12. CORRECCIÓN DE PRODUCTOS.JSON (15/03/2026)
+
+### Problemas encontrados en productos.json:
+| # | Problema | Severidad | Solución |
+|---|----------|-----------|----------|
+| 1 | Campo inconsistente: `name` vs `nombre` | ALTA | Estandarizar a `nombre` |
+| 2 | Campo inconsistente: `cat` vs `categoria` | MEDIA | Estandarizar a `categoria` |
+| 3 | Campo inconsistente: `imgs` vs `imagenes` | MEDIA | Estandarizar a `imagenes` |
+| 4 | Campo inconsistente: `specs` vs `especificaciones` | MEDIA | Estandarizar a `especificaciones` |
+| 5 | Campo inconsistente: `apps` vs `aplicaciones` | MEDIA | Estandarizar a `aplicaciones` |
+| 6 | Campo inconsistente: `tags` vs `etiquetas` | MEDIA | Estandarizar a `etiquetas` |
+| 7 | Error de sintaxis: `"imagenes":18x-1 ["img/lf.png"]` | CRÍTICO | Corregido a `["img/lf18x-1.png"]` |
+| 8 | Error de sintaxis: tags malformado en Sheffield 12 | CRÍTICO | Corregido a `["1000 W"]` |
+| 9 | Falta `id` en producto "PA Sheffield 10" | ALTA | Agregado `id: "sheffield10"` |
+| 10 | JSON no cerrado correctamente | CRÍTICO | Cerrado correctamente |
+
+### Campos estandarizados en productos.json:
+- `name` → `nombre`
+- `cat` → `categoria`
+- `desc` → `descripcion`
+- `imgs` → `imagenes`
+- `specs` → `especificaciones`
+- `apps` → `aplicaciones`
+- `tags` → `etiquetas`
+
+### Nota técnica:
+El archivo `productos.json` se utiliza para referencia/externalización de datos. El archivo `js/main.js` tiene su propia copia de los productos con campos en inglés (`name`, `cat`, `desc`, `imgs`, `specs`, `apps`, `tags`) que es la que utiliza el sitio actualmente. Ambos funcionan correctamente de forma independiente.
 
 ### ✅ POLÍTICAS CUMPLIDAS
 
