@@ -74,6 +74,7 @@
 | Revisión de políticas y scripts | ✅ Completado | 07/03/2026 |
 | Crear funciones applyAllFilters() y clearAllFilters() | ✅ Completado | 07/03/2026 |
 | Corregir referencias a mobileMenuCategory | ✅ Completado | 07/03/2026 |
+| Limpiar código: eliminar función handleMobileCategoryChange() sin usar | ✅ Completado | 08/03/2026 |
 
 ---
 
