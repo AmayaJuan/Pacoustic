@@ -816,20 +816,27 @@ function renderProductos() {
  * Configura los eventos de los filtros de búsqueda y categoría
  */
 function setupCatalogFilters() {
+  // Llenar el selector de categorías
   fillCategorySelect();
   
+  // Elementos del escritorio
   const searchEl = document.getElementById('catalogSearch');
   const categoryEl = document.getElementById('catalogCategory');
+  // Elementos del menú móvil
   const mobileMenuCategory = document.getElementById('mobileMenuCategory');
+  const mobileMenuSearch = document.getElementById('mobileMenuSearch');
+  // Elementos de la caja de búsqueda
   const searchBox = document.getElementById('navSearchBox');
   const searchTrigger = document.getElementById('navSearchTrigger');
 
+  // Evento de búsqueda en escritorio
   if (searchEl) {
     searchEl.addEventListener('input', function() {
       renderProductos();
     });
   }
   
+  // Evento de categoría en escritorio
   if (categoryEl) categoryEl.addEventListener('change', function() {
     renderProductos();
     document.getElementById('productos').scrollIntoView({ behavior: 'smooth' });
@@ -842,6 +849,17 @@ function setupCatalogFilters() {
     document.getElementById('productos').scrollIntoView({ behavior: 'smooth' });
   });
 
+  // Evento para la búsqueda en el menú móvil - NUEVO
+  if (mobileMenuSearch) {
+    mobileMenuSearch.addEventListener('input', function() {
+      if (searchEl) {
+        searchEl.value = mobileMenuSearch.value;
+        renderProductos();
+      }
+    });
+  }
+
+  // Configuración de la caja de búsqueda expandible
   if (searchBox && searchTrigger && searchEl) {
     searchTrigger.addEventListener('click', () => {
       const isExpanded = searchBox.classList.toggle('expanded');

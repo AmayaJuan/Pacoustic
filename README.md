@@ -10,7 +10,10 @@ Sitio web oficial de **PA Acoustic**, empresa especializada en equipos de audio 
 
 | Fecha | Cambios | Archivos Afectados |
 |-------|---------|-------------------|
-| 08/03/2026 | Limpiar código: eliminar función handleMobileCategoryChange() sin usar | js/main.js, CHECKLIST_REQUISITOS.md |
+| 07/03/2026 | Corregir búsqueda en menú móvil - agregar evento input para mobileMenuSearch | js/main.js |
+| 07/03/2026 | Eliminar controles de catálogo móvil (botón buscar/filtrar) | index.html |
+| 07/03/2026 | Navbar fixed en móvil para que quede fijo al hacer scroll | css/styles.css |
+| 07/03/2026 | Limpiar código: eliminar función handleMobileCategoryChange() sin usar | js/main.js, CHECKLIST_REQUISITOS.md |
 | 07/03/2026 | Revisión de políticas y scripts - Crear funciones applyAllFilters() y clearAllFilters() | js/main.js, ANALISIS.md, CHECKLIST_REQUISITOS.md |
 | 07/03/2026 | Indicador de categoría activa en catálogo | index.html, css/styles.css, js/main.js, ANALISIS.md, CHECKLIST_REQUISITOS.md |
 | 07/03/2026 | Agregar nuevo producto: PA Sheffield 10 | js/main.js |
