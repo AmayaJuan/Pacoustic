@@ -54,6 +54,71 @@ const WP_SVG = `<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.75
 const THEME_KEY = 'paTheme';
 
 // ========================================
+// SISTEMA DE CACHE DOM
+// ========================================
+
+/**
+ * Objeto cache para almacenar referencias a elementos del DOM
+ * Evita llamadas repetidas a getElementById
+ */
+const domCache = {};
+
+/**
+ * Inicializa el cache con los elementos más usados del sitio
+ * Se llama una sola vez al cargar la página
+ */
+function initCache() {
+  // Elementos del navbar
+  domCache.navHamburger = document.getElementById('navHamburger');
+  domCache.navLinks = document.getElementById('navLinks');
+  domCache.navMobileOverlay = document.getElementById('navMobileOverlay');
+  domCache.catalogSearch = document.getElementById('catalogSearch');
+  domCache.catalogCategory = document.getElementById('catalogCategory');
+  domCache.navSearchBox = document.getElementById('navSearchBox');
+  domCache.navSearchTrigger = document.getElementById('navSearchTrigger');
+  domCache.mobileMenuCategory = document.getElementById('mobileMenuCategory');
+  domCache.mobileMenuSearch = document.getElementById('mobileMenuSearch');
+  
+  // Elementos del catálogo
+  domCache.productosGrid = document.getElementById('productosGrid');
+  domCache.productos = document.getElementById('productos');
+  domCache.categoriaActiva = document.getElementById('categoriaActiva');
+  domCache.categoriaNombre = document.getElementById('categoriaNombre');
+  domCache.bannerTrack = document.getElementById('bannerTrack');
+  
+  // Elementos del modal
+  domCache.modalOverlay = document.getElementById('modalOverlay');
+  domCache.modal = document.getElementById('modal');
+  domCache.modalBody = document.getElementById('modalBody');
+  domCache.modalTitulo = document.getElementById('modalTitulo');
+  domCache.modalImgMain = document.getElementById('modalImgMain');
+  domCache.modalThumbs = document.getElementById('modalThumbs');
+  domCache.modalInfo = document.getElementById('modalInfo');
+  
+  // Elementos de filtros móviles
+  domCache.mobileSearchInput = document.getElementById('mobileSearchInput');
+  domCache.mobileCategorySelect = document.getElementById('mobileCategorySelect');
+  domCache.mobileFilterBtn = document.getElementById('mobileFilterBtn');
+  domCache.mobileSearchPanel = document.getElementById('mobileSearchPanel');
+  domCache.mobileFilterPanel = document.getElementById('mobileFilterPanel');
+  
+  // Audio
+  domCache.introAudio = document.getElementById('introAudio');
+}
+
+/**
+ * Función helper para obtener elementos del DOM con cache
+ * @param {string} id - ID del elemento
+ * @returns {HTMLElement|null}
+ */
+function $(id) {
+  if (!domCache[id]) {
+    domCache[id] = document.getElementById(id);
+  }
+  return domCache[id];
+}
+
+// ========================================
 // BANDERAS DE ESTADO
 // ========================================
 
@@ -1087,6 +1152,7 @@ function initActiveMenuLink() {
 // ========================================
 
 document.addEventListener('DOMContentLoaded', function() {
+  initCache();
   loadTheme();
   initIntroAudio();
   renderBanner();
@@ -1156,80 +1222,6 @@ function toggleMobileFilters() {
   if (filterPanel) {
     filterPanel.classList.toggle('open');
   }
-}
-
-/**
- * Aplica la búsqueda desde el panel móvil
- */
-function applyMobileSearch() {
-  const mobileInput = document.getElementById('mobileSearchInput');
-  const desktopInput = document.getElementById('catalogSearch');
-  
-  if (mobileInput && desktopInput) {
-    desktopInput.value = mobileInput.value;
-    renderProductos();
-  }
-  
-  toggleMobileSearch();
-  document.getElementById('productos').scrollIntoView({ behavior: 'smooth' });
-}
-
-/**
- * Limpia la búsqueda desde el panel móvil
- */
-function clearMobileSearch() {
-  const mobileInput = document.getElementById('mobileSearchInput');
-  const desktopInput = document.getElementById('catalogSearch');
-  
-  if (mobileInput) mobileInput.value = '';
-  if (desktopInput) desktopInput.value = '';
-  
-  renderProductos();
-  toggleMobileSearch();
-}
-
-/**
- * Aplica el filtro de categoría desde el panel móvil
- */
-function applyMobileFilters() {
-  const mobileSelect = document.getElementById('mobileCategorySelect');
-  const desktopSelect = document.getElementById('catalogCategory');
-  const filterBtn = document.getElementById('mobileFilterBtn');
-  
-  if (mobileSelect && desktopSelect) {
-    desktopSelect.value = mobileSelect.value;
-    renderProductos();
-    
-    if (filterBtn) {
-      if (mobileSelect.value) {
-        filterBtn.classList.add('active');
-      } else {
-        filterBtn.classList.remove('active');
-      }
-    }
-  }
-  
-  toggleMobileFilters();
-  document.getElementById('productos').scrollIntoView({ behavior: 'smooth' });
-}
-
-/**
- * Limpia los filtros de categoría desde el panel móvil
- */
-function clearMobileFilters() {
-  const mobileSelect = document.getElementById('mobileCategorySelect');
-  const desktopSelect = document.getElementById('catalogCategory');
-  const filterBtn = document.getElementById('mobileFilterBtn');
-  
-  if (mobileSelect) mobileSelect.value = '';
-  if (desktopSelect) desktopSelect.value = '';
-  
-  if (filterBtn) {
-    filterBtn.classList.remove('active');
-  }
-  
-  renderProductos();
-  toggleMobileFilters();
 }
 
 // ========================================

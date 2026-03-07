@@ -10,6 +10,8 @@ Sitio web oficial de **PA Acoustic**, empresa especializada en equipos de audio 
 
 | Fecha | Cambios | Archivos Afectados |
 |-------|---------|-------------------|
+| 07/03/2026 | Implementar sistema de cache DOM (domCache, initCache, función $()) | js/main.js |
+| 07/03/2026 | Eliminar funciones sin usar: applyMobileSearch, clearMobileSearch, applyMobileFilters, clearMobileFilters | js/main.js |
 | 07/03/2026 | Corregir búsqueda en menú móvil - agregar evento input para mobileMenuSearch | js/main.js |
 | 07/03/2026 | Eliminar controles de catálogo móvil (botón buscar/filtrar) | index.html |
 | 07/03/2026 | Navbar fixed en móvil para que quede fijo al hacer scroll | css/styles.css |
