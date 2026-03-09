@@ -10,6 +10,11 @@ Sitio web oficial de **PA Acoustic**, empresa especializada en equipos de audio 
 
 | Fecha | Cambios | Archivos Afectados |
 |-------|---------|-------------------|
+| 09/03/2026 | Reorganización del proyecto: eliminar archivos sin uso, corregir nombres de imágenes (sheffield) | index.html, js/main.js, productos.json, fonts/, img/ |
+| 09/03/2026 | Eliminar productos.json (no está en funcionamiento - datos en main.js) | productos.json |
+| 09/03/2026 | Eliminar carpeta fonts/ vacía | fonts/ |
+| 09/03/2026 | Eliminar imagen sin uso hl30a-3.jpg | img/hl30a-3.jpg |
+| 09/03/2026 | Corregir nombres de imágenes con errores ortográficos (pa10shefieeld → pa10sheffield) | img/, js/main.js |
 | 07/03/2026 | Actualizar contador de paginación al formato "Pag. 1. 8 / 8 de 9 productos" | js/main.js |
 | 07/03/2026 | Actualizar productos.json a inglés, revisar variables en inglés, actualizar documentación | productos.json, README.md, ANALISIS.md |
 | 07/03/2026 | Agregar contador de productos en el catálogo | index.html, css/styles.css, js/main.js |
@@ -100,8 +105,8 @@ PGW/
 │   ├── pa12n1000-1.png     # Marca de agua PA12N-1000
 │   ├── p12sheffield.png    # Imagen producto Sheffield 12
 │   ├── pa12shieffield-1.png # Marca de agua Sheffield 12
-│   ├── pa10shefieeld.png   # Imagen producto Sheffield 10
-│   └── pa10shefieeld-1.png # Marca de agua Sheffield 10
+│   ├── pa10sheffield.png   # Imagen producto Sheffield 10
+│   └── pa10sheffield-1.png # Marca de agua Sheffield 10
 └── doc/
     ├── DOCUMENTO DE REQUISITOS DEL PROYECTO WEB.docx
     ├── FICHA TECNICA PA HL 10A.docx

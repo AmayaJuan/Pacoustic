@@ -35,7 +35,7 @@ NOTAS DE MARCAS DE AGUA (WATERMARKS):
   PA8N-600:   img/pa8n600-1.png
   PA12N-1000: img/pa12n1000-1.png
   Sheffield12: img/pa12shieffield-1.png
-  Sheffield10: img/pa10shefieeld-1.png
+  Sheffield10: img/pa10sheffield-1.png
 - Estilos en css/styles.css:
   .prod-watermark (catálogo) y .modal-watermark (modal)
 ======================================================================
@@ -645,8 +645,8 @@ const productos = [
     cat: 'Parlantes',
     badge: 'Nuevo',
     desc: 'El parlante SHEFFIELD 10 es un componente de alta calidad diseñado para sistemas profesionales que requieren graves profundos y medios precisos. Con bobina de 3" en kapton, imán de ferrita y construcción robusta, ofrece un rendimiento confiable y duradero.',
-    imgs: ['img/pa10shefieeld.png'],
-    watermark: 'img/pa10shefieeld-1.png',
+    imgs: ['img/pa10sheffield.png'],
+    watermark: 'img/pa10sheffield-1.png',
     specs: [
       ['Modelo',             'PA Sheffield 10'],
       ['Diámetro Nominal',  '10 pulgadas'],
