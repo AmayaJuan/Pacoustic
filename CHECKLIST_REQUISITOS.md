@@ -27,11 +27,12 @@
 | Navegación responsive | ✅ Completado | Desktop, tablet y móvil |
 | Catálogo visual | ✅ Completado | Grid de productos con tarjetas |
 | Modal de productos | ✅ Completado | Con especificaciones, imágenes y WhatsApp |
-| Formulario de contacto | ❌ No implementado | No estaba marcado inicialmente |
+| Formulario de contacto | ❌ No solicitado | Contacto solo por WhatsApp |
 | Carrusel automático en inicio | ✅ Completado | Banner con productos |
 | Sistema de zoom en modal | ✅ Completado | Rueda mouse y pinch-to-zoom |
 | Selector de categorías | ✅ Completado | Desktop, tablet y móvil |
 | Indicador de categoría activa | ✅ Completado | Muestra la categoría seleccionada |
+| Paginación de productos | ✅ Completado | Control de páginas en el catálogo |
 
 ---
 
@@ -128,16 +129,16 @@
 
 | Categoría | Completados | Pendientes | Total |
 |-----------|-------------|------------|-------|
-| Secciones | 6           | 2           | 8    |
-| Funcionalidades | 7     | 1           | 8    |
-| Ajustes solicitados | 8 | 0           | 8    |
+| Secciones | 6           | 1           | 7     |
+| Funcionalidades | 8     | 0           | 8     |
+| Ajustes solicitados | 15 | 0           | 15    |
 
-**Progreso general: ~90%**
+**Progreso general: ~95%**
 
 ---
 
 *Documento creado para seguimiento del proyecto PA Acoustic*
-*Última actualización: 09/03/2026*
+*Última actualización: 10/03/2026*
 
 ---
 
