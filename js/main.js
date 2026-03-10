@@ -202,6 +202,8 @@ function resetZoom() {
 
 /**
  * Maneja el evento de rueda del mouse para zoom
+ * Solo activa zoom cuando el cursor está sobre la imagen principal del modal
+ * Si el cursor NO está sobre la imagen, permite scroll normal
  * @param {WheelEvent} e - Evento de rueda
  */
 function handleWheelZoom(e) {
@@ -209,6 +211,25 @@ function handleWheelZoom(e) {
   const modalOverlay = document.getElementById('modalOverlay');
   if (!modalOverlay || !modalOverlay.classList.contains('open')) return;
   
+  // Obtener la imagen principal del modal
+  const modalImgMain = document.getElementById('modalImgMain');
+  if (!modalImgMain) return;
+  
+  // Verificar si el cursor está sobre la imagen principal
+  const imgRect = modalImgMain.getBoundingClientRect();
+  const isOverImage = (
+    e.clientX >= imgRect.left &&
+    e.clientX <= imgRect.right &&
+    e.clientY >= imgRect.top &&
+    e.clientY <= imgRect.bottom
+  );
+  
+  // Si el cursor NO está sobre la imagen, permitir scroll normal (no prevenir default)
+  if (!isOverImage) {
+    return; // Sale de la función sin preventDefault, permitiendo scroll normal
+  }
+  
+  // Si el cursor está sobre la imagen, aplicar zoom
   e.preventDefault();
   
   if (e.deltaY < 0) {
