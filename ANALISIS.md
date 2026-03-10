@@ -353,5 +353,73 @@ if (productosCount) {
 
 ---
 
-*Documento actualizado: 07/03/2026*
-*Versión: 2.6 (Actualización a inglés y limpieza de código)*
+*Documento actualizado: 09/03/2026*
+*Versión: 2.8 (Análisis completo de problemas)*
+
+---
+
+## 16. ANÁLISIS COMPLETO 09/03/2026 - PROBLEMAS ENCONTRADOS
+
+### TABLA RESUMEN DE PROBLEMAS
+
+| # | PROBLEMA | ARCHIVO | NIVEL | EXPLICACIÓN | SOLUCIÓN |
+|---|----------|---------|-------|-------------|----------|
+| 1 | Script inline en `<head>` antes de que exista `document.body` | index.html | **CRÍTICO** | El script del tema se ejecutaba en el `<head>` donde `document.body` es `null`, causando error "Cannot read properties of null" | ✅ Mover script al final del `<body>` |
+| 2 | Referencias a elementos inexistentes en cache DOM | main.js | **CRÍTICO** | `mobileSearchInput`, `mobileCategorySelect`, etc. no existen en HTML | ✅ Eliminar líneas 99-102 del cache |
+| 3 | Función duplicada initMobileFilters | main.js | **MEDIO** | Duplica eventos de setupCatalogFilters() | Pendiente |
+| 4 | Triplicar items del banner | main.js | **MEDIO** | Triplica solicitudes HTTP | Pendiente |
+| 5 | Audio preload="auto" | index.html | **MENOR** | Puede causar errores de autoplay | Pendiente |
+| 6 | Label sin atributo for | index.html | **MENOR** | Accesibilidad | Pendiente |
+
+---
+
+### RESUMEN DE CORRECCIONES
+
+| Nivel | Cantidad | Corregidos |
+|-------|----------|------------|
+| **CRÍTICO** | 2 | ✅ 2 (100%) |
+| **MEDIO** | 2 | ⏳ 0 (0%) |
+| **MENOR** | 2 | ⏳ 0 (0%) |
+| **TOTAL** | 6 | **33%** (2/6) |
+
+---
+
+### CÓDIGO CORREGIDO - PROBLEMA 1
+
+**index.html - Script movido al final del body:**
+
+```html
+<body>...</body>
+<script>
+  (function() {
+    var theme = localStorage.getItem('paTheme');
+    if (theme === 'light' || theme === 'dark') {
+      document.body.setAttribute('data-theme', theme);
+    } else {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
+```
+
+---
+
+### CÓDIGO CORREGIDO - PROBLEMA 2
+
+**main.js - Cache DOM corregido:**
+
+```javascript
+// Elementos de filtros móviles - ELIMINADOS (referenciaban elementos inexistentes)
+// Los filtros móviles usan: mobileMenuSearch y mobileMenuCategory (ya definidos arriba)
+```
+
+---
+
+### ESTADO GENERAL
+
+| Aspecto | Estado |
+|---------|--------|
+| Errores JavaScript | ✅ Corregidos |
+| Funcionalidad | ✅ Operativo |
+| Diseño | ✅ Sin cambios |
+| Políticas | ✅ Cumplidas |
