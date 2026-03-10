@@ -380,10 +380,9 @@ function initIntroAudio() {
   const audio = document.getElementById('introAudio');
   if (!audio) return;
 
-  let introStopped = false;
   let introStarted = false;
 
-  // Función para detener el audio
+  // Función para detener el audio con fade out
  function stopIntro() {
   let fade = setInterval(() => {
     if (audio.volume > 0.05) {
