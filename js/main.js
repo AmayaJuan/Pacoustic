@@ -463,10 +463,10 @@ async function loadProducts() {
       // Extraer la descripción del campo description (nivel superior)
       desc: p.description || "Producto de audio profesional",
 
+      // Solo mostrar la imagen principal (no la marca de agua como miniatura)
       imgs: [
-        p.images?.main || "",
-        p.images?.watermark || ""
-      ].filter(Boolean),
+        p.images?.main || ""
+      ],
 
       watermark: p.images?.watermark || null,
 

@@ -72,7 +72,7 @@
   {
     "id": 3,
     "name": "lf18x",
-    "category": "Woofer",
+    "category": "Parlantes",
     "images": {
       "main": "img/products/lf18x-1.png",
       "watermark": "img/products/lf18x-2.png"
@@ -100,7 +100,7 @@
   {
     "id": 4,
     "name": "pa10n",
-    "category": "Parlante",
+    "category": "Parlantes",
     "images": {
       "main": "img/products/pa10n-900-1.png",
       "watermark": "img/products/pa10n-900-2.png"
@@ -122,7 +122,7 @@
   {
     "id": 5,
     "name": "pa12n1000",
-    "category": "Woofer",
+    "category": "Parlantes",
     "images": {
       "main": "img/products/pa12n1000-1.png",
       "watermark": "img/products/pa12n1000-2.png"
@@ -144,7 +144,7 @@
   {
     "id": 6,
     "name": "pa8n600",
-    "category": "Woofer",
+    "category": "Parlantes",
     "images": {
       "main": "img/products/pa8n600-1.png",
       "watermark": "img/products/pa8n600-2.png"
@@ -166,7 +166,7 @@
   {
     "id": 7,
     "name": "parlante 10 sheffieeld",
-    "category": "Parlante",
+    "category": "Parlantes",
     "images": {
       "main": "img/products/parlante 10 sheffieeld-1.png",
       "watermark": "img/products/parlante 10 sheffieeld-2.png"
@@ -191,7 +191,7 @@
   {
     "id": 8,
     "name": "parlante 12 sheffield",
-    "category": "Parlante",
+    "category": "Parlantes",
     "images": {
       "main": "img/products/parlante 12 sheffield-1.png",
       "watermark": "img/products/parlante 12 sheffield-2.png"
@@ -215,7 +215,7 @@
   {
     "id": 9,
     "name": "woofer18lw2420+",
-    "category": "Woofer",
+    "category": "Parlantes",
     "images": {
       "main": "img/products/woofer18lw2420+-1.png",
       "watermark": "img/products/woofer18lw2420+-2.png"
