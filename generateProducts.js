@@ -1,4 +1,3 @@
-
 const fs = require("fs");
 const path = require("path");
 const mammoth = require("mammoth");
@@ -85,13 +84,28 @@ async function readPdf(filePath) {
   }
 }
 
-// Función para extraer la descripción - MEJORADA
+// Función para limpiar clave de especificación (sin guiones bajos)
+function cleanKey(text) {
+  return text
+    .toLowerCase()
+    .replace(/á/g, "a")
+    .replace(/é/g, "e")
+    .replace(/í/g, "i")
+    .replace(/ó/g, "o")
+    .replace(/ú/g, "u")
+    .replace(/ñ/g, "n")
+    .replace(/\s+/g, " ")
+    .replace(/[^a-z0-9 ]/g, "")
+    .trim();
+}
+
+// Función para extraer la descripción
 function extractDescription(text, productName) {
   if (!text) return "Producto de audio profesional " + productName;
   
   const lines = text.split('\n').map(function(l) { return l.trim(); }).filter(function(l) { return l.length > 0; });
   
-  // Buscar "Descripción:" al inicio (primera línea del documento)
+  // Buscar "Descripción:" al inicio
   for (let i = 0; i < Math.min(lines.length, 3); i++) {
     const line = lines[i];
     const lowerLine = line.toLowerCase();
@@ -103,7 +117,6 @@ function extractDescription(text, productName) {
         descParts.push(afterDesc);
       }
       
-      // Collect siguientes líneas hasta specs
       for (let j = i + 1; j < lines.length; j++) {
         const nextLine = lines[j];
         const nextLower = nextLine.toLowerCase();
@@ -253,17 +266,7 @@ function extractSpecs(text) {
     if (!line.includes(':') && line.length > 15 && line.length < 80) {
       const parts = line.trim().split(/\s{2,}|\t+/);
       if (parts.length >= 2) {
-        let key = parts[0]
-          .toLowerCase()
-          .replace(/á/g, "a")
-          .replace(/é/g, "e")
-          .replace(/í/g, "i")
-          .replace(/ó/g, "o")
-          .replace(/ú/g, "u")
-          .replace(/ñ/g, "n")
-          .replace(/\s+/g, "_")
-          .replace(/[^a-z0-9_]/g, "");
-        
+        let key = cleanKey(parts[0]);
         let value = parts.slice(1).join(' ').replace(/\s+/g, ' ').trim();
         value = value.replace(/^[•\-\*•\u2022\u2023\u25E6\u2043\u2219\s➢]+/, "").trim();
         
@@ -282,16 +285,7 @@ function extractSpecs(text) {
       pendingKey = null;
     } else {
       if (line.length >= 3 && line.length < 35 && !/^\d+$/.test(line)) {
-        let key = line
-          .toLowerCase()
-          .replace(/á/g, "a")
-          .replace(/é/g, "e")
-          .replace(/í/g, "i")
-          .replace(/ó/g, "o")
-          .replace(/ú/g, "u")
-          .replace(/ñ/g, "n")
-          .replace(/\s+/g, "_")
-          .replace(/[^a-z0-9_]/g, "");
+        let key = cleanKey(line);
         
         if (key.length > 2 && !key.includes("item") && !key.includes("descrip")) {
           pendingKey = key;
@@ -303,7 +297,7 @@ function extractSpecs(text) {
   return specs;
 }
 
-// Función para extraer aplicaciones - MEJORADA para collectr más líneas
+// Función para extraer aplicaciones
 function extractApplications(text) {
   if (!text) return "";
   
@@ -315,7 +309,6 @@ function extractApplications(text) {
     const line = lines[i];
     const lowerLine = line.toLowerCase();
     
-    // Detectar inicio de aplicaciones
     if (lowerLine === "aplicaciones" || 
         lowerLine === "aplicaciones recomendadas:" ||
         lowerLine.includes("aplicaciones recomendadas")) {
@@ -324,7 +317,6 @@ function extractApplications(text) {
     }
     
     if (inApps) {
-      // Detener en otra sección
       if (lowerLine.includes("gráfico") ||
           lowerLine.includes("dimensiones") ||
           lowerLine.startsWith("respuesta") ||
@@ -333,13 +325,11 @@ function extractApplications(text) {
         break;
       }
       
-      // Limpiar bullets - múltiples tipos
       const cleanLine = line
         .replace(/^[•\-\*•\u2022\u2023\u25E6\u2043\u2219\u00BF\u00A0➢\s]+/, "")
         .replace(/^[✔✓●○■□◆◇★☆►◄‣‟"„\t]+/, "")
         .trim();
       
-      // Verificar que es una aplicación válida
       if (cleanLine && cleanLine.length > 3 && cleanLine.length < 80) {
         apps.push(cleanLine);
       }
@@ -457,4 +447,3 @@ async function generateProducts() {
 }
 
 generateProducts();
-
