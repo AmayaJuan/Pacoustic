@@ -630,16 +630,17 @@ function renderProducts() {
   const grid = document.getElementById('productsGrid');
   if (!grid) return;
 
-  // Actualizar contador de products
+  // Actualizar contador de productos
+  // Formato: "Pag. 1. 1-8 / 9" (página actual, rango de productos mostrados, total)
   const productsCount = document.getElementById('productsCount');
   if (productsCount) {
     const total = filtered.length;
-    // Calcular variables de paginación para el contador
     const itemsPerPage = PAGINATION_CONFIG.itemsPerPage;
     const currentPage = PAGINATION_CONFIG.currentPage;
     const startIndex = (currentPage - 1) * itemsPerPage;
-    // Formato: "Pag. 1. 8 / 8 de 9 products"
-    productsCount.innerHTML = `Pag. ${currentPage}. ${Math.min(startIndex + itemsPerPage, total)} / ${startIndex + itemsPerPage} de ${total} products`;
+    const endIndex = Math.min(startIndex + itemsPerPage, total);
+    const startItem = startIndex + 1;
+    productsCount.innerHTML = `Pag. ${currentPage}. ${startItem}-${endIndex} / ${total}`;
   }
 
   // Obtener valores de los filtros activos
