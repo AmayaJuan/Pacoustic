@@ -7,8 +7,33 @@
       "main": "img/products/hl10a-1.png",
       "watermark": "img/products/hl10a-2.png"
     },
+    "description": "El PA HL10-A es un sistema line array activo bi-amplificado de 2 vías, diseñado para aplicaciones profesionales de refuerzo sonoro de formato pequeño y mediano. Integra dos parlantes de 8\" con iman de neodimio y un motor de compresión con iman de neodimio y una bobina de 2.5\", ofreciendo una respuesta en frecuencia de 65 Hz a 20 kHz y un SPL máximo de hasta 133 dB. El sistema incorpora amplificación clase D de alta eficiencia, con una potencia total de 1400 W y una potencia RMS de 700W, perfectamente adaptada a los altavoces para maximizar el rendimiento dinámico y la confiabilidad del sistema.",
     "document": "doc/products/FICHA TECNICA PA HL 10A.docx",
-    "specs": []
+    "specs": {
+        "modelo": "PA HL-10A",
+        "tipo": "Módulo activo 2 vías, bi amplificado",
+        "potencia_pico": "1400 W",
+        "potencia_rms": "700 W",
+        "potencia_lf": "1000 W pico / 500 W RMS",
+        "potencia_hf": "400 W pico / 200 W RMS",
+        "respuesta_frecuencia": "65 Hz – 20 kHz",
+        "spl_maximo": "133 dB",
+        "cobertura_horizontal": "100°",
+        "cobertura_vertical": "15°",
+        "transductores": "2 × 8\" woofer Neodymium (bobina de voz 2.0\") + 1 driver compresor (bobina de 2.5\")",
+        "conectores_entrada": "XLR / TRS combo balanceado / no balanceado",
+        "conector_salida": "XLR",
+        "sensibilidad_entrada": "-2 dBu / +4 dBu",
+        "frecuencia_crossover": "800 Hz",
+        "proteccion": "Protección térmica, RMS; limitador suave",
+        "alimentacion": "powerCON IN / powerCON OUT",
+        "material": "polipropileno",
+        "herrajes": "Mecanismos variables de rigging, ángulos seleccionables cada 2°",
+        "dimensiones": "Alto: 294 mm • Ancho: 569 mm • Profundidad: 434 mm",
+        "peso_neto": "20,4 kg",
+        "color": "Negro",
+        "aplicaciones": "Conciertos en vivo, Iglesias, colegios, Teatros y auditorios, Eventos corporativos y conferencias, Conciertos al aire libre, Sistemas de refuerzo sonoro para DJ y clubes, Instalaciones fijas"
+      }
   },
   {
     "id": 2,
@@ -18,9 +43,32 @@
       "main": "img/products/hl30a-1.png",
       "watermark": "img/products/hl30a-2.png"
     },
+     "description": "El PA HL30-A es un sistema line array activo bi-amplificado de 2 vías, diseñado para aplicaciones profesionales de refuerzo sonoro de pequeño y gran formato, con tecnología innovadora y control remoto por NET WORK. Integra dos parlantes de 10\" con imanes de neodimio y un motor de compresión de 1.4\" con diafragma de titanio, ofreciendo una respuesta en frecuencia de 50 Hz a 20 kHz y un SPL máximo de hasta 137 dB. El sistema incorpora amplificación clase D de alta eficiencia, con una potencia total de 2200 W y una potencia RMS de 1100W.",
     "document": "doc/products/FICHA TECNICA PA HL30A.docx",
-    "specs": []
-  },
+    "specs": {
+        "modelo": "PA HL-30A",
+        "tipo": "Módulo activo 2 vías, biamplificado",
+        "amplificador": "Clase D, Bi amplificado, DSP NET WORK",
+        "potencia_total": "2200 W",
+        "potencia_rms": "1100 W",
+        "potencia_baja_frecuencia": "1600 W PGM / 800 W RMS",
+        "potencia_alta_frecuencia": "600 W PGM / 300 W RMS",
+        "rango_frecuencia": "50 Hz – 20 kHz",
+        "spl_maximo": "137 dB",
+        "impedancia": "4 ohms",
+        "cobertura_horizontal": "100°",
+        "cobertura_vertical": "15°",
+        "woofer": "2 × 10\" woofer Neodymium (bobina de 65.5 mm)",
+        "driver": "1.4mm Neodymium, diafragma de Titanio con una bobina de 4\"",
+        "conectores_entrada": "XLR",
+        "conector_salida": "Powercom",
+        "entrada_alimentacion": "Powercom",
+        "material": "polipropileno",
+        "herrajes": "Sistema de rigging integrado con ajustes de ángulo",
+        "dimensiones": "Alto: 294 mm • Ancho: 707 mm • Profundidad: 508 mm",
+        "aplicaciones": "Conciertos en vivo, Teatros y auditorios, Refuerzo sonoro en espacios medianos y grandes, Instalaciones fijas, Espectáculos móviles, Iglesias, colegios, Eventos corporativos"
+      }
+    },
   {
     "id": 3,
     "name": "lf18x",
@@ -29,8 +77,25 @@
       "main": "img/products/lf18x-1.png",
       "watermark": "img/products/lf18x-2.png"
     },
+      "description": "El LF18X401+ es un woofer profesional de alto rendimiento diseñado para sistemas de refuerzo sonoro que requieren gran potencia, eficiencia y confiabilidad. Cuenta con 1900 W RMS y 3800 W de potencia continua lo que garantiza un rendimiento confiable incluso en altas exigencias de trabajo. Su campo magnético de 180 oz de carga y doble ventilación de aire permite que la bobina mantenga refrigerada por largo tiempo de trabajo.",
     "document": "doc/products/FICHA TECNICA PARLANTE LF18X401+.docx",
-    "specs": []
+    "specs": {
+        "diametro_nominal": "18 pulgadas (457 mm)",
+        "carga_magnetica": "180 onzas",
+        "impedancia_nominal": "8 ohmios",
+        "potencia_programada": "3800 W",
+        "potencia_rms": "1900 W",
+        "sensibilidad": "98 dB",
+        "rango_frecuencia": "30 Hz – 1000 Hz",
+        "excursion_maxima": "54 mm (2.13 pulgadas)",
+        "diametro_bobina": "4.5 pulgadas (114 mm)",
+        "material_bobina": "Til / Alambre Cobre",
+        "capas_bobina": "2 capas (Inside/Outside)",
+        "material_cono": "Cartón prensado con partículas de Fibra de Vidrio",
+        "diametro_total": "465 mm",
+        "altura_total": "212 mm",
+        "aplicaciones": "Cajas de alto desempeño, Cajas bass réflex o frontales, Diseños de cuarto orden, Sistemas de sonido profesional, Subwoofers de alta potencia, Instalaciones fijas en teatros y auditorios"
+      }
   },
   {
     "id": 4,
@@ -40,30 +105,63 @@
       "main": "img/products/pa10n-900-1.png",
       "watermark": "img/products/pa10n-900-2.png"
     },
-    "document": null,
-    "specs": []
-  },
+    "description": "El PA10N-900 es un Altavoz profesional de 10 pulgadas, diseñado para ofrecer un rendimiento superior en aplicaciones de Line Array, cajas tipo Turbo, equipos de sonido para Pickups y también para quienes buscan máxima presión y claridad en Car Audio. Su construcción avanzada garantiza respuesta rápida, alta sensibilidad y un audio limpio incluso en condiciones de alto estrés.",
+    "document": "doc/products/FICHA TECNICA PARLANTE 10 NEODIMIO.docx",
+    "specs": {
+        "diametro_nominal": "255mm (10 pulgadas)",
+        "impedancia_nominal": "8 ohmios",
+        "potencia_programada": "1000 W",
+        "potencia_rms": "500 W",
+        "sensibilidad": "99 dB",
+        "rango_frecuencia": "50 Hz – 3500 Hz",
+        "diametro_bobina": "3 pulgadas",
+        "capas_bobina": "2 capas (IN - OUT)",
+        "aplicaciones": "Sistemas line array, Monitores de escenarios, Cajas turbo, Sistema pickup, Car audio, Proyectos donde se requiera ligereza más potencia"
+      }
+    },
   {
     "id": 5,
     "name": "pa12n1000",
-    "category": "Parlante",
+    "category": "Woofer",
     "images": {
       "main": "img/products/pa12n1000-1.png",
       "watermark": "img/products/pa12n1000-2.png"
     },
-    "document": null,
-    "specs": []
+    "description": "Descubre un Woofer de 12\" diseñado para entregar máxima fuerza, precisión y eficiencia en cualquier aplicación profesional. Su impresionante sensibilidad de 100 dB lo convierte en un Woofer extremadamente eficiente, ideal para sistemas que requieren potencia real con una respuesta rápida y contundente.",
+    "document": "doc/products/FICHA TECNICA WOOFER PA12N1000.pdf",
+    "specs": {
+        "diametro_nominal": "306mm (12 pulgadas)",
+        "impedancia_nominal": "8 ohmios",
+        "potencia_rms": "1000 W",
+        "sensibilidad": "100 dB",
+        "rango_frecuencia": "50 Hz – 3500 Hz",
+        "diametro_bobina": "3 pulgadas",
+        "capas_bobina": "2 capas (IN - OUT)",
+        "caracteristicas": "Potencia real de 1000W, Bobina de 3\" IN-OUT, Sensibilidad de 100dB, Cono con protección semi-impermeable, Diseño de chassis robusto y profesional",
+        "aplicaciones": "Sistemas line array, Sistemas PA de alto rendimiento, Monitores de escenarios, Cajas turbo, Sistema pickup, Car audio, Proyectos donde se requiera ligereza más potencia"
+      }
   },
   {
     "id": 6,
     "name": "pa8n600",
-    "category": "Parlante",
+    "category": "Woofer",
     "images": {
       "main": "img/products/pa8n600-1.png",
       "watermark": "img/products/pa8n600-2.png"
     },
-    "document": null,
-    "specs": []
+    "description": "El PA8N-600 es un Woofer profesional de 8 pulgadas con imán de neodimio, diseñado para aplicaciones de refuerzo sonoro de rango medio y alta eficiencia. Su construcción robusta y bobina de 2 pulgadas IN-OUT permite una excelente respuesta térmica y un desempeño confiable.",
+    "document": "doc/products/FICHA TECNICA WOOFER PA8N600.pdf",
+    "specs": {
+        "diametro_nominal": "8 pulgadas",
+        "impedancia_nominal": "8 ohmios",
+        "potencia_programada": "600 W",
+        "potencia_rms": "300 W",
+        "sensibilidad": "97 dB",
+        "rango_frecuencia": "70 Hz – 3000 Hz",
+        "diametro_bobina": "2 pulgadas",
+        "capas_bobina": "2 capas (IN - OUT)",
+        "aplicaciones": "Cajas de dos vías, Sistemas line array, Monitores de escenarios, Cajas turbo, Sistema pickup, Car audio, Proyectos donde se requiera ligereza más potencia"
+      }
   },
   {
     "id": 7,
@@ -73,9 +171,23 @@
       "main": "img/products/parlante 10 sheffieeld-1.png",
       "watermark": "img/products/parlante 10 sheffieeld-2.png"
     },
-    "document": null,
-    "specs": []
-  },
+     "description": "El parlante SHEFFIELD 10 es un altavoz diseñado para aplicaciones profesionales que requieren potencia constante, buena respuesta en medios y excelente comportamiento en sistemas de audio tipo refuerzo sonoro. Su imán de ferrita, bobina de 3'' en kapton y chassis en lámina(brindan estabilidad térmica, durabilidad y un rendimiento sólido.",
+    "document": "doc/products/FICHA TECNICA PARLANTE 10 SHEFIEELD.docx",
+    "specs": {
+        "diametro_nominal": "10 pulgadas",
+        "carga_magnetica": "70 onzas",
+        "impedancia_nominal": "8 ohmios",
+        "potencia_programada": "800 W",
+        "potencia_rms": "400 W",
+        "sensibilidad": "97 dB",
+        "rango_frecuencia": "50 Hz – 2.5KHz",
+        "diametro_bobina": "3 pulgadas",
+        "material_bobina": "Kapton / Alambre Cobre",
+        "tipo_iman": "Ferrita",
+        "tipo_chasis": "Lamina",
+        "aplicaciones": "Monitores de piso, Reemplazo para proyectos de reparación, Refuerzo sonoro en eventos, Cajas convencionales"
+      }
+    },
   {
     "id": 8,
     "name": "parlante 12 sheffield",
@@ -84,8 +196,21 @@
       "main": "img/products/parlante 12 sheffield-1.png",
       "watermark": "img/products/parlante 12 sheffield-2.png"
     },
+     "description": "El parlante SHEFFIELD 12 es un componente pensado para sistemas profesionales que requieren graves más profundos y mayor cobertura de rango medio. Su bobina de 3'' en kapton, imán de ferrita y chassis en láminas aseguran un rendimiento confiable, alta durabilidad y excelente disipación de calor.",
     "document": "doc/products/FICHA TECNICA PARLANTE 12 SHEFFIELD.docx",
-    "specs": []
+    "specs": {
+        "diametro_nominal": "12 pulgadas",
+        "impedancia_nominal": "8 ohmios",
+        "potencia_rms": "500 W",
+        "potencia_programada": "1000 W",
+        "sensibilidad": "97 dB",
+        "rango_frecuencia": "45 Hz – 2.5KHz",
+        "diametro_bobina": "3 pulgadas",
+        "material_bobina": "Kapton / Alambre Cobre",
+        "tipo_iman": "Ferrita",
+        "tipo_chasis": "Lamina",
+        "aplicaciones": "Cajas convencionales, Sistemas full-range de alto desempeño, Equipos profesionales para música en vivo, Monitores de escenario de alta presión sonora, Reemplazos para proyectos de reparación"
+      }
   },
   {
     "id": 9,
@@ -95,7 +220,21 @@
       "main": "img/products/woofer18lw2420+-1.png",
       "watermark": "img/products/woofer18lw2420+-2.png"
     },
+     "description": "El 18LW2420+ es un woofer profesional de alto rendimiento diseñado para sistemas de refuerzo sonoro que requieren gran potencia, eficiencia y confiabilidad. Cuenta con 1300 W RMS y 2600 W de potencia continua lo que garantiza un rendimiento confiable incluso en altas exigencias de trabajo. Está construido con un imán de ferrita compacto especial para bajas frecuencias.",
     "document": "doc/products/FICHA TECNICA WOOFER 18LW2420+.docx",
-    "specs": []
-  }
+    "specs": {
+        "sensibilidad": "98 dB SPL",
+        "potencia_programa": "2600 W",
+        "potencia_rms": "1300 W",
+        "disipacion_calor": "Difusor de aire integrado y múltiples ventilaciones en la placa trasera",
+        "impedancia_nominal": "8 Ω",
+        "rango_frecuencia": "30Hz – 2500 Hz",
+        "diametro_bobina": "4 pulgadas",
+        "material_bobina": "Til / Alambre Cobre",
+        "diametro_nominal": "18 pulgadas (457 mm)",
+        "capas_bobina": "2 capas (Inside/Outside)",
+        "aplicaciones": "Cajas de alto desempeño, Cajas bass réflex o frontales, Diseños de cuarto orden, Sistemas de sonido profesional, Subwoofers de alta potencia, Instalaciones fijas en teatros y auditorios"
+      }
+    }
 ]
+

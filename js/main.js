@@ -460,7 +460,8 @@ async function loadProducts() {
       name: p.name.toUpperCase(),
       cat: p.category || "Parlantes",
       badge: "Producto",
-      desc: "Producto de audio profesional",
+      // Extraer la descripción del campo description (nivel superior)
+      desc: p.description || "Producto de audio profesional",
 
       imgs: [
         p.images?.main || "",
@@ -469,8 +470,17 @@ async function loadProducts() {
 
       watermark: p.images?.watermark || null,
 
-      specs: p.specs || [],
-      apps: [],
+      // Extraer las especificaciones del campo specs (son directamente las specs, no hay specs.specifications)
+      // Convertir el objeto de especificaciones a array de pares [key, value]
+      specs: p.specs ? Object.entries(p.specs).filter(([key]) => key !== 'aplicaciones') : [],
+      
+      // Extraer las aplicaciones del campo specs.aplicaciones
+      apps: p.specs?.aplicaciones ? 
+            (typeof p.specs.aplicaciones === 'string' ? 
+              p.specs.aplicaciones.split(',').map(s => s.trim()) : 
+              p.specs.aplicaciones) 
+            : [],
+
       tags: [],
 
       doc: p.document || null
