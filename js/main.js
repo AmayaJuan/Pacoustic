@@ -640,8 +640,14 @@ function renderProducts() {
   const grid = document.getElementById('productsGrid');
   if (!grid) return;
 
+  // Obtener valores de los filtros activos
+  const searchEl = document.getElementById('catalogSearch');
+  const categoryEl = document.getElementById('catalogCategory');
+  const query = (searchEl && searchEl.value) ? searchEl.value.trim() : '';
+  const category = (categoryEl && categoryEl.value) ? categoryEl.value.trim() : '';
+
   // Actualizar contador de productos
-  // Formato: "Pag. 1. 1-8 / 9" (página actual, rango de productos mostrados, total)
+  // Solo mostrar si hay productos Y NO hay filtro de categoría activo
   const productsCount = document.getElementById('productsCount');
   if (productsCount) {
     const total = filtered.length;
@@ -649,22 +655,37 @@ function renderProducts() {
     const currentPage = PAGINATION_CONFIG.currentPage;
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = Math.min(startIndex + itemsPerPage, total);
-    const startItem = startIndex + 1;
-    productsCount.innerHTML = `Pag. ${currentPage}. ${startItem}-${endIndex} / ${total}`;
+    const startItem = total > 0 ? startIndex + 1 : 0;
+    
+    // Ocultar contador si hay categoría seleccionada
+    if (category && total > 0) {
+      productsCount.style.display = 'none';
+    } else if (total > 0) {
+      productsCount.innerHTML = `
+        <span class="count-label">Página</span>
+        <span class="count-current">${currentPage}</span>
+        <span class="count-separator">·</span>
+        <span class="count-range">${startItem}-${endIndex}</span>
+        <span class="count-separator">/</span>
+        <span class="count-total">${total}</span>
+        <span class="count-label">productos</span>
+      `;
+      productsCount.style.display = 'inline-flex';
+    } else {
+      productsCount.style.display = 'none';
+    }
   }
-
-  // Obtener valores de los filtros activos
-  const searchEl = document.getElementById('catalogSearch');
-  const categoryEl = document.getElementById('catalogCategory');
-  const query = (searchEl && searchEl.value) ? searchEl.value.trim() : '';
-  const category = (categoryEl && categoryEl.value) ? categoryEl.value.trim() : '';
   
   // Actualizar indicador de categoría activa
   const categoryActive = document.getElementById('categoryActive');
-  const categoryname = document.getElementById('categoryname');
-  if (categoryActive && categoryname) {
+  const categoryNameEl = document.getElementById('categoryName');
+  if (categoryActive && categoryNameEl) {
     if (category) {
-      categoryname.textContent = category;
+      // Contar productos de la categoría seleccionada
+      const productsInCategory = products.filter(p => (p.cat || '').toLowerCase().includes(category.toLowerCase()));
+      const count = productsInCategory.length;
+      // Mostrar categoría y cantidad
+      categoryNameEl.textContent = category + ' (' + count + ' productos)';
       categoryActive.style.display = 'inline-flex';
     } else {
       categoryActive.style.display = 'none';

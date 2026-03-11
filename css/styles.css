@@ -1149,43 +1149,119 @@ body[data-theme="light"] .modal-watermark {
   justify-content: center;
 }
 
-/* Contador de products */
-.products-count {
-  font-size: 0.85rem;
-  color: var(--muted);
-  margin-bottom: 1rem;
-  font-weight: 500;
-}
-
-.products-count strong {
-  color: var(--rojo);
-  font-weight: 700;
-}
-
-/* Indicador de categoría activa en el catálogo */
-.categoria-activa {
+/* Contador de productos - Estilo igual al indicador de categoría */
+.productos-count {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: var(--rojo);
-  border-radius: 6px;
+  padding: 0.5rem 0.85rem;
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.15) 0%, rgba(196, 30, 58, 0.08) 100%);
+  border: 1px solid rgba(196, 30, 58, 0.3);
+  border-radius: 8px;
   margin-bottom: 1.5rem;
   flex-wrap: wrap;
 }
 
-.categoria-badge {
+.productos-count .count-label {
+  color: var(--rojo);
   font-size: 0.7rem;
   font-weight: 600;
-  color: white;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
-.categoria-nombre {
-  font-size: 0.8rem;
+.productos-count .count-current {
+  color: var(--titulo);
   font-weight: 700;
+  font-size: 0.95rem;
+  font-family: 'Rajdhani', sans-serif;
+  min-width: 20px;
+  text-align: center;
+}
+
+.productos-count .count-separator {
+  color: var(--muted);
+  margin: 0 0.1rem;
+  font-weight: 400;
+}
+
+.productos-count .count-range {
+  color: var(--texto);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.productos-count .count-total {
+  color: var(--titulo);
+  font-weight: 700;
+  font-size: 0.9rem;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.productos-count .count-suffix {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-left: 0.15rem;
+}
+
+/* Indicador de categoría activa - Estilo mejorado */
+.category-active {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.15) 0%, rgba(196, 30, 58, 0.08) 100%);
+  border: 1px solid rgba(196, 30, 58, 0.3);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  animation: fadeUp 0.4s ease;
+}
+
+.category-active .categoria-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--rojo);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.category-active .category-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--titulo);
+  background: var(--rojo);
   color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+}
+
+/* Legacy selector support */
+.categoria-activa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.15) 0%, rgba(196, 30, 58, 0.08) 100%);
+  border: 1px solid rgba(196, 30, 58, 0.3);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.categoria-activa .categoria-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--rojo);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.categoria-activa .categoria-nombre {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--titulo);
 }
 
 .mobile-filter-btn {
@@ -1421,7 +1497,7 @@ body[data-theme="light"] .modal-watermark {
 }
 
 /* ========================================
-   CONTROLES DE PAGINACIÓN
+   CONTROLES DE PAGINACIÓN - Estilo Mejorado
    ======================================== */
 .pagination-controls {
   display: flex;
@@ -1429,75 +1505,101 @@ body[data-theme="light"] .modal-watermark {
   justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
-  padding: 1rem;
+  padding: 1.25rem 2rem;
+  background: var(--bg3);
+  border-radius: 50px;
+  border: 1px solid var(--borde);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .pagination-btn {
   width: 40px;
   height: 40px;
-  border-radius: 8px;
-  border: 1px solid var(--borde);
-  background: var(--bg3);
+  border-radius: 50%;
+  border: 2px solid var(--borde);
+  background: var(--bg2);
   color: var(--texto);
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  font-weight: 700;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .pagination-btn:hover:not([disabled]) {
   border-color: var(--rojo);
   color: var(--rojo);
-  background: rgba(232, 25, 44, 0.1);
+  background: rgba(232, 25, 44, 0.15);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.3);
+}
+
+.pagination-btn:active:not([disabled]) {
+  transform: translateY(0) scale(0.98);
 }
 
 .pagination-btn[disabled] {
-  opacity: 0.4;
+  opacity: 0.3;
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 .pagination-info {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg2);
+  border-radius: 25px;
   font-size: 0.9rem;
   color: var(--muted);
+  border: 1px solid var(--borde);
 }
 
 .pagination-current {
   color: var(--rojo);
   font-weight: 700;
   font-size: 1.1rem;
+  min-width: 24px;
+  text-align: center;
 }
 
 .pagination-separator {
   color: var(--muted);
+  font-weight: 400;
 }
 
 .pagination-total {
   color: var(--muted);
+  font-weight: 500;
 }
 
 /* Responsive pagination */
 @media (max-width: 480px) {
   .pagination-controls {
-    gap: 0.75rem;
-    padding: 0.75rem;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 30px;
   }
   
   .pagination-btn {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     font-size: 1rem;
   }
   
   .pagination-info {
-    font-size: 0.85rem;
+    gap: 0.35rem;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+    border-radius: 20px;
   }
   
   .pagination-current {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    min-width: 18px;
   }
 }
