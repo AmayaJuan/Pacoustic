@@ -81,8 +81,8 @@ function initCache() {
   // Elementos del catálogo
   domCache.productsGrid = document.getElementById('productsGrid');
   domCache.products = document.getElementById('products');
-  domCache.categoriaActiva = document.getElementById('categoriaActiva');
-  domCache.categorianame = document.getElementById('categorianame');
+  domCache.categoryActive = document.getElementById('categoryActive');
+  domCache.categoryname = document.getElementById('categoryname');
   domCache.bannerTrack = document.getElementById('bannerTrack');
   
   // Elementos del modal
@@ -495,7 +495,7 @@ async function loadProducts() {
  */
 function onBannerItemClick(id) {
   document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
-  setTimeout(() => abrirModal(id), 450);
+  setTimeout(() => openModal(id), 450);
 }
 
 /**
@@ -650,14 +650,14 @@ function renderProducts() {
   const category = (categoryEl && categoryEl.value) ? categoryEl.value.trim() : '';
   
   // Actualizar indicador de categoría activa
-  const categoriaActiva = document.getElementById('categoriaActiva');
-  const categorianame = document.getElementById('categorianame');
-  if (categoriaActiva && categorianame) {
+  const categoryActive = document.getElementById('categoryActive');
+  const categoryname = document.getElementById('categoryname');
+  if (categoryActive && categoryname) {
     if (category) {
-      categorianame.textContent = category;
-      categoriaActiva.style.display = 'inline-flex';
+      categoryname.textContent = category;
+      categoryActive.style.display = 'inline-flex';
     } else {
-      categoriaActiva.style.display = 'none';
+      categoryActive.style.display = 'none';
     }
   }
   
@@ -712,7 +712,7 @@ function renderProducts() {
     
     grouped[cat].forEach((p) => {
       html += `
-<div class="prod-card" style="--card-delay: ${delay * 0.07}s" onclick="abrirModal('${p.id}')">
+<div class="prod-card" style="--card-delay: ${delay * 0.07}s" onclick="openModal('${p.id}')">
           <div class="prod-img-wrap">
             <img src="${p.imgs[0]}" alt="${p.name}"/>
             ${p.watermark ? `<img src="${p.watermark}" alt="" class="prod-watermark"/>` : ''}
@@ -927,7 +927,7 @@ function setupCatalogFilters() {
  * Abre el modal con los detalles de un producto
  * @param {string} id - ID del producto a mostrar
  */
-function abrirModal(id) {
+function openModal(id) {
   const p = products.find(x => x.id === id);
   if (!p) return;
 
@@ -960,6 +960,14 @@ function abrirModal(id) {
     <table class="modal-tabla">
       ${p.specs.map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('')}
     </table>
+    
+    ${p.doc ? `
+      <div class="modal-doc"> 
+      <a href="${p.doc}" target="_blank" class="modal-doc-btn">
+       Ver ficha técnica
+      </div>
+      ` : ''}}
+
     <div class="modal-apps">
       <h4>Aplicaciones</h4>
       <ul>${p.apps.map(a => `<li>${a}</li>`).join('')}</ul>
@@ -974,7 +982,7 @@ function abrirModal(id) {
   document.body.style.overflow = 'hidden';
 
   /* Guardar referencia al elemento que tenía el foco antes de abrir el modal */
-  abrirModal._focusAnterior = document.activeElement;
+  openModal._focusAnterior = document.activeElement;
 
   /* Obtener todos los elementos enfocables dentro del modal */
   const modal = document.getElementById('modal');
@@ -1005,7 +1013,7 @@ function abrirModal(id) {
 
   /* Registrar el listener del focus trap y guardarlo para poder eliminarlo después */
   document.addEventListener('keydown', trapFocus);
-  abrirModal._trapFocus = trapFocus; /* Guardar referencia para eliminar en cerrarModalBtn */
+  openModal._trapFocus = trapFocus; /* Guardar referencia para eliminar en cerrarModalBtn */
 
   /* Enfocar el primer elemento del modal al abrirlo */
   if (primero) primero.focus();
@@ -1035,14 +1043,14 @@ function cerrarModal(e) {
  */
 function cerrarModalBtn() {
   /* Eliminar el listener del focus trap al cerrar el modal */
-  if (abrirModal._trapFocus) {
-    document.removeEventListener('keydown', abrirModal._trapFocus);
-    abrirModal._trapFocus = null; /* Limpiar la referencia */
+  if (openModal._trapFocus) {
+    document.removeEventListener('keydown', openModal._trapFocus);
+    openModal._trapFocus = null; /* Limpiar la referencia */
   }
   /* Devolver el foco al elemento que lo tenía antes de abrir el modal */
-  if (abrirModal._focusAnterior) {
-    abrirModal._focusAnterior.focus();
-    abrirModal._focusAnterior = null; /* Limpiar la referencia */
+  if (openModal._focusAnterior) {
+    openModal._focusAnterior.focus();
+    openModal._focusAnterior = null; /* Limpiar la referencia */
   }
 
   document.getElementById('modalOverlay').classList.remove('open');
