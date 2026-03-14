@@ -569,7 +569,7 @@ function getFilteredproducts() {
  */
 function getUniqueCategories() {
   // Categorías fijas requeridas por el proyecto (en orden específico)
-  const fixedCategories = ['Parlantes', 'Drivers', 'Cabinas', 'Line Array'];
+const fixedCategories = ['Parlantes', 'Line Array', 'Woofer', 'Drivers', 'Cabinas'];
   
   // Obtener categorías de products existentes
   const productCategories = [];
