@@ -5,62 +5,80 @@
    para el sitio web de PA Acoustic.
    Incluye temas claro y oscuro, diseño responsivo
    y animaciones.
+   
+   POLÍTICA CSS: Cada regla importante debe tener comentario explicando su función.
    ══════════════════════════════════════ */
 
+
 :root {
-  /* Dark theme (default) - Vibrant modern palette */
-  /* Colores principales para el tema oscuro */
-  --bg:     #0a0c14;      /* Fondo principal oscuro */
-  --bg2:    #12151f;      /* Fondo secundario */
-  --bg3:    #1a1e2e;      /* Fondo terciario */
-  --borde:  #2a3142;      /* Color de bordes */
-  --rojo:   #ff2d55;      /* Color rojo principal */
-  --rojo2:  #ff4d6d;      /* Color rojo secundario */
-  --rojo-grad: linear-gradient(135deg, #ff2d55 0%, #ff6b3d 100%); /* Degradado rojo */
-  --texto:  #e8ecf4;      /* Color de texto principal */
-  --muted:  #8b9bb4;     /* Color de texto muted */
-  --titulo: #ffffff;      /* Color de títulos */
-  --blanco: #ffffff;      /* Blanco puro */
-  --wp:     #25d366;      /* Color WhatsApp */
-  --accent-glow: rgba(255, 45, 85, 0.4); /* Efecto glow rojo */
+  /* ══════════════════════════════════════
+     VARIABLES CSS - TEMA OSCURO (POR DEFECTO)
+     Paleta vibrante moderna para modo oscuro
+     ══════════════════════════════════════ */
+  /* Colores principales para el tema oscuro (default) */
+  --bg:     #0a0c14;      /* Fondo principal oscuro - body background */
+  --bg2:    #12151f;      /* Fondo secundario - secciones alternas */
+  --bg3:    #1a1e2e;      /* Fondo terciario - tarjetas y elementos */
+  --borde:  #2a3142;      /* Color de bordes y separadores */
+  --rojo:   #ff2d55;      /* Color rojo principal - botones, acentos */
+  --rojo2:  #ff4d6d;      /* Color rojo secundario - hover states */
+  --rojo-grad: linear-gradient(135deg, #ff2d55 0%, #ff6b3d 100%); /* Degradado rojo principal */
+  --texto:  #e8ecf4;      /* Color de texto principal - párrafos */
+  --muted:  #8b9bb4;      /* Color de texto secundario - placeholders, labels */
+  --titulo: #ffffff;      /* Color de títulos principales */
+  --blanco: #ffffff;      /* Blanco puro - elementos highlight */
+  --wp:     #25d366;      /* Color oficial WhatsApp - botones WP */
+  --accent-glow: rgba(255, 45, 85, 0.4); /* Efecto glow rojo para sombras */
 
-  /* Variables de sombra para el tema oscuro (valores por defecto) */
-  /* Sin estos valores, las sombras fallan silenciosamente en modo oscuro */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3); /* Sombra pequeña para elementos sutiles */
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4); /* Sombra mediana para tarjetas */
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5); /* Sombra grande para modales */
+  /* Variables de sombra para el tema oscuro - EVITA FALLOS SILENCIOSOS */
+  /* Sin estas variables, las sombras se rompen en tema oscuro */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3); /* Sombra pequeña - botones sutiles */
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4); /* Sombra mediana - tarjetas productos */
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5); /* Sombra grande - modales, hero */
 }
 
-/* Light theme overrides - Nueva paleta de colores profesional para modo claro */
+
+/* ══════════════════════════════════════
+     SOBRESCRITURAS TEMA CLARO - body[data-theme="light"]
+     Nueva paleta profesional con alto contraste
+     Se activan automáticamente al cambiar tema
+     ══════════════════════════════════════ */
 body[data-theme="light"] {
-  /* Fondos - Blancos y tonos suaves */
-  --bg:     #f0f5f9;      /* Celeste muy suave - fondo principal */
-  --bg2:    #ffffff;       /* Blanco puro - fondos de secciones */
-  --bg3:    #fefdfb;       /* Blanco cálido - tarjetas y elementos */
+  /* ══════════════════════════════════════
+     FONDOS - Paleta blanca suave y profesional */
+  --bg:     #f0f5f9;      /* Fondo principal - celeste muy suave */
+  --bg2:    #ffffff;      /* Fondo secciones - blanco puro */
+  --bg3:    #fefdfb;      /* Tarjetas - blanco cálido sutil */
   
-  /* Bordes - Gris elegante */
-  --borde:  #d1d9e6;      /* Bordes visibles y profesionales */
+  /* ══════════════════════════════════════
+     BORDES - Gris elegante y profesional */
+  --borde:  #d1d9e6;      /* Bordes visibles con toque profesional */
   
-  /* Colores de marca - Rojo conservado */
-  --rojo:   #c41e3a;       /* Rojo cardinal - color de marca */
-  --rojo2:  #e63950;       /* Rojo vibrante - hover */
-  --rojo-grad: linear-gradient(135deg, #c41e3a 0%, #e63950 100%);
+  /* ══════════════════════════════════════
+     COLORES DE MARCA - Rojo mantenido */
+  --rojo:   #c41e3a;      /* Rojo cardinal principal */
+  --rojo2:  #e63950;      /* Rojo vibrante para hover */
+  --rojo-grad: linear-gradient(135deg, #c41e3a 0%, #e63950 100%); /* Degradado claro */
   
-  /* Textos - Alto contraste */
-  --texto:  #1a1a2e;       /* Negro azulado - texto principal */
-  --muted:  #5a6a7a;       /* Azul gris - texto secundario */
-  --titulo: #0d1b2a;       /* Azul oscuro profundo - títulos */
+  /* ══════════════════════════════════════
+     TEXTOS - Máximo contraste para accesibilidad */
+  --texto:  #1a1a2e;      /* Negro azulado - párrafos principales */
+  --muted:  #5a6a7a;      /* Azul gris - texto secundario */
+  --titulo: #0d1b2a;      /* Azul profundo - títulos principales */
   
-  /* Blanco y acentos */
-  --blanco: #ffffff;
-  --wp:     #2d8c4e;      /* Verde profesional - WhatsApp */
-  --accent-glow: rgba(196, 30, 58, 0.25);
+  /* ══════════════════════════════════════
+     BLANCO Y ACENTOS */
+  --blanco: #ffffff;      /* Blanco puro */
+  --wp:     #2d8c4e;      /* Verde WhatsApp profesional */
+  --accent-glow: rgba(196, 30, 58, 0.25); /* Glow rojo atenuado */
   
-  /* Sombras suaves */
-  --shadow-sm: 0 1px 2px rgba(13, 27, 42, 0.06);
-  --shadow-md: 0 4px 12px rgba(13, 27, 42, 0.1);
-  --shadow-lg: 0 8px 24px rgba(13, 27, 42, 0.12);
+  /* ══════════════════════════════════════
+     SOMBRAS SUAVES - Modo claro */
+  --shadow-sm: 0 1px 2px rgba(13, 27, 42, 0.06); /* Sombra mínima */
+  --shadow-md: 0 4px 12px rgba(13, 27, 42, 0.1); /* Tarjetas */
+  --shadow-lg: 0 8px 24px rgba(13, 27, 42, 0.12); /* Modales */
 }
+
 
 /* Fondo de imágenes de products en modo claro */
 body[data-theme="light"] .prod-img-wrap,

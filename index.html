@@ -175,10 +175,13 @@
       <span class="linea2">Alta Potencia</span>
     </h1>
     <p class="hero-sub">Line arrays, woofers y parlantes profesionales diseñados para eventos de gran formato, instalaciones fijas y sistemas de refuerzo sonoro de alto rendimiento.</p>
-    <div class="hero-btns">
-      <a href="#products" class="btn-rojo">Ver products</a>
-<a href="https://wa.me/573053402732?text=Hola,%20quiero%20más%20información" target="_blank" rel="noopener noreferrer" class="btn-outline">Cotizar por WhatsApp</a>
-    </div>
+<!-- Botones CTA del hero: Ver Catálogo y WhatsApp cotización -->
+  <div class="hero-btns">
+    <!-- Botón primario rojo: scroll a catálogo -->
+    <a href="#products" class="btn-rojo" onclick="handleNavClick(event, 'products')">Ver productos</a>
+    <!-- Botón secundario outline: WhatsApp directo con pre-texto -->
+    <a href="https://wa.me/573053402732?text=Hola,%20quiero%20más%20información%20sobre%20PA%20Acoustic" target="_blank" rel="noopener noreferrer" class="btn-outline">Cotizar por WhatsApp</a>
+  </div>
   </div>
 </section>
 
@@ -273,11 +276,15 @@
     <div class="sec-label">— Estamos para ayudarte</div>
 <h2 class="sec-titulo" id="titulo-contacto">Contáctanos</h2>
   </div>
+<!-- Grid responsive: info contacto izquierda, tarjeta derecha -->
   <div class="con-grid">
+    <!-- Columna izquierda: datos contacto + mapa -->
     <div class="reveal">
+      <!-- Título sección contacto -->
       <h3 class="con-titulo">Hablemos de <span>Tu Proyecto</span></h3>
+      <!-- Subtítulo explicativo -->
       <p class="con-sub">¿Necesitas un equipo específico o asesoría técnica? Escríbenos por WhatsApp y te respondemos de inmediato.</p>
-      <!-- Lista de datos de contacto -->
+      <!-- Lista de datos de contacto: WhatsApp, horario, dirección, país -->
       <div class="con-items">
         <div class="con-item">
           <div class="con-ico">📱</div>
@@ -352,9 +359,14 @@
 <button class="modal-close" onclick="cerrarModalBtn()" aria-label="Cerrar modal">✕</button>
     </div>
     <div class="modal-body" id="modalBody">
+<!-- Galería imágenes producto: principal + miniaturas -->
       <div class="modal-imgs">
-        <div class="modal-img-main"><img id="modalImgMain" src="" alt=""/></div>
-        <div class="modal-img-thumbs" id="modalThumbs"></div>
+        <!-- Imagen principal con zoom (wheel/pinch) -->
+        <div class="modal-img-main">
+          <img id="modalImgMain" src="" alt="" role="img" />
+        </div>
+        <!-- Miniaturas navegables (click para cambiar principal) -->
+        <div class="modal-img-thumbs" id="modalThumbs" role="tablist"></div>
       </div>
       <div class="modal-info" id="modalInfo"></div>
     </div>

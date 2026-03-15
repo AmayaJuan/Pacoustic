@@ -10,10 +10,13 @@ Sitio web oficial de **PA Acoustic**, empresa especializada en equipos de audio 
 
 | Fecha | Cambios | Archivos Afectados |
 |-------|---------|-------------------|
+| 14/03/2026 | Cloudinary HL10A (main+watermark) + comentarios index.html 100% + limpieza scripts generadores | data/products.json, index.html, README.md |
+| 14/03/2026 | Revisión exhaustiva del código fuente + comentarios detallados en CSS + migración inicial Cloudinary | css/styles.css, index.html, TODO.md |
 | 11/03/2026 | Reorganizar sección contacto: mapa de Google Maps, dirección, país/ciudad y botón WhatsApp | index.html |
 | 11/03/2026 | Agregar mapa de Google en sección contacto: Cl 44 #66-75, Laureles - Estadio | index.html |
 | 11/03/2026 | Agregar dirección del almacén en sección contacto: Cl 44 #66-75, Laureles - Estadio | index.html |
 | 11/03/2026 | Mejoras visuales del catálogo: contador de productos, indicador de categoría y paginación con diseño profesional | css/styles.css, js/main.js, ANALISIS.md |
+
 | 10/03/2026 | Optimizar audio: cambiar preload="auto" a preload="metadata" para evitar errores de autoplay | index.html |
 | 10/03/2026 | Optimizar código: eliminar función initMobileFilters() vacía (proceso redundante) | js/main.js |
 | 10/03/2026 | Revisión completa del proyecto: análisis de código fuente (index.html, css/styles.css, js/main.js), verificación de políticas, documentación actualizada | README.md, ANALISIS.md |
