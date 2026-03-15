@@ -1103,10 +1103,14 @@ body[data-theme="light"] .modal-watermark {
   .btn-rojo, .btn-outline { padding: 0.7rem 1.5rem; font-size: 0.85rem; }
   .banner-item { width: 150px; height: 110px; }
   
-  /* Modal */
+  /* Modal - FIJA PROBLEMA WP CORTADO MÓVIL */
   .modal { max-width: 100%; border-radius: 12px; }
-  .modal-overlay { padding: 0.5rem; align-items: flex-start; }
-  .modal { max-height: 95vh; margin-top: 0.5rem; }
+  .modal-overlay { padding: 1rem; align-items: center; }
+  .modal { 
+    max-height: 92vh; 
+    margin-top: 0; 
+    padding-bottom: 1.5rem; 
+  }
   .modal-body { grid-template-columns: 1fr; padding: 1rem; gap: 1rem; }
   .modal-header { padding: 0.75rem 1rem; }
   .modal-titulo { font-size: 1.2rem; }
