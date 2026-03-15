@@ -7,7 +7,7 @@
       "main": "img/products/hl10a-1.png",
       "watermark": "img/products/hl10a-2.png"
     },
-    "description": "El PA HL10-A es un sistema line array activo bi-amplificado de 2 vías, diseñado para aplicaciones profesionales de refuerzo sonoro de formato pequeño y mediano. Integra dos parlantes de 8” con iman de neodimio y un motor de compresión con iman de neodimio y una bobina de 2.5”, ofreciendo una respuesta en frecuencia de 65 Hz a 20 kHz y un SPL máximo de hasta 133 dB. El sistema incorpora amplificación clase D de alta eficiencia, con una potencia total de 1400 W y una potencia RMS de 700W, perfe...",
+    "description": "El PA HL10-A es un sistema line array activo bi-amplificado de 2 vías, diseñado para aplicaciones profesionales de refuerzo sonoro de formato pequeño y mediano. Integra dos parlantes de 8” con iman de neodimio y un motor de compresión con iman de neodimio y una bobina de 2.5”, ofreciendo una respuesta en frecuencia de 65 Hz a 20 kHz y un SPL máximo de hasta 133 dB.",
     "document": "doc/products/FICHA TECNICA PA HL 10A.docx",
     "specs": {
       "100": "Cobertura vertical",
@@ -38,7 +38,7 @@
       "main": "img/products/hl30a-1.png",
       "watermark": "img/products/hl30a-2.png"
     },
-    "description": "El PA HL30-A es un sistema line array activo bi-amplificado de 2 vías, diseñado para aplicaciones profesionales de refuerzo sonoro de pequeño y gran formato, con tecnología innovadora y control remoto por NET WORK. Integra dos parlantes de 10” con imanes de neodimio y un motor de compresión de 1.4” con diafragma de titanio, ofreciendo una respuesta en frecuencia de 50 Hz a 20 kHz y un SPL máximo de hasta 137 dB. El sistema incorpora amplificación clase D de alta eficiencia, con una potencia t...",
+    "description": "El PA HL30-A es un sistema line array activo bi-amplificado de 2 vías, diseñado para aplicaciones profesionales de refuerzo sonoro de pequeño y gran formato, con tecnología innovadora y control remoto por NET WORK. Integra dos parlantes de 10” con imanes de neodimio y un motor de compresión de 1.4” con diafragma de titanio, ofreciendo una respuesta en frecuencia de 50 Hz a 20 kHz y un SPL máximo de hasta 137 dB.",
     "document": "doc/products/FICHA TECNICA PA HL30A.docx",
     "specs": {
       "modelo": "PA HL-30A",
