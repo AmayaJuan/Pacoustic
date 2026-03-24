@@ -1029,10 +1029,10 @@ function openModal(id) {
       <h4>Aplicaciones</h4>
      <ul>${(p.apps || []).map(a => `<li>${a}</li>`).join('')}</ul>
     </div>
-    ${p.doc ? `<a href="${p.doc}" target="_blank" rel="noopener noreferrer" class="modal-pdf-btn" style="display: block; margin: 1rem 0; padding: 0.8rem 1.2rem; background: linear-gradient(135deg, #2563eb, #1d4ed8); color: white; text-decoration: none; text-align: center; border-radius: 8px; font-weight: 600;" onclick="event.stopPropagation();">
-      📄 Ver Ficha Técnica ${p.name}
-    </a>` : ''}
-<a href="${WP}?text=${encodeURIComponent('Hola, me interesa el ' + p.name + '. ¿Pueden darme información y precio?')}"
+    ${p.doc ? `<button class="modal-pdf-btn" onclick="event.stopPropagation(); abrirPDF('${escapeAttr(p.doc)}', '${escapeAttr(p.name)}')">
+      📄 Ver Ficha Técnica ${escapeHtml(p.name)}
+    </button>` : ''}
+    <a href="${WP}?text=${encodeURIComponent('Hola, me interesa el ' + p.name + '. ¿Pueden darme información y precio?')}"
        target="_blank" rel="noopener noreferrer" class="modal-wp">
       ${WP_SVG} Consultar por WhatsApp
     </a>
@@ -1120,8 +1120,81 @@ function cerrarModalBtn() {
   document.body.style.overflow = '';
 }
 
-// Cerrar modal con tecla Escape desde cualquier parte de la página
-document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarModalBtn(); });
+// Cerrar modal con tecla Escape — primero cierra el visor PDF si está abierto
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Escape') return;
+  const pdfOverlay = document.getElementById('pdfOverlay');
+  // Si el visor PDF está visible, cerrarlo primero sin tocar el modal
+  if (pdfOverlay && pdfOverlay.style.display === 'flex') {
+    cerrarPDF();
+  } else {
+    cerrarModalBtn();
+  }
+});
+
+/**
+ * Abre el PDF en un visor iframe superpuesto dentro de la misma página
+ * No abre nueva pestaña ni navega fuera del sitio
+ * @param {string} url - URL del PDF en Cloudinary
+ * @param {string} nombre - Nombre del producto para el título del visor
+ */
+function abrirPDF(url, nombre) {
+  // Buscar el overlay del visor PDF o crearlo si no existe todavía
+  let pdfOverlay = document.getElementById('pdfOverlay');
+  if (!pdfOverlay) {
+    // Crear el contenedor del visor PDF
+    pdfOverlay = document.createElement('div');
+    pdfOverlay.id = 'pdfOverlay';
+    // Estilos del overlay: cubre toda la pantalla sobre el modal
+    pdfOverlay.style.cssText = [
+      'position:fixed',
+      'inset:0',
+      'z-index:3000',
+      'background:rgba(0,0,0,0.95)',
+      'display:flex',
+      'flex-direction:column',
+      'align-items:center',
+      'justify-content:flex-start',
+      'padding:1rem'
+    ].join(';');
+    // Agregar al body para que quede encima de todo
+    document.body.appendChild(pdfOverlay);
+  }
+
+  // Construir el visor con encabezado y iframe de Google Docs
+  pdfOverlay.innerHTML = `
+    <div style="width:100%;max-width:960px;display:flex;flex-direction:column;height:100%;">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1rem;margin-bottom:0.75rem;background:var(--bg3);border:1px solid var(--borde);border-radius:10px;flex-shrink:0;">
+        <span style="font-family:'Rajdhani',sans-serif;font-size:1rem;font-weight:700;color:var(--titulo);">
+          📄 Ficha Técnica — ${nombre}
+        </span>
+        <button
+          onclick="cerrarPDF()"
+          style="width:36px;height:36px;border-radius:8px;border:1px solid var(--borde);background:transparent;color:var(--texto);font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;"
+          aria-label="Cerrar visor PDF"
+        >✕</button>
+      </div>
+      <iframe
+        src="https://docs.google.com/viewer?url=${encodeURIComponent(url)}&embedded=true"
+        style="flex:1;width:100%;border:none;border-radius:10px;background:#fff;min-height:0;"
+        title="Ficha Técnica ${nombre}"
+      ></iframe>
+    </div>
+  `;
+
+  // Mostrar el overlay encima del modal
+  pdfOverlay.style.display = 'flex';
+}
+
+/**
+ * Cierra el visor de PDF sin cerrar el modal del producto
+ */
+function cerrarPDF() {
+  const pdfOverlay = document.getElementById('pdfOverlay');
+  // Ocultar el overlay del visor PDF
+  if (pdfOverlay) pdfOverlay.style.display = 'none';
+  // No restaurar overflow porque el modal del producto sigue abierto
+}
 
 // ========================================
 // MENÚ MÓVIL
