@@ -665,7 +665,8 @@ body[data-theme="light"] .prod-watermark {
 }
 .banner-wrap:hover .banner-track { animation-play-state: paused; }
 .banner-item {
-height: 220px;
+  width: 300px;
+  height: 220px;
   background: #1e2a40;
   border: 1px solid rgba(196, 30, 58, 0.3);
   border-radius: 12px;
@@ -1101,7 +1102,7 @@ body[data-theme="light"] .modal-watermark {
   .sec-titulo { font-size: 1.6rem; margin-bottom: 1.5rem; }
   .nos-titulo, .con-titulo { font-size: 1.6rem; }
   .btn-rojo, .btn-outline { padding: 0.7rem 1.5rem; font-size: 0.85rem; }
-width: 200px; height: 145px;
+  .banner-item { width: 200px; height: 145px; }
   
   /* Modal - FIJA PROBLEMA WP CORTADO MÓVIL */
   .modal { max-width: 100%; border-radius: 12px; }
