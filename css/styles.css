@@ -665,10 +665,9 @@ body[data-theme="light"] .prod-watermark {
 }
 .banner-wrap:hover .banner-track { animation-play-state: paused; }
 .banner-item {
-  width: 300px;
   height: 220px;
   background: #1e2a40;
-  border: 1px solid rgba(196, 30, 58, 0.3);
+  border: 1px solid rgba(139, 155, 180, 0.3);
   border-radius: 12px;
   display: flex; align-items: center; justify-content: center;
   padding: 1rem;
@@ -677,8 +676,8 @@ body[data-theme="light"] .prod-watermark {
   cursor: pointer;
 }
 .banner-item:hover {
-  border-color: rgba(196, 30, 58, 0.6);
-  box-shadow: 0 0 30px rgba(196, 30, 58, 0.3), 0 0 50px rgba(196, 30, 58, 0.15), inset 0 0 40px rgba(196, 30, 58, 0.05);
+  border-color: rgba(139, 155, 180, 0.6);
+  box-shadow: 0 0 30px rgba(139, 155, 180, 0.3), 0 0 50px rgba(139, 155, 180, 0.15), inset 0 0 40px rgba(139, 155, 180, 0.05);
 }
 .banner-item img {
   width: 100%; height: 100%;
@@ -1100,9 +1099,7 @@ body[data-theme="light"] .modal-watermark {
   .hero-logo-img { height: 60px; }
   .hero-tag { font-size: 0.6rem; padding: 0.25rem 0.75rem; }
   .sec-titulo { font-size: 1.6rem; margin-bottom: 1.5rem; }
-  .nos-titulo, .con-titulo { font-size: 1.6rem; }
-  .btn-rojo, .btn-outline { padding: 0.7rem 1.5rem; font-size: 0.85rem; }
-  .banner-item { width: 200px; height: 145px; }
+.nos-titulo, .con-titulo { font-size: 1.6rem; }\n  .btn-rojo, .btn-outline { padding: 0.7rem 1.5rem; font-size: 0.85rem; }
   
   /* Modal - FIJA PROBLEMA WP CORTADO MÓVIL */
   .modal { max-width: 100%; border-radius: 12px; }
