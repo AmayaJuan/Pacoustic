@@ -25,7 +25,7 @@
       "proteccion limitadores": "Proteccion termica, RMS; limitador suave",
       "alimentacion": "powerCON IN / powerCON OUT",
       "material": "polipropileno",
-      "aplicaciones": "Conciertos en vivo, Iglesias, colegios, Teatros y auditorios, Eventos corporativos"
+      "aplicaciones": "Conciertos en vivo., Iglesias., colegios., Teatros y auditorios., Eventos corporativos."
     }
   },
   {
@@ -56,7 +56,7 @@
       "conector de salida link": "Powercom",
       "entrada de alimentacion": "Powercom",
       "material": "polipropileno",
-      "aplicaciones": "Conciertos en vivo, Teatros y auditorios, Instalaciones fijas, Iglesias, colegios, Eventos corporativos"
+      "aplicaciones": "Conciertos en vivo., Teatros y auditorios., Instalaciones fijas., Iglesias., colegios., Eventos corporativos."
     }
   },
   {
@@ -86,7 +86,7 @@
       "material del cono": "Carton prensado con particulas de Fibra de vidrio",
       "diametro total": "465 mm",
       "altura total": "212 mm",
-      "aplicaciones": "Instalaciones Fijas: teatros, auditorios y clubes nocturnos."
+      "aplicaciones": "Instalaciones Fijas: teatros., auditorios y clubes nocturnos."
     }
   },
   {
@@ -108,7 +108,7 @@
       "99 db": "Rango de Frecuencia",
       "50 hz 3500 hz": "Diametro de Bobina",
       "3 pulgadas": "Capas de Bobina",
-      "aplicaciones": "Sistemas line array, Monitores de escenarios, Cajas turbo, Sistema pickup, Car audio"
+      "aplicaciones": "Sistemas line array., Monitores de escenarios., Cajas turbo., Sistema pickup., Car audio."
     }
   },
   {
@@ -126,7 +126,7 @@
       "impedancia nominal 8 ohmios": "Potencia RMS 1000 W",
       "sensibilidad 100 db": "Rango de Frecuencia 50 Hz - 3500 Hz",
       "diametro de bobina": "3 pulgadas",
-      "aplicaciones": "Sistemas line array, Sistemas PA, Monitores de escenarios, Cajas turbo, Sistema pickup, Car audio"
+      "aplicaciones": "Sistemas line array., Sistemas PA., Monitores de escenarios., Cajas turbo., Sistema pickup., Car audio."
     }
   },
   {
@@ -144,7 +144,7 @@
       "potencia programada 600 w": "Potencia RMS 300 W",
       "sensibilidad 97 db": "Rango de Frecuencia 70 Hz - 3000 Hz",
       "diametro de bobina": "2 pulgadas",
-      "aplicaciones": "Cajas de dos vias, Sistemas line array, Monitores de escenarios, Cajas turbo, Car audio"
+      "aplicaciones": "Cajas de dos vias., Sistemas line array., Monitores de escenarios., Cajas turbo., Car audio."
     }
   },
   {
@@ -169,7 +169,7 @@
       "material de bobina": "Kapton / Alambre Cobre",
       "tipo iman": "Ferrita",
       "tipo de chasis": "Lamina",
-      "aplicaciones": "Monitores de piso, Reemplazo para proyectos de reparacion, refuerzo sonoro en eventos, Cajas convencionales"
+      "aplicaciones": "Monitores de piso., Reemplazo para proyectos de reparacion., refuerzo sonoro en eventos., Cajas convencionales."
     }
   },
   {
@@ -193,7 +193,7 @@
       "material de bobina": "Kapton / Alambre Cobre",
       "tipo iman": "Ferrita",
       "tipo de chasis": "Lamina",
-      "aplicaciones": "Cajas convencionales, Sistemas full-range, Equipos profesionales para musica en vivo, Monitores de escenario, Reemplazos para reparacion."
+      "aplicaciones": "Cajas convencionales., Sistemas full-range., Equipos profesionales para musica en vivo., Monitores de escenario., Reemplazos para reparacion."
     }
   },
   {
@@ -216,7 +216,7 @@
       "material de bobina": "Til / Alambre Cobre",
       "diametro nominal": "18 pulgadas (457 mm)",
       "numero de capas de bobina": "2 capas (Inside/Outside)",
-      "aplicaciones": "Instalaciones Fijas: teatros, auditorios y clubes nocturnos."
+      "aplicaciones": "Instalaciones Fijas: teatros., auditorios y clubes nocturnos."
     }
   },
   {
@@ -360,7 +360,7 @@
       "peso aproximado": "25.7 kg",
       "alimentacion": "115V - 120V",
       "material": "Polipropileno de alta resistencia",
-      "aplicaciones": "Eventos en vivo, Iglesias y conferencias, Eventos corporativos, Salones sociales"
+      "aplicaciones": "Eventos en vivo, Iglesias y conferencias., Eventos corporativos., Salones sociales."
     }
   },
   {
@@ -385,7 +385,7 @@
       "material de bobina": "CCAW sobre soporte de Kapton™",
       "dimensiones": "132mm x 113 mm", 
       "Peso neto": "2.3 kg",
-      "aplicaciones": "Sistemas de sonido profesional de alta gama, Line array y bocinas de gran formato, Refuerzo sonoro para música en vivo y espectáculos"
+      "aplicaciones": "Sistemas de sonido profesional de alta gama., Line array y bocinas de gran formato., Refuerzo sonoro para música en vivo y espectáculos."
     }
   }
 ]
