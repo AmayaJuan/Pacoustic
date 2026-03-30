@@ -10,7 +10,7 @@ Sitio web oficial de **PA Acoustic**, empresa especializada en equipos de audio 
 
 | Fecha | Cambios | Archivos Afectados |
 |-------|---------|-------------------|
-| 18/03/2026 | ✅ Corrección filtrado EXACTO categorías + paginación "14-16/14" + políticas 100% | js/main.js, README.md, TODO_FILTRADO.md |
+| 29/03/2026 | ✅ Corrección galería modal: lf18x401+ ahora muestra 2 fotos en thumbnails | js/main.js, TODO.md |\n| 18/03/2026 | ✅ Corrección filtrado EXACTO categorías + paginación "14-16/14" + políticas 100% | js/main.js, README.md, TODO_FILTRADO.md |
 
 | 11/03/2026 | Reorganizar sección contacto: mapa de Google Maps, dirección, país/ciudad y botón WhatsApp | index.html |
 | 11/03/2026 | Agregar mapa de Google en sección contacto: Cl 44 #66-75, Laureles - Estadio | index.html |

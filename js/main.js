@@ -163,7 +163,7 @@ async function loadProducts() {
       cat: p.category || "Parlantes",
       badge: "Producto",
       desc: p.description || "Producto de audio profesional",
-      imgs: [p.images?.main || ""],
+      imgs: [p.images?.main || "", ...(p.images?.gallery || [])].filter(Boolean),
       watermark: p.images?.watermark || null,
       specs: p.specs ? Object.entries(p.specs).filter(([k]) => k !== 'aplicaciones') : [],
       apps: p.specs?.aplicaciones ? (typeof p.specs.aplicaciones === 'string' ? p.specs.aplicaciones.split(',').map(s => s.trim()) : p.specs.aplicaciones) : [],
