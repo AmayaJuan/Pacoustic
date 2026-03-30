@@ -374,7 +374,18 @@
     "description": "DRIVER COAXIAL MN4582, driver de compresión coaxial de neodimo de 2 pulgadas. Caracteristicas Principales: Diseño coaxial con dos imanes de neodimio y dos diafragmas para rango  medio y agudos. Ancho de banda extendido: 300Hz - 22kHz. Ensamblaje de imanes de de neodimio, compacto y ligero. Alta dinámica y baja distorsión. Dos subsistemasque dividen el espectro de frecuencias, mejorando el manejo de potencia.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774826683/FICHA_TECNICA_MN4582-1_edxwnh.pdf",
     "specs":{
-      
+      "impedancia nominal" :"8 ohmios",
+      "sensibilidad (1W/1m)": "118dB SPL",
+      "Radio de frecuencia - medio": "300 Hz - 7 kHz",
+      "Radio de frecuencia - agudo": "6.3 kHz - 22kHz",
+      "Potencia (RMS)": "Medio: 150 W | Agudos: 80 W",
+      "Potencia Pico": "Hasta 1000 W conbinados",
+      "Diámetro de bobina (Medio)": "3.5' (90mm)",
+      "Diámetro de bobina (Agudo)": "1.75' (44.4 mm)",
+      "material de bobina": "CCAW sobre soporte de Kapton™",
+      "dimensiones": "132mm x 113 mm", 
+      "Peso neto": "2.3 kg",
+      "aplicaciones": "Sistemas de sonido profesional de alta gama, Line array y bocinas de gran formato, Refuerzo sonoro para música en vivo y espectáculos"
     }
   }
 ]
