@@ -493,12 +493,12 @@ footer p { font-size: 0.72rem; color: var(--muted); }
   .nos-grid, .con-grid { grid-template-columns: 1fr; gap: 2rem; }
   .products-grid { display: grid; grid-template-columns: 1fr; gap: 1.75rem; justify-items: center; padding: 0 1rem; max-width: 400px; margin: 0 auto; }
   .prod-card { max-width: 100%; width: 340px; cursor: pointer; -webkit-tap-highlight-color: transparent; }
-  .prod-img-wrap { height: 300px !important; }
+  .prod-img-wrap { height: 260px !important; }
   .prod-btn { padding: 0.55rem 1rem; min-height: 36px; }
 
   /* Banner */
   .banner-wrap { padding: 1.5rem 0; }
-  .banner-item { width: 320px !important; height: 380px !important; }
+  .banner-item { width: 300px !important; height: 350px !important; }
 
   footer { padding: 2rem 1.5rem 5rem; flex-direction: column; text-align: center; gap: 1.5rem; }
   .wp-float { bottom: 5.5rem; right: 1.5rem; width: 50px; height: 50px; }
