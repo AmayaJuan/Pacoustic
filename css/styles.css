@@ -23,7 +23,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; overflow-x: hidden; }
+html { scroll-behavior: auto; overflow-x: hidden; }
 body { background: var(--bg); color: var(--texto); font-family: 'Nunito', sans-serif; overflow-x: clip; position: relative; }
 
 .page-watermark {
@@ -104,7 +104,7 @@ nav { position: sticky; top: 0; z-index: 200; display: flex; align-items: center
 .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 65% 50%, rgba(196,30,58,0.04) 0%, transparent 65%); }
 .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(13,27,42,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(13,27,42,0.06) 1px, transparent 1px); background-size: 50px 50px; mask-image: radial-gradient(ellipse at 30% 50%, black 20%, transparent 70%); }
 .hero-content { position: relative; z-index: 2; max-width: 600px; opacity: 0; animation: fadeUp .9s ease forwards .3s; }
-.hero-logo-img { height: 80px; margin-bottom: 1.5rem; object-fit: contain; display: block; }
+.hero-logo-img { height: 80px; max-width: 280px; width: auto; margin-bottom: 1.5rem; object-fit: contain; display: block; }
 .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.3rem 1rem; border: 1px solid rgba(196,30,58,0.4); border-radius: 999px; font-size: 0.7rem; color: var(--rojo); letter-spacing: 0.2em; text-transform: uppercase; background: rgba(196,30,58,0.06); margin-bottom: 1.5rem; }
 .hero-tag::before { content: '●'; font-size: 0.45rem; animation: blink 2s infinite; }
 .hero-titulo { font-family: 'Rajdhani', sans-serif; font-size: clamp(2.8rem,7vw,6rem); font-weight: 700; line-height: 0.95; text-transform: uppercase; color: var(--titulo); margin-bottom: 1.25rem; }
@@ -584,3 +584,86 @@ footer p { font-size: 0.72rem; color: var(--muted); }
 .pagination-current { color: var(--rojo); font-weight: 700; font-size: 1.1rem; min-width: 24px; text-align: center; }
 .pagination-separator { color: var(--muted); font-weight: 400; }
 .pagination-total { color: var(--muted); font-weight: 500; }
+
+/* ── LIGHTBOX — zoom + paneo ── */
+#lightboxOverlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0,0,0,0.97);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+#lightboxOverlay.open { display: flex; animation: modalIn .2s ease; }
+
+.lb-img-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+#lbImg {
+  max-width: 92%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 10px;
+  user-select: none;
+  touch-action: none;
+  cursor: grab;
+  will-change: transform;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+#lbImg:active { cursor: grabbing; }
+
+.lb-close {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.08);
+  color: #fff; font-size: 1.1rem;
+  cursor: pointer; display: flex;
+  align-items: center; justify-content: center;
+  transition: background .2s; z-index: 10;
+  backdrop-filter: blur(6px);
+}
+.lb-close:hover { background: rgba(255,255,255,0.22); }
+
+.lb-controls {
+  display: flex; align-items: center;
+  gap: 0.6rem; padding-top: 0.75rem;
+  flex-wrap: wrap; justify-content: center;
+}
+
+.lb-ctrl-btn {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.8);
+  font-size: 1rem; cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s;
+}
+.lb-ctrl-btn:hover { background: rgba(255,255,255,0.2); color: #fff; }
+
+.lb-hint {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.04em;
+}
+
+#modalImgMain { cursor: zoom-in; }
+
+@media (max-width: 768px) {
+  #lbImg { max-width: 98%; max-height: 75vh; }
+  .lb-hint { display: none; }
+}

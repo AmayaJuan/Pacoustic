@@ -152,7 +152,7 @@
     "name": "parlante 10 sheffieeld",
     "category": "Parlantes",
     "images": {
-      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773523378/parlante_10_sheffieeld-1_yh3ldi.png",
+      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774912809/parlante_10_sheffieeld-1_yh3ldi.png",
       "gallery": []
     },
     "description": "El parlante SHEFFIELD 10 es un altavoz para aplicaciones profesionales que requieren potencia constante y excelente comportamiento en sistemas de audio.",
@@ -177,7 +177,7 @@
     "name": "parlante 12 sheffield",
     "category": "Parlantes",
     "images": {
-      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773523666/parlante_12_sheffield-1_f9g9c2.png",
+      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774913135/parlante_12_sheffield-1_f9g9c2.png",
       "gallery": []
     },
     "description": "El parlante SHEFFIELD 12 es un componente pensado para sistemas profesionales con bobina de 3 pulgadas en kapton, iman de ferrita y chasis en lamina.",
@@ -270,8 +270,8 @@
     "name": "10ndl76",
     "category": "Parlantes",
     "images": {
-      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774827083/10ndl76_n88ylu.png",
-      "gallery": []
+      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774911555/neodimio10_c0alet.png",
+      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774827083/10ndl76_n88ylu.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1774912000/neodimio10-1_dzvuiz.png"]
     },
     "description": "Parlante de 10 pulgadas neodimo con bobina de 3 pulgadas IN-OUT, sensitivy 99dB, impedancia 8 ohmios, potencia 1000 watts, frecuencia 50-3500Hz.",
     "document": "",
@@ -294,7 +294,7 @@
     "category": "Parlantes",
     "images": {
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774827252/12ndl76_ylwz2t.png",
-      "gallery": []
+      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774912000/neodimio10-1_dzvuiz.png"]
     },
     "description": "Parlante de 12 pulgadas neodimo con bobina de 3 pulgadas IN-OUT, sensitivy 100dB, impedancia 8 ohmios, potencia 1000 watts, frecuencia 50-3500Hz.",
     "document": "",
@@ -316,7 +316,7 @@
     "name": "12md26",
     "category": "Parlantes",
     "images": {
-      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774827339/12md26_drfdsu.png",
+      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774912604/12md26_drfdsu.png",
       "gallery": []
     },
     "description": "Parlante de 12 pulgadas, potencia 1000 watts, impedancia 8 ohm, sensibilidad 100dB, frecuencia 50Hz-350kHz, tipo chasis aluminio.",
