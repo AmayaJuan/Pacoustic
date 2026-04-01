@@ -60,7 +60,7 @@
     }
   },
   {
-    "id": 3,
+    "id": 6,
     "name": "woofer lf18x401+",
     "category": "Woofer",
     "images": {
@@ -92,10 +92,10 @@
   {
     "id": 4,
     "name": "pa10n-900",
-    "category": "Parlantes",
+    "category": "Woofer",
     "images": {
-      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773504623/pa10n-900-1_zhuwia.png",
-      "gallery": []
+      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774999066/pa10n900_qagfmz.png",
+      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774999876/pa10n900_nd6f7b.png","https://res.cloudinary.com/djlr3wszq/image/upload/v1774998869/pa10n-900-1_zhuwia.png"]
     },
     "description": "El PA10N-900, es un Altavoz profesional de 10 pulgadas, disenado para ofrecer un rendimiento superior en aplicaciones de Line Array, cajas tipo Turbo y Car Audio.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773527460/FICHA_TECNICA_PARLANTE_10_NEODIMIO_cqhdwa.pdf",
@@ -117,7 +117,7 @@
     "category": "Woofer",
     "images": {
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773505883/pa12n1000-1_qaoenb.png",
-      "gallery": []
+      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774996918/pa12n1000_ojk6vs.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1774996919/pa12n1000-1_negmeh.png"]
     },
     "description": "Woofer de 12 pulgadas con sensibilidad de 100 dB, ideal para sistemas que requieren potencia real con una respuesta rapida y contundente.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773524084/FICHA_TECNICA_WOOFER_PA12N1000_nk9zc9.pdf",
@@ -130,12 +130,12 @@
     }
   },
   {
-    "id": 6,
+    "id": 3,
     "name": "pa8n600",
     "category": "Woofer",
     "images": {
-      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773528098/pa8n600-1_dqgf6s.png",
-      "gallery": []
+      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774998687/pa8n600-1_dqgf6s.png",
+      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774997485/pa8n600_sj1err.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1774997485/pa8n600-1_ubwyjp.png"]
     },
     "description": "El PA8N-600 es un Woofer profesional de 8 pulgadas con iman de neodimio, para aplicaciones de refuerzo sonoro de rango medio y alta eficiencia.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773528038/FICHA_TECNICA_WOOFER_PA8N600_g2bphm.pdf",
@@ -150,7 +150,7 @@
   {
     "id": 7,
     "name": "parlante 10 sheffieeld",
-    "category": "Parlantes",
+    "category": "Woofer",
     "images": {
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774912809/parlante_10_sheffieeld-1_yh3ldi.png",
       "gallery": []
@@ -175,7 +175,7 @@
   {
     "id": 8,
     "name": "parlante 12 sheffield",
-    "category": "Parlantes",
+    "category": "Woofer",
     "images": {
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774913135/parlante_12_sheffield-1_f9g9c2.png",
       "gallery": []
@@ -247,8 +247,8 @@
     "name": "pa150r400w",
     "category": "Cabinas",
     "images": {
-      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773870318/pa150r400w_djrlzr.png",
-      "gallery": []
+      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774997345/pa150r400w_djrlzr.png",
+      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774997378/pa150r400w-1_oyoehc.png"]
     },
     "description": "Cabina de 15 pulgadas con reproductor mp3, usb, bluetooth y radio FM, con sistema DSP. Potencia 400 W RMS.",
     "document": "",
@@ -268,7 +268,7 @@
   {
     "id": 12,
     "name": "10ndl76",
-    "category": "Parlantes",
+    "category": "Woofer",
     "images": {
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774911555/neodimio10_c0alet.png",
       "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774827083/10ndl76_n88ylu.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1774912000/neodimio10-1_dzvuiz.png"]
@@ -291,7 +291,7 @@
   {
     "id": 13,
     "name": "12ndl76",
-    "category": "Parlantes",
+    "category": "Woofer",
     "images": {
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774827252/12ndl76_ylwz2t.png",
       "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774912000/neodimio10-1_dzvuiz.png"]
@@ -314,7 +314,7 @@
   {
     "id": 14,
     "name": "12md26",
-    "category": "Parlantes",
+    "category": "Woofer",
     "images": {
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774912604/12md26_drfdsu.png",
       "gallery": []
