@@ -621,7 +621,7 @@ footer p { font-size: 0.72rem; color: var(--muted); }
   position: fixed;
   inset: 0;
   z-index: 2000;
-  background: rgba(13,27,42,0.85);  /* ✅ Fondo transparente oscuro */
+  background: rgba(255,255,255,0.98);  /* ✅ MODO BLANCO */
   backdrop-filter: blur(12px);
   flex-direction: column;
   align-items: center;
