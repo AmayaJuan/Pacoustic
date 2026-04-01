@@ -344,7 +344,7 @@ function renderProducts() {
       const mediaCount = p.imgs.length + (p.video ? 1 : 0);
       html += `<div class="prod-card" style="--card-delay:${delay*0.07}s" onclick="openModal('${p.id}')">
         <div class="prod-img-wrap">
-          <img src="${p.imgs[0]}" srcset="${getResponsiveSrcset(p.imgs[0])}" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" alt="${escapeAttr(p.name)}" loading="lazy"/>
+          <img src="${p.imgs[0]}" alt="${escapeAttr(p.name)}" loading="lazy"/>
           ${p.watermark ? `<img src="${p.watermark}" alt="" class="prod-watermark"/>` : ''}
           <span class="prod-badge">${escapeHtml(p.badge)}</span>
           ${hasGallery ? `<span class="prod-gallery-count" title="${mediaCount} archivos">${p.video ? '🎬' : '📷'} ${mediaCount}</span>` : ''}
@@ -460,8 +460,9 @@ function openModal(id) {
 
   // Imagen principal
   const mainImg = document.getElementById('modalImgMain');
-  mainImg.srcset = getResponsiveSrcset(p.imgs[0]);
-  mainImg.sizes  = '(max-width: 768px) 100vw, 50vw';
+  mainImg.src = p.imgs[0];
+  mainImg.removeAttribute('srcset');
+  mainImg.removeAttribute('sizes');
   mainImg.alt = 'Imagen de ' + p.name;
   mainImg.style.transform = '';
   mainImg.style.cursor = 'zoom-in';
@@ -498,7 +499,7 @@ function openModal(id) {
            role="tab"
            data-type="img"
            aria-label="Imagen ${i + 1} de ${p.imgs.length}">
-      <img src="${img}" srcset="${getResponsiveSrcset(img)}" sizes="(max-width: 768px) 100vw, 50vw" alt="Vista ${i + 1}" loading="lazy"/>
+      <img src="${img}" alt="Vista ${i + 1}" loading="lazy"/>
       </div>`).join('');
 
     const videoThumb = hasVideo ? (() => {
