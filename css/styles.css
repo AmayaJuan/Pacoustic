@@ -301,6 +301,13 @@ footer p { font-size: 0.72rem; color: var(--muted); }
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .modal-img-main {
+    background: rgba(13,27,42,0.85);
+    backdrop-filter: blur(12px);
+  }
+}
+
 .modal-video-wrap {
   width: 100%;
   height: 100%;
@@ -614,7 +621,8 @@ footer p { font-size: 0.72rem; color: var(--muted); }
   position: fixed;
   inset: 0;
   z-index: 2000;
-  background: rgba(240,245,249,0.98);
+  background: rgba(13,27,42,0.85);  /* ✅ Fondo transparente oscuro */
+  backdrop-filter: blur(12px);
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -632,8 +640,10 @@ footer p { font-size: 0.72rem; color: var(--muted); }
 }
 
 #lbImg {
-  max-width: 72vw;
-  max-height: 60vh;
+  max-width: 70vw;
+  max-height: 55vh;  /* ✅ Más pequeña/representativa como modal */
+  width: 85%;        /* ✅ Fija más pequeña */
+  height: 70%;
   object-fit: contain;
   border-radius: 12px;
   user-select: none;

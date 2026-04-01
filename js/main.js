@@ -48,8 +48,8 @@ const PAGINATION_CONFIG = { itemsPerPage: 8, currentPage: 1 };
 // ZOOM
 // ========================================
 const ZOOM_CONFIG = { 
-  levels: [0.5, 0.8, 1, 1.5, 2], 
-  currentLevel: 2, 
+  levels: [0.8, 1, 1.2, 1.4], /* ✅ ZOOM LÍMITE: máximo 1.4x suave */
+  currentLevel: 1, 
   currentZoom: 1 
 };
 
@@ -807,7 +807,7 @@ function abrirLightbox(src, nombre) {
 }
 
 function lbZoom(delta) {
-  LBState.scale = Math.max(0.8, Math.min(3, LBState.scale + delta));
+LBState.scale = Math.max(0.8, Math.min(1.4, LBState.scale + delta)); /* ✅ Lightbox TAMBIÉN máximo 1.4x */
   lbApply();
 }
 
