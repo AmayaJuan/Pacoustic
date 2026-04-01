@@ -232,7 +232,7 @@ function getFilteredproducts() {
   return list;
 }
 function getUniqueCategories() {
-  const fixed = ['Parlantes','Line Array','Woofer','Drivers','Cabinas'];
+  const fixed = ['Line Array','Woofer','Drivers','Cabinas'];
   const from  = [];
   products.forEach(p => { if (p.cat && !from.includes(p.cat)) from.push(p.cat); });
   return [...new Set([...fixed, ...from])];
