@@ -476,7 +476,7 @@ function openModal(id) {
   mainImg.alt = 'Imagen de ' + p.name;
   mainImg.style.transform = '';
   mainImg.style.cursor = 'zoom-in';
-mainImg.onclick = (e) => { e.stopPropagation(); abrirLightbox(mainImg.src, p.name); };
+mainImg.onclick = null;  /* ✅ NO zoom/lightbox desde modal — imagen queda intacta */
 // Zoom restringido a niveles discretos en lightbox
 
   // Flechas de navegación
