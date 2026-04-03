@@ -1,5 +1,6 @@
 # PAcoustic — Parlantes Profesionales ⚡
 
+**✅ Fix zoom modal (restricción max 1.12x): 02/04/26**  
 **Optimizado responsive imágenes/video: 01/04/2026**
 
 ## 🚀 Optimizaciones Responsive Completadas

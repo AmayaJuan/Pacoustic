@@ -59,10 +59,6 @@ function initZoomControls() {
     const img = document.getElementById('modalImgMain');
     if (img && img.style.display !== 'none') {
       const r = img.getBoundingClientRect();
-      if (e.clientX >= r.left && e.clientX <= r.right &&
-          e.clientY >= r.top  && e.clientY <= r.bottom) {
-        e.preventDefault();
-      }
     }
   }, { passive: false });
 }

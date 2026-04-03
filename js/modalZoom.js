@@ -1,40 +1,56 @@
-// Modal Zoom — Función independiente
-const MODAL_ZOOM_CONFIG = { currentZoom: 1, maxZoom: 1.2 };
+// ========================================
+// PA ACOUSTIC — modalZoom.js
+// Zoom sutil en imagen principal del modal
+// ========================================
+
+const MODAL_ZOOM_CONFIG = {
+  currentZoom: 1,
+  maxZoom: 1.12,     // ← zoom máximo sutil (12% más grande)
+  minZoom: 1,       // ← nunca más pequeño que el tamaño original
+  step: 0.04        // Pasos de 4% por scroll
+};
 
 function modalZoomInit() {
   const imgMain = document.getElementById('modalImgMain');
   if (!imgMain) return;
 
-  // Reset zoom
-  MODAL_ZOOM_CONFIG.currentZoom = 1;
-  imgMain.style.transform = 'scale(1)';
-  imgMain.style.transition = 'transform 0.3s ease';
+  // Reset al abrir
+  MODAL_ZOOM_CONFIG.currentZoom  = 1;
+  imgMain.style.transform        = 'scale(1)';
+  imgMain.style.transformOrigin  = 'center center';
+  imgMain.style.transition       = 'transform 0.25s ease';
 
-  // Event listeners zoom
-  imgMain.addEventListener('wheel', zoomWheel, { passive: false });
-  imgMain.addEventListener('dblclick', zoomReset);
+  imgMain.addEventListener('wheel',    _zoomWheel,   { passive: false });
+  imgMain.addEventListener('dblclick', _zoomReset);
 }
 
-function zoomWheel(e) {
+function _zoomWheel(e) {
   e.preventDefault();
   e.stopPropagation();
-  
-  const delta = e.deltaY > 0 ? -0.2 : 0.2;
-  MODAL_ZOOM_CONFIG.currentZoom = Math.max(1, Math.min(MODAL_ZOOM_CONFIG.maxZoom, MODAL_ZOOM_CONFIG.currentZoom + delta));
-  
+
+  const delta = e.deltaY > 0 ? -MODAL_ZOOM_CONFIG.step : MODAL_ZOOM_CONFIG.step;  // ← Fix indent + restricción zoom
+  MODAL_ZOOM_CONFIG.currentZoom = Math.max(
+    MODAL_ZOOM_CONFIG.minZoom,
+    Math.min(MODAL_ZOOM_CONFIG.maxZoom, MODAL_ZOOM_CONFIG.currentZoom + delta)
+  );
+
   const imgMain = document.getElementById('modalImgMain');
-  imgMain.style.transform = `scale(${MODAL_ZOOM_CONFIG.currentZoom})`;
+  if (imgMain) imgMain.style.transform = `scale(${MODAL_ZOOM_CONFIG.currentZoom})`;
 }
 
-function zoomReset(e) {
+function _zoomReset(e) {
   e.preventDefault();
   MODAL_ZOOM_CONFIG.currentZoom = 1;
-  document.getElementById('modalImgMain').style.transform = 'scale(1)';
+  const imgMain = document.getElementById('modalImgMain');
+  if (imgMain) imgMain.style.transform = 'scale(1)';
 }
 
-// Cleanup en cerrar modal
 function modalZoomCleanup() {
   const imgMain = document.getElementById('modalImgMain');
-  imgMain.removeEventListener('wheel', zoomWheel);
-  imgMain.removeEventListener('dblclick', zoomReset);
+  if (!imgMain) return;
+  imgMain.removeEventListener('wheel',    _zoomWheel);
+  imgMain.removeEventListener('dblclick', _zoomReset);
+  // Reset visual al cambiar imagen o cerrar
+  MODAL_ZOOM_CONFIG.currentZoom = 1;
+  imgMain.style.transform = 'scale(1)';
 }
