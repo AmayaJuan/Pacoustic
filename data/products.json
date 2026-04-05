@@ -204,19 +204,20 @@
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773526030/woofer18lw2420_-1_q5rmoz.png",
       "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774999715/18lw2420_-1_wlk8fr.png"]
     },
-    "description": "El 18LW2420+ es un woofer profesional con 1300 W RMS y 2600 W de potencia continua, construido con iman de ferrita compacto especial para bajas frecuencias.",
-    "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773526341/FICHA_TECNICA_WOOFER_18LW2420_shyia3.pdf",
+    "description": "El 18LW2420+ es un woofer profesional de alto rendimiento diseñado para sistemas de refuerzo sonoro que requieren gran potencia, eficiencia y confiabilidad. Cuenta con 1300 W RMS y 2600 W de potencia  continua lo que garaniza un rendimiento confiable incluso en altas exigencias de trabajo. Esta construido con un imán de ferrita compacto especial para bajas frecuencias. Cuenta con su sistema de ventilación en la parte posterior para expulsar el aire caliente, su bobina de 4 pulgadas. El diseño del chasis es robusto su material es de antimonio. Su impedancia es de 8 ohmios con una sensibilidad de 98 Db, su rango  de frecuencia empieza desde 30Hz a 250Hz.",
+    "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775359931/FICHA_TECNICA_WOOFER_18LW2420_gjr96p.pdf",
     "specs": {
-      "sensibilidad": "98 dB SPL",
-      "potencia programa": "2600 W",
-      "potencia rms": "1300 W",
-      "impedancia nominal": "8 ohmios",
-      "rango de frecuencia": "30Hz - 2500 Hz",
-      "diametro de bobina": "4 pulgadas",
-      "material de bobina": "Til / Alambre Cobre",
-      "diametro nominal": "18 pulgadas (457 mm)",
-      "numero de capas de bobina": "2 capas (Inside/Outside)",
-      "aplicaciones": "Instalaciones Fijas: teatros., auditorios y clubes nocturnos."
+      "Sensibilidad": "98 dB SPL",
+      "Potencia programa": "2600 W",
+      "Potencia RMS": "1300 W",
+      "Dispación de color": "Difusor de aire integrado y múltiples ventilaciones en la placa trasera",
+      "impedancia nominal": "8 Ω",
+      "Rango de frecuencia": "30Hz - 2500 Hz",
+      "Diámetro de Bobina": "4 pulgadas",
+      "Material de Bobina": "Til / Alambre Cobre",
+      "Diámetro nominal": "18 pulgadas (457 mm)",
+      "Número de capas de Bobina": "2 capas (Inside/Outside)",
+      "aplicaciones": "Este Woofer esta diseñado para cajas de alto desempeño, cajas bass réflex o frontales y diseños de cuatro orden, Sistemas de sonido profesionales: ideal para conciertos en vivo y eventos d gran formato, Subwoofers de Alta Potencia: Adecuado para aplicaciones que requieren bajos profundos y potentes, Instalaciones Fijas: Perfecto para teatros auditoriosy clubes nocturnos"
     }
   },
   {
@@ -273,19 +274,24 @@
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774911555/neodimio10_c0alet.png",
       "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774827083/10ndl76_n88ylu.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1774912000/neodimio10-1_dzvuiz.png"]
     },
-    "description": "Parlante de 10 pulgadas neodimo con bobina de 3 pulgadas IN-OUT, sensitivy 99dB, impedancia 8 ohmios, potencia 1000 watts, frecuencia 50-3500Hz.",
-    "document": "",
+    "description": "El woofer 10NDL76 ha sido diseñado para ofrecer alto rendimiento, eficiencia y confiabilidad en aplicaciones de refuerzo sonoro y profesional. Incorpora un potente sistema magnético de neodimio, que permite reducir el peso total sin sacrificar potencia ni desempeño; facilitando su instalación. Su bobina de 3 pulgadas garantiza una excelente disipación térmica y estabilidad durante largas jornadas de trabajo, soportando una potencia continua de 500W y hasta 1000W programa, proporcionando una baja distorsion incluso a altos niveles de presión sonora. El cono fabricado con papel tratado ofrece una respuesta rápida y precisa, logrando una reproducción equilibrada en frecuencias medias y bajas dentro de su rango de frecuencia de 50Hz a 3500Hz. Gracias a su sistema de enfriamiento con Buje de cobre en el núcleo magnético, el transductor mantiene una temperatura estable, mejorando la eficiencia y prologando la vifa útil del parlante",
+    "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775260662/FICHA_TECNICA_PARLANTE_10NDL76_spiovz.pdf",
     "specs": {
-      "sensibilidad": "99 dB",
-      "potencia programa": "1000 WATTS",
-      "potencia rms": "",
-      "impedancia nominal": "8 ohmios",
-      "rango de frecuencia": "50-3500Hz",
-      "diametro de bobina": "3 pulgadas IN-OUT",
-      "material de bobina": "",
-      "diametro nominal": "",
-      "numero de capas de bobina": "",
-      "aplicaciones": "."
+      "Tipo": "Parlante 10NDL76",
+      "Diámetro nominal": "10 pulgadas (254 mm)",
+      "Tipo de imán": "Neodimio",
+      "Diámetro de bobina": "3 pulgadas (76 mm) in out",
+      "Impedancia nominal": "8 ohmios",
+      "Potencia RMS": "500 W RMS",
+      "Potencia programa": "1000 W",
+      "sensibilidad": "99 Db",
+      "Respuesta de frecuencia": "50 Hz - 3500 Hz",
+      "Material del iman": "Neodimio",
+      "Material del cono": "Papel tratado de alta rigidez",
+      "Material del chasis": "Aluminio fundido",
+      "Sistema de enfriamiento": "Buje de cobre en núcleo magnético",
+      "Aplicación": "Medios / medios -bajos",
+      "aplicaciones": "Sistemas Line Array compactos, Cajas acústicas Full Range profecionales, Monitores de escenario, Sistemas de refuerzo sonoro para conciertos, Sistemas pickup, Car audio, Proyectos donde se requiera ligereza más potencia"
     }
   },
   {
@@ -296,19 +302,20 @@
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774827252/12ndl76_ylwz2t.png",
       "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774912000/neodimio10-1_dzvuiz.png"]
     },
-    "description": "Parlante de 12 pulgadas neodimo con bobina de 3 pulgadas IN-OUT, sensitivy 100dB, impedancia 8 ohmios, potencia 1000 watts, frecuencia 50-3500Hz.",
-    "document": "",
+    "description": "El woofer de 12' 12NDL76 ha sido diseñado para aplicaciones de sonido que requieren alta  eficiencia, excelente definición en frecuencias medias. Gracias a su potente bobina de 3 pulgadas y su estructura magnética de neodimio, ofrece un rendimiento superior con menor peso, ideal para sistemas portátiles y configuraciones de alto desempeño. Cuenta con una potencia RMS de 500W y una potencia en programa de 1000W, garantizado una reproducción sonora limpia, estable y confiable incluso en condiciones de trabajo exigentes. Su sensibilidad de 100Db permite una excelente proyección. El sistema de enfriamiento con Buje de cobre en el núcleo magnetico mejora la disipación térmica, reduciendo la compresión de potencia y aumentado la durabilidad. Su respuesta  en frecuenciade 50 Hz a 3500 Hz lo convierte en una opción ideal para  reproducción de medios y medios-bajos con gran claridad y presencia.",
+    "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775260690/FICHA_TECNICA_PARLANTE_12NDL76_k24ncm.pdf",
     "specs": {
-      "sensibilidad": "100dB",
-      "potencia programa": "1000 WATTS",
-      "potencia rms": "",
-      "impedancia nominal": "8 ohmios",
-      "rango de frecuencia": "50-3500Hz",
-      "diametro de bobina": "3 pulgadas IN-OUT",
-      "material de bobina": "",
-      "diametro nominal": "",
-      "numero de capas de bobina": "",
-      "aplicaciones": "."
+      "Tipo": "Parlante 12NDL76",
+      "Diámetro nominal": "12 pulgadas",
+      "Bobina": "3 pulgadas in out",
+      "Impedancia nominal": "8 ohmios",
+      "Potencia RMS": "500W",
+      "Potencia programa": "1000 W",
+      "Respuesta en frecuencia": "50 Hz - 3500 Hz",
+      "Material de imán": "Neodimio",
+      "Sistema de enfriamiento": "Buje de cobre en núcleo magnético",
+      "Aplicación": "Medios / Medios - Bajos",
+      "aplicaciones": "Sistemas Line Array compactos, Cajas acústicas Full Range profecionales, Monitores de escenario, Sistemas de refuerzo sonoro para conciertos, Sistemas pickup, Car audio, Proyectos donde se requiera ligereza más potencia"
     }
   },
   {
@@ -319,19 +326,18 @@
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774912604/12md26_drfdsu.png",
       "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774830391/12md26-1_p6e9hu.png"]
     },
-    "description": "Parlante de 12 pulgadas, potencia 1000 watts, impedancia 8 ohm, sensibilidad 100dB, frecuencia 50Hz-350kHz, tipo chasis aluminio.",
-    "document": "",
+    "description": "El Woofer 12 pulgadas diseñado para aplicaciones de sonido en vivo y sistemas de refuerzo sonoro de alta exigencia. Ofrece una potencia nominal de 1000W y una sensibilidad de 100 dB, garantizando alto rendimiento acústico, excelente presión sonora y gran eficiencia energética.  Su respuesta en frecuencia de 50 Hz a 3.5 kHz proporciona graves definidos y medios claros, ideales para configuraciones full range o sistemas de dos vías. Cuenta con chasis de aluminio que mejora la dispación térmica y la resistencia estructural, combinado con imán de ferrita que asegura estabilidad y desempeño constante.",
+    "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775323244/FICHA_TECNICA_WOOFER_12MD26_fxuu0t.pdf",
     "specs": {
-      "sensibilidad": "100dB",
-      "potencia programa": "1000 WATTS",
-      "potencia rms": "",
-      "impedancia nominal": "8 ohmios",
-      "rango de frecuencia": "50Hz-350kHz",
-      "diametro de bobina": "3 pulgadas",
-      "material de bobina": "",
-      "diametro nominal": "",
-      "numero de capas de bobina": "",
-      "aplicaciones": "."
+      "Diámetro nominal": "12 pulgadas",
+      "Potencia nominal": "1000 W",
+      "Impedancia": "8 Ohmios",
+      "sensibilidad": "100 dB",
+      "Respuesta de frecuencia": "50Hz-3.5kHz",
+      "Tipo de chasis": "Aluminio",
+      "Tipo de imán": "Ferrita",
+      "Diámetro de bobina": "3 pulgadas",
+      "aplicaciones": "Sistema de sonido profesional (PA), Cajas acústicas full rango, Monitores de escenario, Refuerzo sonoro en eventos en vivo, Instalaciones fijas y sonido comercial, Proyectos de sonido móvil y discotecas, Sistemas Line Array compactos"
     }
   },
   {
