@@ -128,14 +128,17 @@
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773505883/pa12n1000-1_qaoenb.png",
       "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1775084033/pa12n1000_ojk6vs.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1774996919/pa12n1000-1_negmeh.png"]
     },
-    "description": "Woofer de 12 pulgadas con sensibilidad de 100 dB, ideal para sistemas que requieren potencia real con una respuesta rapida y contundente.",
+    "description": "Descubre un Woofer de  12 pulgadas diseñado para entregar máxima fuerza, presión y eficiencia en cualquier aplicación profesional. Su impresionante sensibilidad de 100 dB lo convierte en un Woofer extremadamente eficiente, ideal para sistemas que requieren potenca real con una respuesta rápida y contundente. Cararisticas destacadas. Potencia real de 100 W: Construido con materiales de alta resistencia y un motor magnético robusto que garantiza potencia continua sin perdidas ni compresión térmica. Bobina de 3 pulgadas IN-OUT: Fabricada para soportar altas temperaturas, permitiendo largas jornadas de trabajo con estabilidad y rendimiento constante.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773524084/FICHA_TECNICA_WOOFER_PA12N1000_nk9zc9.pdf",
     "specs": {
-      "diametro nominal 306mm": "(12 pulgadas)",
-      "impedancia nominal 8 ohmios": "Potencia RMS 1000 W",
-      "sensibilidad 100 db": "Rango de Frecuencia 50 Hz - 3500 Hz",
-      "diametro de bobina": "3 pulgadas",
-      "aplicaciones": "Sistemas line array., Sistemas PA., Monitores de escenarios., Cajas turbo., Sistema pickup., Car audio."
+      "Diámetro nominal": "306mm (12 pulgadas)",
+      "Impedancia nominal": "8 ohmios",
+      "Potencia RMS": "1000 W",
+      "Sensibilidad": "100 dB",
+      "Rango de frecuencia": "50 Hz - 3500 Hz",
+      "Diámetro de Bobina": "3 pulgadas",
+      "Capas de Bobina": "2 capas (IN - OUT)",
+      "aplicaciones": "Sistemas line array, Sistemas PA de alto rendimiento, Monitores de escenarios, Cajas turbo, Sistema pickup, Car audio, Proyecto donde requiera ligereza mas potente"
     }
   },
   {
@@ -164,21 +167,21 @@
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774912809/parlante_10_sheffieeld-1_yh3ldi.png",
       "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1775083755/sheffield10_clvemq.png"]
     },
-    "description": "El parlante SHEFFIELD 10 es un altavoz para aplicaciones profesionales que requieren potencia constante y excelente comportamiento en sistemas de audio.",
+    "description": "El parlante SHEFFIELD 10 es un altavoz diseñado para aplicaciones profesionales que requieren potencia constante, buena respuesta en medios y excelente  comportamiento en sistemas de audio tipo refuerzo sonoro. Su imán de ferrita, bobina de 3’’ en kapton y chasis en lámina brindas estabilidad térmica, durabilidad y un rendimiento sólido en ambientes de trabajo exigentes. Es ideal para configuraciones tipo full-range, cajas de dos y tres vías y proyectos de reemplazo de alto desempeño. ",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773524034/FICHA_TECNICA_PARLANTE_10_SHEFIEELD_mlt894.pdf",
     "specs": {
-      "diametro nominal": "10 pulgadas",
-      "carga magnetica": "70 onzas",
-      "impedancia nominal": "8 ohmios",
-      "potencia programada": "800 W",
-      "potencia rms": "400 W",
-      "sensibilidad": "97 dB",
-      "rango de frecuencia": "50 Hz - 2.5KHz",
-      "diametro de bobina": "3 pulgadas",
-      "material de bobina": "Kapton / Alambre Cobre",
-      "tipo iman": "Ferrita",
-      "tipo de chasis": "Lamina",
-      "aplicaciones": "Monitores de piso., Reemplazo para proyectos de reparacion., refuerzo sonoro en eventos., Cajas convencionales."
+      "Diámetro nominal": "10 pulgadas",
+      "Carga magnética": "70 onzas",
+      "Impedancia nominal": "8 ohmios",
+      "Potencia programada": "800 W",
+      "Potencia rms": "400 W",
+      "Sensibilidad": "97 dB",
+      "Rango de frecuencia": "50 Hz - 2.5KHz",
+      "Diámetro de bobina": "3 pulgadas",
+      "Material de bobina": "Kapton / Alambre Cobre",
+      "Tipo Iman": "Ferrita",
+      "Tipo de chasis": "Lamina",
+      "aplicaciones": "Monitores de piso, Reemplazo para proyectos de reparacion, Refuerzo sonoro en eventos, Cajas convencionales."
     }
   },
   {
@@ -189,20 +192,20 @@
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774913135/parlante_12_sheffield-1_f9g9c2.png",
       "gallery": []
     },
-    "description": "El parlante SHEFFIELD 12 es un componente pensado para sistemas profesionales con bobina de 3 pulgadas en kapton, iman de ferrita y chasis en lamina.",
+    "description": "El parlante SHEFFIELD 12 es un componente pensado para sistemas profesionales que requieren graves más profundos y mayor cobertura de rango medio. Su bobina de  3’’ en kapton imán de ferrita y chasis en lámina aseguran un rendimiento confiable, alta durabilidad y excelente disipación de calor. Está diseñado para cajas acústicas de refuerzo sonoro, sistemas de rango extendido y aplicaciones de alto rendimiento en eventos y conciertos.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773527957/FICHA_TECNICA_PARLANTE_12_SHEFFIELD_tjixu0.pdf",
     "specs": {
-      "diametro nominal": "12 pulgadas",
-      "impedancia nominal": "8 ohmios",
-      "potencia rms": "500 W",
-      "potencia programada": "1000 W",
-      "sensibilidad": "97 dB",
-      "rango de frecuencia": "45 Hz - 2.5KHz",
-      "diametro de bobina": "3 pulgadas",
-      "material de bobina": "Kapton / Alambre Cobre",
-      "tipo iman": "Ferrita",
-      "tipo de chasis": "Lamina",
-      "aplicaciones": "Cajas convencionales., Sistemas full-range., Equipos profesionales para musica en vivo., Monitores de escenario., Reemplazos para reparacion."
+      "Diámetro nominal": "12 pulgadas",
+      "Impedancia nominal": "8 ohmios",
+      "Potencia RMS": "500 W",
+      "Potencia programada": "1000 W",
+      "Sensibilidad": "97 dB",
+      "Rango de frecuencia": "45 Hz - 2.5KHz",
+      "Diámetro de bobina": "3 pulgadas",
+      "Material de bobina": "Kapton / Alambre Cobre",
+      "Tipo imán": "Ferrita",
+      "Tipo de chasis": "Lamina",
+      "aplicaciones": "Cajas convencionales, Sistemas full-range de alto desempeño, Equipos profesionales para musica en vivo, Monitores de escenario de alta presión sonora, Reemplazos para proyectos de reparación"
     }
   },
   {
@@ -503,6 +506,32 @@
       "Ángulo de dispersión": "Dependiente de la guía de onda",
       "Peso aproximado": "1.6 kg",
       "aplicaciones": "Cabimas activas y pasivas profesionales, Sistemas de sonido en vivo, Sistemas Line arrays, Monitores, Sistemas de perifoneo"
+    }
+  }, 
+  {
+    "id": 21,
+    "name": "PA-4449S",
+    "category": "Drivers",
+    "images":{
+       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775004326/PA4449S_x6z1t7.png",
+       "gallery":["https://res.cloudinary.com/djlr3wszq/image/upload/v1775003690/pa4449s_vyqpj3.png"]
+    },
+    "description": "El driver de compresión de 1 pulgada ha sido diseñado para ofrecer un renbdimiento óptimo en la reproducción de altas frecuencias, destacándose por su claridad, eficiencia y alta presión sonora, lo que lo convierte en un componente ideal para sistemas de sonido profesional, cabinas activas y pasivas, así como aplicaciones de refuerzo sonoro en vivo. Este driver cuenta con una potencia de programa continuo de 180W, lo que garantiza una operación estable bajo condiciones exigentes, manteniendo una excelente fidelidad son distorsión incluso a altos niveles de volumen. Su diseño incorpora una bobina de 44mm (1.7 pulgadas) en alambre plano, lo cual permite una mejor disipación térmica, mayor eficiencia electromagnética y una respuesta más precisa en el rango de frecuencias altaS. Su rango de frecuencia de trabajo abarca desde 1500 Hz hasta 18 kHz, permitiendo cubrir de manera eficiente las frecuencias medias-altas y altas, aportando claridad, presencia y brillo al sistema. Además, cuenta con una alta sensibilidad de 108.5 dB lo que se traduce en una excelente eficiencia, logrando altos niveles de presión sonora con menor requerimiento de potencia.",
+    "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775265138/FICHA_TECNICA_DRIVER_PA_4449S_wakmjl.pdf",
+    "specs":{
+      "Diámetro de la garganta": "25mm (1.0in)",
+      "Impedancia nominal":"8 ohmios",
+      "impedancia minima": "7.8 ohmios",
+      "Manejo de potencia nominal": "90 W",
+      "Manejo potencia continua": "180 W",
+      "Sensibilidad": "108.5 Db",
+      "Cruce recomendado": "2000 Hz",
+      "Diámetro de la bobina": "44mm (1.7in)",
+      "Rango de frecuencia": "1500 Hz - 18.0 kHz",
+      "Material de la bobina": "Kapton, alambre aleación de cobre y aluminio",
+      "Tapa de aluminio": "Para mayor control de calor hacia la bobina",
+      "Inductancia": "0.11 Mh",
+      "Nivel presión sonora": "(SPL)"
     }
   }
 ]
