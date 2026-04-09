@@ -273,6 +273,7 @@
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775765409/150r400w_g4chfo.jpg",
       "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774997345/pa150r400w_djrlzr.png","https://res.cloudinary.com/djlr3wszq/image/upload/v1774997378/pa150r400w-1_oyoehc.png"]
     },
+    "video": "",
     "description": "La cabina activa de 15” está diseñada para ofrecer un rendimiento sólido, versátil y confiable en aplicaciones de sonido en vivo, eventos sociales y uso profesional. Incorpora un sistema de amplificación eficiente con una potencia de 400W RMS y 800W programa, garantizando una reproducción clara, potente y con excelente respuesta. Tiene un parlante de 15 pulgadas con imán de ferrita de 80 onzas y bobina de 3”, esta cabina proporciona una excelente reproducción de frecuencias bajas con buena profundidad; ideal para música en vivo, DJ y reproducción de contenido multimedia. Complementa su desempeño un driver de compresión de 1” con bobina de 1.75”, que asegura una adecuada definición en altas frecuencias, logrando un sonido balanceado. El sistema integra procesamiento digital DSP, optimizando la respuesta sonora y permitiendo una mejor adaptación a diferentes entornos acústicos. Además, cuenta con efecto de reverberación (reverb), ideal para aplicaciones como karaoke o presentaciones vocales.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775579196/FICHA_TECNICA_PA150R400W_y0exbv.pdf",
     "specs": {
@@ -375,7 +376,7 @@
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775766968/pax-one_usva2r.jpg",
       "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774988691/subwoofer_arjn8u.png"]
     },
-    "video": "https://res.cloudinary.com/djlr3wszq/video/upload/v1775767500/pax-one_mydjph.mp4",
+    "video": "https://res.cloudinary.com/djlr3wszq/video/upload/v1775767500/pax-one_mydjph.mp4", "video2": "https://res.cloudinary.com/djlr3wszq/video/upload/v1775771249/pax-one_kjfst1.mp4",
     "description": "El sistema PAX-ONE compacto y elegante, ofrece un impresionante SPL máximo  de 128 db, con un alcance constante de adelante hacia atrás, gracias a su arreglo lineal de 12 altavoces y acompañado de un subwoofer de 12 pulgadas, diseñado a la medida con tecnólogia acústica. El sistema PA barra lineal + subwoofer cuenta con amplificador incorporado de 1400W electronicamente optimizado, que incluye un mezclador de 5 canales (4 entradas para microfono XLR mixto y una entrada en stereo TR) con ecualizador paramétrico y efectos, DSP incorporado con 4 Preset, conexión a Bluetooth y TWS para el enlace de dos sistemas. Un sonido excepcional y versátil, que minimiza el montaje de tus pequeños y medianos eventos corporativos y empresariales.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774475012/FICHA_TECNICA_BARRA_LINEAL_SUBWOFFER_sexqtq.pdf",
     "specs": {
@@ -603,9 +604,10 @@
     "name": "HL20A",
     "category": "Line Array",
     "images": {
-      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775532517/hl20a-3_sapzoj.png",
-      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1775532517/hl20a-1_yvmoxp.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1775532517/hl20a-2_hjb9pw.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1775532516/hl20a-4_qzyo20.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1775086982/hl20a_adpxrv.png"]
+      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775771047/pahl20a_ut5z8j.jpg",
+      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1775532517/hl20a-3_sapzoj.png","https://res.cloudinary.com/djlr3wszq/image/upload/v1775532517/hl20a-1_yvmoxp.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1775532517/hl20a-2_hjb9pw.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1775532516/hl20a-4_qzyo20.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1775086982/hl20a_adpxrv.png"]
     },
+    "video":"",
     "description": "",
     "document": "",
     "specs": {
