@@ -42,6 +42,7 @@
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775260459/hl30a_xybxrb.png",
       "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1775085205/hl30a-2_dpgtum.png","https://res.cloudinary.com/djlr3wszq/image/upload/v1775085185/hl30a-3_suvnal.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1775085148/hl30a_pk2r2n.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1775085117/hl30a-1_vjxhig.png"]
     },
+    "video": "https://res.cloudinary.com/djlr3wszq/video/upload/v1775767972/pahl30a_auozxu.mp4",
     "description": "El PA HL30-A es un sistema line array activo bi-amplificado de 2 vías, diseñado para aplicaciones profesionales de refuerzo sonoro de pequeño y gran formato, con tecnología innovadora y control remoto por NET WORK . Integra dos parlantes de 10” con imanes de neodimio y un motor de compresión de 1.4” con diafragma de titanio, ofreciendo una respuesta en frecuencia de 50 Hz a 20 kHz y un SPL máximo de hasta 137 dB. El sistema incorpora amplificación clase D de alta eficiencia, con una potencia total 2200 W y una potencia RMS de 1100W, perfectamente adaptada a los altavoces para maximizar el rendimiento dinámico y la confiabilidad del sistema. El procesamiento interno se realiza mediante un DSP de 32 bits a 48 kHz, que gestiona con precisión, asegurando  un funcionamiento estable y seguro en largas jornadas de trabajo. Con una cobertura nominal de 100° horizontal y 15° vertical, el PA HL30-A está diseñado para una integración óptima en arreglos verticales, asegurando una corrcta sumatoria acústica entre módulos y un control preciso de la dispersión. Su alto SPL combinado con una respuesta extendida lo convierte en un elemento ideal para trabajar junto a subwoofes logrando sistemas de gran impacto",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773526923/FICHA_TECNICA_PA_HL30A_qiqevw.pdf",
     "specs": {
@@ -73,11 +74,12 @@
     "name": "lf18x401+",
     "category": "Woofer",
     "images": {
-      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774910048/lf18x-1_whg5pa.png",
-      "gallery": [
+      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775765590/lf18x401_enks9g.jpg",
+      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774910048/lf18x-1_whg5pa.png",
         "https://res.cloudinary.com/djlr3wszq/image/upload/v1774822247/lf18x-2_mo3t5g.png"
       ]
     },
+    "video":"https://res.cloudinary.com/djlr3wszq/video/upload/v1775767819/lf18x401_omnjru.mp4",
     "description": "El LF18X401+  es un woofer profesional de alto rendimiento diseñado para sistemas de refuerzo sonoro que requieren <gran potencia, eficiencia y confiabilidad. Cuenta con 1900 W RMS y 3800 W de potencia continua lo que garantiza un rendimiento confiable incluso en altas exigencias de trabajo. Su campo magnético de 180 oz de carga y doble ventilación de aire permite que la bobina mantenga refrigerada por largo tiempo de trabajo. Su bobina de 4.5 pulgadas, fabricada en TIL con diseño IN-OUT, proporciona una excelente disipación térmica y una respuesta precisa. El cono en cartón prensado con partículas de fibra de vidrio, con revestimiento semi-impermeable, asegura gran resistencia y proyección sonora clara, sensibilidad de 98 dB, impedancia de 8 ohmios y rango de frecuencia de 30 Hz a 1.000 Hz.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773528333/FICHA_TECNICA_PARLANTE_LF18X401_kxqd5v.pdf",
     "specs": {
@@ -103,8 +105,8 @@
     "name": "pa10n-900",
     "category": "Woofer",
     "images": {
-      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774999066/pa10n900_qagfmz.png",
-      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774999876/pa10n900_nd6f7b.png","https://res.cloudinary.com/djlr3wszq/image/upload/v1774998869/pa10n-900-1_zhuwia.png"]
+      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775766120/pa10n900_qbmz76.jpg",
+      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774999066/pa10n900_qagfmz.png","https://res.cloudinary.com/djlr3wszq/image/upload/v1774999876/pa10n900_nd6f7b.png","https://res.cloudinary.com/djlr3wszq/image/upload/v1774998869/pa10n-900-1_zhuwia.png"]
     },
     "description": "El PA10N-900, es un Altavoz profesional de 10 pulgadas, disenado para ofrecer un rendimiento superior en aplicaciones de Line Array, cajas tipo Turbo, equipos de sonido para Pickups y también para quienes buscan máxima presión y claridad en Car Audio. Su construcción avanzada garantiza respuesta rápida, alta sensibilidad y un audio limpio incluso en condiciones de alto estrés. Diseño robusto, canasta reforzada y motor optimizado para estabilidad y durabilidad. Respuesta profesional: Ideal para voces claras y excelente definición en medios-bajos",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773527460/FICHA_TECNICA_PARLANTE_10_NEODIMIO_cqhdwa.pdf",
@@ -125,8 +127,8 @@
     "name": "pa12n1000",
     "category": "Woofer",
     "images": {
-      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773505883/pa12n1000-1_qaoenb.png",
-      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1775084033/pa12n1000_ojk6vs.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1774996919/pa12n1000-1_negmeh.png"]
+      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775766336/pa12n1000_hahmae.jpg",
+      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1773505883/pa12n1000-1_qaoenb.png","https://res.cloudinary.com/djlr3wszq/image/upload/v1775084033/pa12n1000_ojk6vs.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1774996919/pa12n1000-1_negmeh.png"]
     },
     "description": "Descubre un Woofer de  12 pulgadas diseñado para entregar máxima fuerza, presión y eficiencia en cualquier aplicación profesional. Su impresionante sensibilidad de 100 dB lo convierte en un Woofer extremadamente eficiente, ideal para sistemas que requieren potenca real con una respuesta rápida y contundente. Cararisticas destacadas. Potencia real de 100 W: Construido con materiales de alta resistencia y un motor magnético robusto que garantiza potencia continua sin perdidas ni compresión térmica. Bobina de 3 pulgadas IN-OUT: Fabricada para soportar altas temperaturas, permitiendo largas jornadas de trabajo con estabilidad y rendimiento constante.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773524084/FICHA_TECNICA_WOOFER_PA12N1000_nk9zc9.pdf",
@@ -146,8 +148,8 @@
     "name": "PA8N-600",
     "category": "Woofer",
     "images": {
-      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774998687/pa8n600-1_dqgf6s.png",
-      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774997485/pa8n600_sj1err.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1774997485/pa8n600-1_ubwyjp.png"]
+      "main": "",
+      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774998687/pa8n600-1_dqgf6s.png","https://res.cloudinary.com/djlr3wszq/image/upload/v1774997485/pa8n600_sj1err.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1774997485/pa8n600-1_ubwyjp.png"]
     },
     "description": "El PA8N-600 es un Woofer profesional de 8 pulgadas con imán de neodimio, para aplicaciones de refuerzo sonoro de rango medio y alta eficiencia. Su construcción robusta y bobina de 2 púlgadas IN-OUT permite una excelente respuesta térmica y un desempeño confiable.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773528038/FICHA_TECNICA_WOOFER_PA8N600_g2bphm.pdf",
@@ -217,8 +219,8 @@
     "name": "18lw2420+",
     "category": "Woofer",
     "images": {
-      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1773526030/woofer18lw2420_-1_q5rmoz.png",
-      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774998027/18lw2420_xuufjh.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1774998027/18lw2420_-1_eq51nf.png"]
+      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775766737/18lw2420_g7cuhe.jpg",
+      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1773526030/woofer18lw2420_-1_q5rmoz.png","https://res.cloudinary.com/djlr3wszq/image/upload/v1774998027/18lw2420_xuufjh.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1774998027/18lw2420_-1_eq51nf.png"]
     },
     "description": "El 18LW2420+ es un woofer profesional de alto rendimiento diseñado para sistemas de refuerzo sonoro que requieren gran potencia, eficiencia y confiabilidad. Cuenta con 1300 W RMS y 2600 W de potencia continua lo que garaniza un rendimiento confiable incluso en altas exigencias de trabajo. Esta construido con un imán de ferrita compacto especial para bajas frecuencias. Cuenta con su sistema de ventilación en la parte posterior para expulsar el aire caliente, su bobina de 4 pulgadas. El diseño del chasis es robusto su material es de antimonio. Su impedancia es de 8 ohmios con una sensibilidad de 98 Db, su rango  de frecuencia empieza desde 30Hz a 250Hz.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775359931/FICHA_TECNICA_WOOFER_18LW2420_gjr96p.pdf",
@@ -268,8 +270,8 @@
     "name": "PA150r400w",
     "category": "Cabinas",
     "images": {
-      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774997345/pa150r400w_djrlzr.png",
-      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774997378/pa150r400w-1_oyoehc.png"]
+      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775765409/150r400w_g4chfo.jpg",
+      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774997345/pa150r400w_djrlzr.png","https://res.cloudinary.com/djlr3wszq/image/upload/v1774997378/pa150r400w-1_oyoehc.png"]
     },
     "description": "La cabina activa de 15” está diseñada para ofrecer un rendimiento sólido, versátil y confiable en aplicaciones de sonido en vivo, eventos sociales y uso profesional. Incorpora un sistema de amplificación eficiente con una potencia de 400W RMS y 800W programa, garantizando una reproducción clara, potente y con excelente respuesta. Tiene un parlante de 15 pulgadas con imán de ferrita de 80 onzas y bobina de 3”, esta cabina proporciona una excelente reproducción de frecuencias bajas con buena profundidad; ideal para música en vivo, DJ y reproducción de contenido multimedia. Complementa su desempeño un driver de compresión de 1” con bobina de 1.75”, que asegura una adecuada definición en altas frecuencias, logrando un sonido balanceado. El sistema integra procesamiento digital DSP, optimizando la respuesta sonora y permitiendo una mejor adaptación a diferentes entornos acústicos. Además, cuenta con efecto de reverberación (reverb), ideal para aplicaciones como karaoke o presentaciones vocales.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775579196/FICHA_TECNICA_PA150R400W_y0exbv.pdf",
@@ -325,6 +327,7 @@
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774827252/12ndl76_ylwz2t.png",
       "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774912000/neodimio10-1_dzvuiz.png"]
     },
+    "video": "https://res.cloudinary.com/djlr3wszq/video/upload/v1775767217/12NDL76_waigjz.mp4",
     "description": "El woofer de 12” 12NDL76 ha sido diseñado para aplicaciones de sonido que requieren alta  eficiencia, excelente definición en frecuencias medias. Gracias a su potente bobina de 3 pulgadas y su estructura magnética de neodimio, ofrece un rendimiento superior con menor peso, ideal para sistemas portátiles y configuraciones de alto desempeño. Cuenta con una potencia RMS de 500W y una potencia en programa de 1000W, garantizado una reproducción sonora limpia, estable y confiable incluso en condiciones de trabajo exigentes. Su sensibilidad de 100Db permite una excelente proyección. El sistema de enfriamiento con Buje de cobre en el núcleo magnetico mejora la disipación térmica, reduciendo la compresión de potencia y aumentado la durabilidad. Su respuesta  en frecuenciade 50 Hz a 3500 Hz lo convierte en una opción ideal para  reproducción de medios y medios-bajos con gran claridad y presencia.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775260690/FICHA_TECNICA_PARLANTE_12NDL76_k24ncm.pdf",
     "specs": {
@@ -349,6 +352,7 @@
       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774912604/12md26_drfdsu.png",
       "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774830391/12md26-1_p6e9hu.png"]
     },
+    "video": "https://res.cloudinary.com/djlr3wszq/video/upload/v1775767654/12md26_ejnv1z.mp4",
     "description": "El Woofer 12 pulgadas diseñado para aplicaciones de sonido en vivo y sistemas de refuerzo sonoro de alta exigencia. Ofrece una potencia nominal de 1000W y una sensibilidad de 100 dB, garantizando alto rendimiento acústico, excelente presión sonora y gran eficiencia energética.  Su respuesta en frecuencia de 50 Hz a 3.5 kHz proporciona graves definidos y medios claros, ideales para configuraciones full range o sistemas de dos vías. Cuenta con chasis de aluminio que mejora la dispación térmica y la resistencia estructural, combinado con imán de ferrita que asegura estabilidad y desempeño constante.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775323244/FICHA_TECNICA_WOOFER_12MD26_fxuu0t.pdf",
     "specs": {
@@ -368,9 +372,10 @@
     "name": "Pax-One",
     "category": "Cabinas",
     "images": {
-      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774988691/subwoofer_arjn8u.png",
-      "gallery": []
+      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775766968/pax-one_usva2r.jpg",
+      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774988691/subwoofer_arjn8u.png"]
     },
+    "video": "https://res.cloudinary.com/djlr3wszq/video/upload/v1775767500/pax-one_mydjph.mp4",
     "description": "El sistema PAX-ONE compacto y elegante, ofrece un impresionante SPL máximo  de 128 db, con un alcance constante de adelante hacia atrás, gracias a su arreglo lineal de 12 altavoces y acompañado de un subwoofer de 12 pulgadas, diseñado a la medida con tecnólogia acústica. El sistema PA barra lineal + subwoofer cuenta con amplificador incorporado de 1400W electronicamente optimizado, que incluye un mezclador de 5 canales (4 entradas para microfono XLR mixto y una entrada en stereo TR) con ecualizador paramétrico y efectos, DSP incorporado con 4 Preset, conexión a Bluetooth y TWS para el enlace de dos sistemas. Un sonido excepcional y versátil, que minimiza el montaje de tus pequeños y medianos eventos corporativos y empresariales.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774475012/FICHA_TECNICA_BARRA_LINEAL_SUBWOFFER_sexqtq.pdf",
     "specs": {
@@ -471,8 +476,8 @@
     "name": "PA10MB",
     "category": "Woofer",
     "images":{
-      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1774999490/pa10mb_uzabdo.png",
-      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774999490/pa10mb-1_vgjvx2.png"]
+      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775766516/pa10mb_ezqmgw.jpg",
+      "gallery": ["https://res.cloudinary.com/djlr3wszq/image/upload/v1774999490/pa10mb_uzabdo.png","https://res.cloudinary.com/djlr3wszq/image/upload/v1774999490/pa10mb-1_vgjvx2.png"]
     },
     "description": "El parlante PA10MB de 10” ha sido diseñado para ofrecer alto desempeño acustico gran eficiencia y excelente respuesta sonora en aplicaciones de sonido profesional. Gracias a su potencia de 1000W y una sensibilidad de 98Db, proporciona una reproducción clara, definida y con alta presión sonora, ideal para sistemas exigentes de refuerzo. Su estructura incorpora un chasis de aluminio que garantiza mayor resistencia mecánica y una optima dispación térmica, permitiendo un funcionamiento estable incluso durante jornadas prolongadas de trabajo. El sistema magnético de iman de ferrita de 100oz genera un campo magnético eficiente que mejora el control del cono y la precisión en la reproducción de frecuencias. El PA10MB es una solución confiable para aplicaciones de sopnido en vivo, instalaciones fijas y proyectos de audio profesional donde se requiere potencia durabilidad y claridad.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775323360/FICHA_TECNICA_WOOFER_PA10MB_l5wlal.pdf",
@@ -494,9 +499,10 @@
     "name": "BNT 44",
     "category": "Drivers",
     "images":{
-      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775000953/bnt44neodimio_xf24qp.png",
-      "gallery":["https://res.cloudinary.com/djlr3wszq/image/upload/v1775000953/bnt44neodimio1_mnbk4d.png"]
+      "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775765801/btn44_xhwebh.jpg",
+      "gallery":["https://res.cloudinary.com/djlr3wszq/image/upload/v1775000953/bnt44neodimio_xf24qp.png","https://res.cloudinary.com/djlr3wszq/image/upload/v1775000953/bnt44neodimio1_mnbk4d.png"]
     },
+    "video": "https://res.cloudinary.com/djlr3wszq/video/upload/v1775767359/btn44_p8mzqi.mp4",
     "description": "El driver de compresión  BNT 44 está diseñado para sistemas profesionales de sonido que requieren alta eficiencia, claridad y excelente respuesta en altas frecuencias. Incorpora diafragma de titanio y bobina de 44 mm en alambre plano, lo que garantiza una rproducción precisa, baja distorsión y alta resistencia térmica durante trabajos exigentes.",
     "document":"https://res.cloudinary.com/djlr3wszq/image/upload/v1775323213/FICHA_TECNICA_DRIVER_BNT44_bb9shf.pdf",
     "specs":{
@@ -552,8 +558,8 @@
     "name": "PA516",
     "category": "Drivers",
     "images":{
-       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775084971/pa516_b8frhb.png",
-       "gallery":["https://res.cloudinary.com/djlr3wszq/image/upload/v1775084971/pa516-1_llpidk.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1775084971/pa516-2_nwvmgy.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1775084423/pa516-3_nev79j.png"]
+       "main": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775765103/516_qwm4lt.jpg",
+       "gallery":["https://res.cloudinary.com/djlr3wszq/image/upload/v1775084971/pa516_b8frhb.png","https://res.cloudinary.com/djlr3wszq/image/upload/v1775084971/pa516-1_llpidk.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1775084971/pa516-2_nwvmgy.png", "https://res.cloudinary.com/djlr3wszq/image/upload/v1775084423/pa516-3_nev79j.png"]
     },
     "description": "Driver profesional de alta potencia diseñado para sistemas de sonido profesional y aplicaciones de refuerzo sonoro. Incorpora una bobina de 51.6 mm fabricada con alambre redondo que permite una excelente disipación térmica, mayor eficiencia y alta resistencia al trabajo continuo. Su respuesta en frecuencia de 1 kHz a 16 kHz garantiza una reproducción clara y definida de medios-altos y altas frecuencias, logrando excelente proyección sonora y alta inteligibilidad vocal. Ideal para sistemas PA, cabinas profesionales, sonido móvil y refuerzo en eventos en vivo.",
     "document": "https://res.cloudinary.com/djlr3wszq/image/upload/v1775323179/FICHA_TECNICA_DRIVER_PA516_e4w5t2.pdf",
