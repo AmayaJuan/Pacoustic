@@ -193,6 +193,7 @@ async function loadProducts() {
         desc:      p.description || "Producto de audio profesional",
         imgs:      gallery, // Array imágenes procesado
         videos,    // ✅ Array videos procesado
+        bannerImg: p.bannerImg || null,
         // Watermark opcional
         watermark: p.images?.watermark || null,
         // Specs como array pares key-value (excluye 'aplicaciones')
@@ -228,8 +229,8 @@ function renderBanner() {
   const track = document.getElementById('bannerTrack');
   if (!track) return;
   const items = products
-    .filter(p => p.imgs[0] && /\.(jpg|jpeg)$/i.test(p.imgs[0]))
-    .map(p => ({ src: p.imgs[0], alt: p.name, id: p.id }));
+    .filter(p => p.bannerImg && p.bannerImg.trim() !== '')
+    .map(p => ({ src: p.bannerImg, alt: p.name, id: p.id }));
   const dup = [...items, ...items, ...items];
   track.innerHTML = dup.map(({ src, alt, id }) => `
     <div class="banner-item" onclick="onBannerItemClick('${id}')" role="button" tabindex="0" aria-label="Ver ${escapeAttr(alt)}">
